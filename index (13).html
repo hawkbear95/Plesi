@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Plesi</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzAgMTMwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBnIiB4MT0iMC4xIiB5MT0iMCIgeDI9IjAuNSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0ZGNkE0MiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0ZGM0ExQiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMzAiIGhlaWdodD0iMTMwIiByeD0iMzAiIGZpbGw9IiNGQkYwRUMiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOCwxMikiPjxwYXRoIGQ9Ik0zMiwxNSBMNTUsMTUgQTI5LDI1LjUgMCAwIDEgNTUsNjYgTDQ0LDY2IEw0NCw4OSBBMTEsMTEgMCAwIDEgMjIsODkgTDIyLDI1IEExMCwxMCAwIDAgMSAzMiwxNSBaIiBmaWxsPSJ1cmwoI3BnKSIvPjxwYXRoIGQ9Ik01Miw1MSBDNDYuNSw0NSA0NSw0MSA0NSwzNiBBNyw3IDAgMSAxIDU5LDM2IEM1OSw0MSA1Ny41LDQ1IDUyLDUxIFoiIGZpbGw9IiNGRkY2RjIiLz48Y2lyY2xlIGN4PSI1MiIgY3k9IjM2IiByPSIyLjgiIGZpbGw9InVybCgjcGcpIi8+PC9nPjwvc3ZnPg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAW4ElEQVR4nO2de5QcVZ3HP7e6ezJ5zTsvIAgRQngEYoK8IiJIEDyEECE+Yd1FkGXZ9bGLR7Li2V1dQZBdFY+oq+AuAgqLioArqAckEoWjYIKiJAEJAnlNz6OHBJLp7vrtH90z6am+VV3VXd3VXXM/5yTp+vWt+/vd1Ldu/e6tW9WKiBHZMiU70n2cBUeIcARwBPAGoAvFdITpQGe0URqKDAlkFGoYZFihNtnYG5RlbUzuzf9ezZ69O+oAVaMdioiVHRk8QYmcAZwOLAemNjoOQ+jYwBPAfXZC3TdlZu8fowiiYYLeN5JeZNlcLHCxgvmN8muIBgXPCdyStNq+qTo6Bhrot36IiJUfHjhfFJ8ATqqnL0PT8rpC7szbiZum9PQ8XW9ndRG0iFj5zOAFIvKvKI6qhw9DyyHAPXnyV7d3zflzvZyELujsUP9poG42Qja4sBe4KWlb16qenkzYlYcmaBkZ6c3b2WsFuSzMeg2xZYdScmmyc9aPw6w0FOHlhtKrRHEr0BNGfYZJgyjhq4nXRz+pDjjgtTAqrEnQItKWG0lfj6iP1lqXYVLzbN6SVe0dszbXWlHVIpQ9/fNyWXUvcEKtQRgMwBCo96S6en9WSyVWNTvtzew6LJ+1HsOI2RAe3SD/N5pJ/0MtlQQW9L7BwcUJrEcFWVCLY4NBQ1IJN2WH05+vtoJAKcfocP9ShXoE6KjWocHgk8+luvquCbqTb0Hvzew6LCHWY8CcoE4Mhir5fKqrb22QHXwJWl7dMTuXTz4GHF5VWAZDlYioj7V1937Zb/mKghaRtlxm4JeYAaAhGvLKltXJnln3+ylccVCYG0lfjxGzIToSYqnvjg73L/VT2LOHzo30nyu2uq9SOYOh3gi8lCJ5nOrqGvIq59pDy+6dc8RWt2HEbGgCFMzPkr+5UjlXQWeziRuB7lCjMhhqQCHvHR0a+BvvMhqyQ/2nodQjbt8bDBGyO5lXR6ne3pd0X5b10CKSBHUzRsyG5mRGLiFfdPuyTND5kYH3mcX5hibnglxm1zt1X0wQtIhYYnN1Y2IyGKpHxPqSiLQ57RMEnc8Mrja9s6FFODybSX/QaZzYQyNXNS4eg6E2LFgrIimHrcDekf6FmFcNGFoIQR2aHR68uNQ2LuiErcq6b4Oh2VFKPiEi4zNyFhQHg3Cx+24GQ9OyKDc0tHxswwLIjgyeYF7PZWhVVML+0NhnC6D44kSDoSURYY3098+E/Tm0EbShlZmeT1lnAVjFyemTIw7IYKgR+2wAKzsysASYFnE0BkNNCOocEVGWVXhjvsHQ6hw4untgkVX8GQiDoeVJ5NWxFqaHNsQEQRYngUOiDiRyhtOorc+i0q/Aq8MTv5Pxv7wpK+Kyj1tVOj9t7dA+DWZ2IZ190Dcb6T0AksnK8UxGFIuTTNa3IOVyWBvXoZ74Geql58q/l7IPDr2JxlY06ETrdmLo7F6+rQQy6wCYvwA55Ejkjccgc809MQBEHayyQ+ltKOZFHUsjUVs2Yv3oW6iBHeVfhi1kAAkq5IB+uvqwjz4eOW45cthisKp6B2fLI7BVZYfTrwIzog6mIYhg/fS7WI/eWy6yqoVcNGp75ZCF7Oa/1E9HD/YJpyOnnI30ztUFG2eGVXY4nafK1+q2FCJY93wN66lHHPayD3qBldmLhkBCrsaPTyFPKC6gLGTxidgr1iBvWKjZOZbYKjuc9jHiaX2sh+7A+sW9+w06gZVtBs2TfQrZzV6zH71djj4ee+UHkQMP1VQWLyaFoNWWjSS+/bn9Qggzf3Wrr6KfkITsZnf6URb2yWdhn/fXMH2mvp4YEH9B53IkvvQx1MDO1hzwufmo6MeljTM7yL/775A3naqvs8WJfe5sbViHSu8sOfglYppw8MVhK/nOTWS6gaU4KvHlp1iX1rfLCePqx62NRcNIhsS3riNx242wb6+mYa1N7AWtHv8pFYUM7mJy2sMWsucJUx5S1UJ2+FFPPEziho+gdmhfQNSyxFvQw2nUy8WbJl5C9tNbugp57EN51e4njMcVoeoTpvxjpSuC2v4SiS/8I+rZ3xEXYi1otfXZwge3/DUUIevEVOmEcdq8/GgKV/RT6YQp2X59N4mv/gvqt48SB2K9KEDterm8F9OmFpqdnT2vl71iT+nlR2es1o9bG138jPnIjZL49vXk83nkxNZ+eCnWgmb3MIGFDN4Hv8zm2PDtJ8CJFLaQdXbbJvE/N5Kf0o4sOUW/TwsQ65SDvK2/7HoOxKrJX13yVE8/5SFVPeBzbaPuxPRIoew8iVuuRf35j5qgW4N4C7qMavNkp82x4SbkavNkv0LWnjBubaRCG4vfjWZJfP0zMJx2VtwSTBJBVytknZgq2EMRMuV2ZyFtT11Dz1/qJzNE4pvXQj5PqxFzQdcoZKBMsJoiNQvZl59KJ4zT5uWn0okkqC1/wHrwe7Qa8Ra0n8vueLkqL/t+T5gJfpwxefkJ2POP2T39OG16P9aP70Rt31pefxMTb0GX4nqQfVz2/QoZN4Hp/CvonQsHH1b409Xrv+d39ePzyuPrhBHIjmLd/pVyP01MvKftIFhP6dzQCUlrD+DngAXw9tWw5GSY7nj6bXAX/HYdPPyDwmetkIP4dvj31caJftTmp1G/W4+8abmuYNMRf0GX4vcgu9lrEXKyDS68DE5bCcrlwtgzG866EN62Eu6/DR66e3/PrvWt8VN1G3H1Y/3wVvJLTnaPu4lo/gjDQHfZBcfB90ovnDY8Lu8aH+3T4OPXw9tW+RNF2xS44DK45JOglMa3ix/PNpZs+E2him1U215EbfhV5bibgPgL2u0ge+aVRUMtq+3G7MqCD18Dbzw6eOwnnQlrLvfnx7WNJRu+20hZG62ffT94/BEQb0FXfefNp5DH9tcJbMz+1nfCUcdX2wI48wJYeKy7kJ3+axEyuPpRm3/fEktN4y3oMcoOstNWNIS9yD6ZgnMvco8rvR2eehQ2rofMoL6MUrD6Epf2uJ2YbkJmv73MXOHKI4J6/OfubWkS4j0odBNyWSGdnWA9srMSAY45ETp6yuuwbfjBN2DdA5DNgV0U/8q/grPfU17+8MUw9yDY/rLej24jiJA1RbW99G/XwfmeP7UdOZOgh3b0Yk67rhcL61b1oiX6kH5+D/z8Xtg7WhB0Ngt79sCdX4WnHtPvc8RSp8PyHrkspqIhpPUratuLqPR2fXxNQswF7XWQnTb8Cxl8iElgzoH6sNb/tCDibLYo6ByMZmE0B4/8WL/PvIMcMflpYzVC9j5h1LMb9PE1CTEXNNUf5PF9fRx8t/w11a6PKb2zXMhjPXW/5vVkAFOm+cyT3dpIhTbqemVNG5//kz6+JiHeOfQ4Lvmja145/pfD5rDr8tdSm+2yWq2jDwYGCrn0+B8p/NszR79PPufuZ8ygbSPBTlbnhqOI+ssWFyfNwSTooXUHulIv5rO3mlCf0waMurwm4PRz9SlHNg9nrdbvs/c1dz+uJ6bPFMpvz4+gtjX31F28Be16kDXl6rHIPjOkj2vFu2DNZWAl96ccU2fAxz8DS07U7zMyFODErJQnO22aduraKMDrewp/mpRJknJQ22XXzV6pp9S9rhcKc8vv/TC8893w3J+grQ3eeCRM9fjtpgm5tUePrAmpLNia2ggqM4RMne4ea4TEX9B+hTzBFPwga/28/IJ3bB1dsNTnL+q98mdqFrKbPUgKA6aHjoxab4w4N/yKacz+fEgPm+4ege0v6VMl1xOzDkIeI5f1ijZS4p1DlxL2gG8sfy0zl9gzA7Bta82h88cnNTmxJihfAz6nrWgIctu/iX8hoHkjC4uahOxxkP0OxH6zrqbwgcKi/0p+api5CDx4bp8auAmNIuaCrlLIXjMXbgdZ61bg1w+B2NU3Yc8I/G69h5DHPjhtjg23Nvo9MUtOGJneWVVTGkHMBV1Ed9l1fPTsxWqZ6tu1DTY+Xn3sv3ig/LW3Oj+Aq5D9pFB+e/5ECjq7graiYcRf0BUPcqXeSlNf0EX2D9xRXez79sJP7vbvp5oUKuD6FZk1t6kfxWreyMLA8yAHvOyO2XVCrnTZf/4ZePKXweN/8C4YGSyps85CHm+GRxvnLwjejgYSb0GP4feyi9tBduvFHJV7nTB33Qz79vmPOb2z0LN7Chn0vkva4ruNXn722+WQRf7bEAHxF7TzIONxkF3Ti/IqAvf8u7bDvbf6j/u//wP2vo5eYB5+XNtIhTb66/ll0bH+2xAB8Rc04HnwQ1vb4bA7KxSBB++GTU9XDvfRB2DjrzW+vfy4tRGPK4yPnr/047QZyIIjK8cfITEXdJ2EDBoxlRcp82Pb8I3PFqbi3HhlK3znyxo/bifSmB+nDf9C9uVHkKWnQCLhHnsTEG9Bux5kXTm3g1ypFwt4wqR3wtc+i3Zu+vXX4KZrCrMbFa8IXn40Qp7QHofNz5VHwD7pzPI6m4x4C7qUsGcuggjZ6efpJ+Du/3J8b8PXPgOvvFh+2fftx0PI1aZQY7aeWcixb9Y0rLmYBIL2EHJYA75xPzr3Ln4euAMeLXl+8M6b4an1FfyU2Mt8+7zy+O75J9rsM1aB1dzpBsR+tR36g+yZP5Z/dLcXDa49ss53yYdv3wjdfYWVdD+5iwkC0+0YyE/QNnr4aZ+KveJ8jfPmI96CLsXvQS7b9BBZtUIe+5jLwZc/BaOjLn7CFLLGf0U/hTba71gDM5p3/UYp8Re07iC72RshZKd9bJ1GzX4CnEjODS8/nd3YK9+vKdCcxFzQmpwjdCFrC9d22fcr5Kr9+O/57fddAU36uJWOmAu6hKoPsovAoLbLvm8/AU6kWk4YjV2OWYZ96jm6wk1L/AVdS29V62Xfr5Dd/Ic94AvSxmkzyF/+z4UHeluIeAvaefB9DZCKhlry5JoGYl5+qhSym92t51eQv+JT0Ovy0psmJt6CDiu9aPRT1WX1+ej53exVjAXsd12CLDtVU6j5ibmgad0Bn6dvLz+19fxy6jnYF1xSXq5FiL+ggZYSctV+AgpZY5fj30r+w1e3XN5cyiQQtE5MbgMkwh/wBRmINWrAp2mjvPk08h/5N0i2tiRaO/pKCI3JX30PxKrxE/KAT+PHPn0l9qWfaPqloX6It6AnUOOAr6aBmJefxg74JtisBPb7L8de+QHNTq3JJBB0jUJ2szfVgK+KFKarm/yV/4Isbv4loUGIt6DdllTGfcBXoY2ybDn5y9ZCl+YHjVqceAvaSSMGfE02czFh/65u8hd/FFm+Qr9vDJgcgp6kMxfj5dpS2GevwT7/gzBthq7S2BB/QeueFpkEMxcApNqw374S+7yLoGe2Zuf4EX9BjzFZZi4Aemdjv/087DNXF16qPomIv6BbduYioJ9pM5Flb8FevqLwMGsTv3+unsRb0HGeuUimkEMXIkctRY49EVm4uOXv8oVBzP8HQrq8N2rAJxMFy5R2ZGYHzOyG7j5kzoEwbz7yhsOR+QsKZQwTiLmgiWTAJ/MOJn/D7YHCNIRDvAXdiPzVV49saBTxFjSCXrSNmrkwNJqYC5poZy4MDSf+gh6ngTMXhsiYBIKOeObC0FDiL+i6D/g88nFDw4m3oJ0ia9itaqPuqIi3oMeIcs2FoaHEXNCa3rLWmYsgA0tDw4m5oB00Ys2Fl91QdyaHoEOfuQg4BWhoGPEWtOCSckz4EGDmIsBUnyES4i1oPzdAahnwufX8RtuREXNBFwk7T66YwhhFR0W8BT2urToK2ctuaDjxFjSgF21IMxduPb/RdmTEX9D1mLnwm8IYGk78BT1OSAM+ZyVGyE3FJBB0nYRctlnix+g6MmIu6KBpRNAZjZINI+KmIN6CdoosjAGfc0Pb8xt1R0W8BT1OHQZ8vgebhkYSf0FrRRumkItGI+amIP6CLqXWmQvTKzc9k0PQYcxcOAsFuSljaBjxFrRQxVqMko1apvoMkRBvQVebXgRJLTzzcUOjibmgi9RjwOfZ8xtFR0W8BT2urUYJ2RA1ScAGYvp27JLestaZC7ParhWwLWAk6ijqjq81F8U7fLq7i7rHuHTphdvMiaFR7LYEMlFHUTcsyyEyCSBk/OfJToEn4p3JNTGvJhWSARV1IPVhZifhzlz4nOqbObl+qKeJeNVCqRejjqJuzD3QJaf1yJO16YVbj1yyUZquz5tfY+CGKhmxEP4QdRT1Qg472mmpMk922ko2dCnMQqdfQyMQ5AVLKYmvoA9aAL1zqHnApxMylAsZART2m04JqwmGAChhk5W3rA1RB1I3lMI+9awQZy68ZkiK/xyzDHonx6+2NhvKYpPVNqPnTyi2RR1MvbDPvhBSxZ8/q2XmQlNE1/Pb530gpMgNQbGFTZZSSpTwUNTB1I2e2dhnrykf2IHPAZ/TVjRoUhg58jjk+LeEFrohEK+lOvt+X7xDqOIraMB+92XInAP2G6qYuSizO0m1YV/xKVAxnQJtemSdUmrUAkjY6kHgtYgjqh/tU7H/6TpItfubuXAUcRc44/m4fcVa5OAFdQje4A/1CBTXcKienowo7ok2oPoiCxaRv+o6SJXcxQs44JtY4f6BpX3RldhnrKxD1Aa/CPIwlCxKUrZ9S3ThNAZZdgr5T38FZnRWNeArmEtmSJJJ7L9di73mkjpHbvBCYGuqs+9JKBF0smvWL4FNkUXVIOTopeT+83ZkyYlFA8GFDMhBh5C/7hbscy6sc8SGSiiR25RSAo5FHKPDA5cq5JvRhNV41G/WYf3vragtz+A62HPYZc6ByKqLsM9avX860BApeUsWtXfM2gQOQYtIKpsZ2KzgkEgiiwi1dQvq8UdQzzyFevE5GBkufCECU6ch8w9FjjgOOeGthRsnVkyXj7ciIutT3bPG50rL5phGh/svV6ivNzaqJmN0FEb3FnrgKVOjjsbggRJZleyedd/4trOAiLTlMwPPCBzW2NAMhqDI08nOviVj+TNoHr1SSo0K6srGBmYwBEdhXVsq5oLNhexw+vvAu+oelcFQFWpDsrPneKVUvtTqOrpJ2tbHgd11j8tgCI5gcaVTzOAhaNXT8xcR9dH6xmUwBEcht6Y6en+l/64Co8P931Oo94QflsFQDZJOWlOOVB0dad23FSdUU3bicoW8EH5gBkNgRAkfchMz+BC06unJ2HAhsCfU0AyG4NxQOuesw/fi3dxg/0qx1A+BRM1hGQxBEVmf7Op7m1Iq51XM9z3cZM+s+0XUVbVHZjAEQ8HzyZR9QSUxQ8B32rV1934J+HzVkRkMQRG2Z0muUDPm7PRTPPAqm1RX31qEfw8emcEQmGEhf87Uri7fkxJVLRtLdfd9Gri6mn0NBp/sELHPaOueszHITjU90TmaSf+9Er5I3N8zbWg0W3Ik3xGkZx6j5keUs8MDK0DuArprrctgQGR9MplbrWbO669m91Ceud870r8wYasfAYvCqM8wKRHghmRn7zV+ZjPcCOXRi/aOWZuTr40uU8JXcHmQyWBwR9JK2eemuvqurkXMUIcXQ2eH02cK3KrAvFPWUAkR4fZUMneVmjl3VxgV1uU1PzIw0JFLyFrgY0B7PXwYWh21AYsr3VbNVV1rmJU5kYGBg/IJPi3IpcT2h4kMAfmDEr6Q6Oq9Q7eeuVYa8iK2fYODixNW/iOC+gBgnjqdjIisV3BDoqvvfudjU2HS0DcLSibTk5PspcCHgIWN9G1oPAp5QYTv5C25vb1z9pbG+IyIfSPpRZbNeQirUJyESUniwB7gMeBhQR5OdfY9Wc/eWEdTvPtVduyYnp2aWozYx1moJVLovbsV0iWoLsxNm2YhQ+E5091ARpAXlLBZWTxrC5tTnX0blVLZKAP8fwCcIwIqiSoJAAAAAElFTkSuQmCC">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Plesi">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#FF4D2E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#FF4D2E;--coral-press:#E63E20;--coral-50:#FFF1ED;--coral-100:#FFE0D8;--coral-text:#B3260F;
+  --ice:#5DCEF0;--ice-50:#E8F6FC;--ice-100:#CDEDF8;--ice-text:#0A5575;
+  --ink:#17151E;--ink-soft:#3A3742;--muted:#8C8A95;--faint:#B9B7C0;--line:#ECEAEF;--line-soft:#F4F3F6;
+  --bg:#F7F6F9;--white:#fff;--good:#1F9D6B;--good-50:#E6F6EF;
+  --font:'Plus Jakarta Sans',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font-family:var(--font);background:radial-gradient(1200px 600px at 15% -10%,#FFE9E3 0%,transparent 55%),radial-gradient(1000px 700px at 110% 10%,#E2F4FB 0%,transparent 50%),#EFEDF2;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:30px 16px;min-height:100vh}
+.phone{width:390px;height:810px;background:#17120e;border-radius:46px;border:10px solid #111016;box-shadow:0 40px 80px -20px rgba(30,20,40,.45);position:relative;overflow:hidden}
+.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:130px;height:30px;background:#111016;border-bottom-left-radius:18px;border-bottom-right-radius:18px;z-index:60}
+.sb{position:absolute;top:0;left:0;right:0;height:50px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 26px 7px;font-size:13px;font-weight:600;z-index:55;pointer-events:none}
+.sb svg{width:16px;height:16px}.sb .r{display:flex;gap:6px}
+.vp{position:absolute;inset:0;top:50px;bottom:0;overflow:hidden}
+.screen{position:absolute;inset:0;overflow-y:auto;background:var(--bg);display:none;flex-direction:column}
+.screen.on{display:flex;animation:fade .25s}.screen::-webkit-scrollbar{width:0}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+.pad{padding:16px 18px 40px}
+
+/* top bar + centered role switch */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(247,246,249,.94);backdrop-filter:blur(14px);padding:11px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line-soft)}
+.topbar .logo{display:flex;align-items:center;gap:7px}.topbar .m{width:30px;height:30px;display:flex;align-items:center;justify-content:center}.topbar .m svg{width:30px;height:30px}.topbar .t{font-size:19px;font-weight:800;letter-spacing:-.7px}.topbar .t span{color:var(--coral)}
+.topbar .right{display:flex;align-items:center;gap:9px}
+.idpill{font-family:var(--mono);font-size:11px;font-weight:600;background:var(--ice-50);color:var(--ice-text);padding:5px 9px;border-radius:9px}
+.avatarbtn{width:34px;height:34px;border-radius:50%;background:linear-gradient(140deg,var(--coral),#FF7A5E);display:flex;align-items:center;justify-content:center;cursor:pointer}.avatarbtn svg{width:18px;height:18px;color:#fff}
+.segwrap{position:sticky;top:53px;z-index:29;display:flex;justify-content:center;padding:14px 18px 12px;background:rgba(247,246,249,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.seg{display:inline-flex;background:#E7E5EC;border-radius:30px;padding:4px}
+.seg button{border:none;background:transparent;font-family:var(--font);font-weight:700;font-size:14px;padding:10px 28px;border-radius:26px;color:var(--muted);cursor:pointer;transition:.15s}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+
+.back{position:sticky;top:0;z-index:30;background:rgba(247,246,249,.9);backdrop-filter:blur(14px);padding:11px 16px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line-soft)}
+.back .b{width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer}.back .b svg{width:18px;height:18px}
+.back h2{font-size:16px;font-weight:700}.back .s{font-size:11.5px;color:var(--muted)}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:20px 2px 11px}.eyebrow:first-child{margin-top:4px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:none;cursor:pointer;font-family:var(--font);font-weight:700;font-size:15px;padding:15px;border-radius:14px;transition:transform .1s}
+.btn:active{transform:scale(.975)}.btn:disabled{opacity:.5;pointer-events:none}
+.btn-coral{background:var(--coral);color:#fff}.btn-dark{background:var(--ink);color:#fff}.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn svg{width:18px;height:18px}.btn-sm{padding:11px;font-size:13.5px;border-radius:11px}
+.fl{font-size:12px;font-weight:700;color:var(--ink-soft);margin:18px 2px 8px}.fl:first-child{margin-top:4px}
+.inp{width:100%;background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px 14px;font-family:var(--font);font-size:14px;color:var(--ink);resize:none}
+.inp:focus{outline:none;border-color:var(--coral)}textarea.inp{min-height:92px;line-height:1.5}
+select.inp{height:auto}
+.ac{position:relative}
+.ac-list{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:13px;margin-top:5px;max-height:230px;overflow-y:auto;z-index:35;box-shadow:0 12px 34px rgba(0,0,0,.14);display:none}
+.ac-item{padding:13px 15px;font-size:14px;font-weight:500;cursor:pointer;border-bottom:1px solid var(--line-soft)}
+.ac-item:last-child{border-bottom:none}.ac-item:hover,.ac-item:active{background:var(--coral-50);color:var(--coral-text)}
+.ac-item.ac-add{background:var(--coral-50)}.ac-item.ac-add b{display:block;color:var(--coral-text);font-size:14px;font-weight:700}.ac-item.ac-add span{font-size:11px;color:var(--muted);font-weight:500}
+.slider{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;background:var(--line);outline:none;margin:10px 0 4px}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:var(--coral);cursor:pointer;box-shadow:0 2px 10px rgba(255,77,46,.45);border:3px solid #fff}
+.slider::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--coral);cursor:pointer;border:3px solid #fff;box-shadow:0 2px 10px rgba(255,77,46,.45)}
+.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{font-size:12.5px;font-weight:600;padding:9px 13px;border-radius:11px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.subhero{background:linear-gradient(150deg,#1B1922,#262232);border-radius:20px;padding:18px;color:#fff;position:relative;overflow:hidden;margin-bottom:6px}
+.subhero .glow{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,77,46,.5),transparent 70%);top:-70px;right:-50px}
+.subhero .row{display:flex;align-items:center;gap:16px;position:relative}
+.ring{width:72px;height:72px;flex-shrink:0;position:relative}.ring svg{transform:rotate(-90deg)}.ring .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.ring .n{font-size:21px;font-weight:800}.ring .l{font-size:8px;color:rgba(255,255,255,.6);font-weight:600;margin-top:1px}
+.subhero .plan{font-size:12px;font-weight:600;color:var(--ice)}.subhero h3{font-size:17px;font-weight:700;margin:2px 0 4px}.subhero p{font-size:11.5px;color:rgba(255,255,255,.6);line-height:1.4}
+
+/* map */
+
+
+
+
+
+
+
+
+.trip{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;transition:.12s}.trip:active{transform:scale(.99);border-color:var(--coral-100)}.trip+.trip{margin-top:10px}
+.trip .top{display:flex;align-items:center;gap:11px}
+.slogo{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0;background:var(--coral-50);color:var(--coral-text);font-family:var(--mono)}
+.trip .store{font-size:15px;font-weight:700;font-family:var(--mono)}.trip .when{font-size:12px;color:var(--muted);font-weight:500;margin-top:2px}.trip .otime{font-size:11px;color:var(--faint);font-weight:600;margin-top:3px}
+.trip .foot{display:flex;align-items:center;justify-content:space-between;padding-top:11px;margin-top:11px;border-top:1px solid var(--line-soft)}
+.tag{font-size:10.5px;font-weight:600;padding:4px 8px;border-radius:7px;background:var(--ice-50);color:var(--ice-text)}
+.go{font-size:12.5px;font-weight:700;color:var(--coral)}
+
+/* courier availability */
+.availcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:6px}
+.availrow{display:flex;align-items:center;justify-content:space-between}
+.availrow .t{font-size:16px;font-weight:700}.availrow .s{font-size:12px;color:var(--muted);margin-top:1px}
+.bigtoggle{width:54px;height:32px;border-radius:20px;background:var(--coral);position:relative;cursor:pointer;flex-shrink:0;transition:.2s}.bigtoggle.off{background:var(--line)}
+.bigtoggle .k{width:26px;height:26px;border-radius:50%;background:#fff;position:absolute;top:3px;right:3px;transition:.2s;box-shadow:0 1px 4px rgba(0,0,0,.25)}.bigtoggle.off .k{right:25px}
+.livecard{background:var(--good-50);border:1px solid #CBEBDB;border-radius:14px;padding:13px 15px;font-size:13px;font-weight:600;color:#0E5C3C;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+.livedot{width:9px;height:9px;border-radius:50%;background:var(--good);flex-shrink:0;box-shadow:0 0 0 4px rgba(31,157,107,.18)}
+
+.earnhero{background:linear-gradient(150deg,var(--coral),#FF6B4A);border-radius:20px;padding:18px;color:#fff;position:relative;overflow:hidden;margin-bottom:14px}
+.earnhero .glow{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.25),transparent 70%);top:-60px;right:-40px}
+.earnhero .l{font-size:12px;font-weight:600;color:rgba(255,255,255,.85);position:relative}.earnhero .a{font-size:34px;font-weight:800;letter-spacing:-1.5px;margin:2px 0 4px;position:relative}.earnhero .x{font-size:12px;color:rgba(255,255,255,.8);position:relative}
+
+.incoming{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.incoming+.incoming{margin-top:11px}
+.incoming .ih{padding:14px 15px;display:flex;gap:11px;align-items:center}.incoming .store{font-size:14.5px;font-weight:700}.incoming .from{font-size:11.5px;color:var(--muted);font-family:var(--mono);margin-top:2px}
+.incoming .pay .v{font-size:18px;font-weight:800;color:var(--good)}.incoming .items{padding:0 15px 12px;font-size:12.5px;color:var(--ink-soft);line-height:1.5;white-space:pre-line}
+.incoming .iact{display:flex;border-top:1px solid var(--line-soft)}.incoming .iact button{flex:1;border:none;background:#fff;padding:13px;font-family:var(--font);font-weight:700;font-size:13.5px;cursor:pointer}.incoming .iact .dec{color:var(--muted);border-right:1px solid var(--line-soft)}.incoming .iact .acc{color:var(--coral)}
+
+.statuscard{background:linear-gradient(150deg,#1B1922,#2A2536);border-radius:20px;padding:18px;color:#fff;display:flex;align-items:center;gap:14px}
+
+.trketa{margin-top:10px;background:var(--coral-50);border:1px solid #FAD9D0;color:var(--coral-text);font-weight:700;font-size:13px;text-align:center;padding:11px;border-radius:13px}
+
+.cmark svg{width:25px;height:25px}
+
+
+@keyframes dping{0%{transform:scale(.6);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+.statuscard .ic{width:46px;height:46px;border-radius:13px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}.statuscard .ic svg{width:24px;height:24px;color:var(--ice)}
+.statuscard b{font-size:16px;font-weight:700}.statuscard p{font-size:12px;color:rgba(255,255,255,.6);margin-top:2px}
+.tl-item{display:flex;gap:13px}.tl-rail{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.tl-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--line);color:var(--faint)}.tl-dot svg{width:14px;height:14px}
+.tl-line{width:2px;flex:1;min-height:22px;background:var(--line)}
+.tl-done .tl-dot{background:var(--coral);color:#fff}.tl-done .tl-line{background:var(--coral)}
+.tl-active .tl-dot{background:var(--ink);color:#fff;box-shadow:0 0 0 4px rgba(23,21,30,.12)}
+.tl-body{padding-bottom:18px;padding-top:2px}.tl-body .t{font-size:14px;font-weight:700}.tl-wait .tl-body .t{color:var(--faint)}.tl-body .s{font-size:12px;color:var(--muted);margin-top:2px}
+.tl-body img{margin-top:9px;width:64px;height:64px;border-radius:11px;object-fit:cover;border:1px solid var(--line)}
+
+.capstep{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;display:flex;align-items:center;gap:13px;cursor:pointer}.capstep+.capstep{margin-top:11px}.capstep.done{border-color:#CBEBDB;background:var(--good-50)}.capstep.locked{opacity:.5;pointer-events:none}
+.capstep .box{width:48px;height:48px;border-radius:13px;background:var(--ice-50);display:flex;align-items:center;justify-content:center;flex-shrink:0}.capstep .box svg{width:24px;height:24px;color:var(--ice-text)}.capstep.done .box{background:var(--good)}.capstep.done .box svg{color:#fff}
+.capstep b{font-size:14.5px;font-weight:700;display:block}.capstep span{font-size:11.5px;color:var(--muted)}.capstep.done b{color:#0E5C3C}
+
+.chatscroll{flex:1;overflow-y:auto;padding:18px 16px 10px;display:flex;flex-direction:column;gap:10px}
+.bub{max-width:78%;padding:11px 14px;border-radius:17px;font-size:13.5px;line-height:1.45}.bub.them{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:5px}.bub.me{align-self:flex-end;background:var(--coral);color:#fff;border-bottom-right-radius:5px}.bub.sys{align-self:center;background:var(--ink);color:#fff;font-size:11.5px;font-weight:600;padding:7px 13px;border-radius:20px;text-align:center}
+.compose{padding:11px 14px;background:#fff;border-top:1px solid var(--line);display:flex;gap:9px;align-items:center}.compose input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:11px 15px;font-size:13.5px;font-family:var(--font)}.compose input:focus{outline:none}.compose .snd{width:40px;height:40px;border-radius:50%;background:var(--coral);border:none;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer}.compose .snd svg{width:18px;height:18px;color:#fff}
+
+.plan-c{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:16px;cursor:pointer;transition:.12s}.plan-c+.plan-c{margin-top:12px}.plan-c.sel{border-color:var(--coral);background:var(--coral-50)}
+.plan-c .ph{display:flex;justify-content:space-between;align-items:flex-start}.plan-c .pn{font-size:17px;font-weight:800}.plan-c .pd{font-size:12px;color:var(--muted);margin-top:2px}.plan-c .pr{font-size:22px;font-weight:800;letter-spacing:-1px}.plan-c .pr span{font-size:13px;color:var(--muted);font-weight:600}.plan-c .was{font-size:12px;color:var(--faint);text-decoration:line-through;text-align:right}
+
+.empty{text-align:center;padding:28px 18px;color:var(--muted)}.empty svg{width:34px;height:34px;color:var(--faint);margin-bottom:10px}.empty b{font-size:13.5px;color:var(--ink-soft);display:block}.empty span{font-size:12px;line-height:1.5}
+.toast{position:absolute;bottom:40px;left:50%;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:12px 20px;border-radius:14px;opacity:0;transition:.3s;pointer-events:none;max-width:84%;text-align:center}.toast.show{opacity:1;transform:translateX(-50%)}
+.matchbanner{position:absolute;top:14px;left:14px;right:14px;z-index:95;background:linear-gradient(135deg,var(--coral),#FF7A3E);color:#fff;border-radius:18px;padding:14px 16px;display:flex;align-items:center;gap:13px;box-shadow:0 16px 40px -8px rgba(255,77,46,.6);transform:translateY(-140%);transition:transform .45s cubic-bezier(.2,1.2,.3,1);opacity:0}
+.matchbanner.show{transform:translateY(0);opacity:1}
+.matchbanner .mb-emoji{font-size:30px;animation:pop .6s ease}@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
+.matchbanner .mb-t{font-size:15px;font-weight:800}.matchbanner .mb-s{font-size:12px;color:rgba(255,255,255,.9);margin-top:1px}
+.cardpreview{background:linear-gradient(135deg,#2A2536,#17151E);border-radius:16px;padding:18px;color:#fff;margin:14px 0 4px;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)}
+.cardpreview .cp-brand{font-size:12px;font-weight:800;letter-spacing:1px;color:var(--ice);text-align:right;height:16px}
+.cardpreview .cp-num{font-family:var(--mono);font-size:18px;letter-spacing:2px;margin:16px 0 14px}
+.cardpreview .cp-row{display:flex;justify-content:space-between;font-size:11px;font-family:var(--mono);color:rgba(255,255,255,.7)}
+.deliv{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;transition:.12s}.deliv:active{transform:scale(.99)}.deliv+.deliv{margin-top:10px}
+.deliv .top{display:flex;align-items:center;gap:11px}
+.statuspill{font-size:10px;font-weight:700;padding:4px 9px;border-radius:7px;text-transform:capitalize}
+.sp-accepted{background:var(--ice-50);color:var(--ice-text)}.sp-shopping{background:#FFF4E0;color:#9A6A00}.sp-receipt_verified{background:var(--good-50);color:#0E5C3C}
+.progdots{display:flex;gap:5px;margin-top:9px}.progdots .d{width:7px;height:7px;border-radius:50%;background:var(--line)}.progdots .d.on{background:var(--coral)}
+/* item builder */
+.itemadd{display:flex;align-items:center;gap:11px;padding:13px;border:1.5px dashed var(--line);border-radius:14px;cursor:pointer;color:var(--muted);transition:.12s}.itemadd+.itemadd,.itemcard+.itemadd,.itemadd+.itemcard,.itemcard+.itemcard{margin-top:9px}
+.itemadd:active{transform:scale(.99)}.itemadd.next{border-color:var(--coral);background:var(--coral-50);color:var(--coral-text)}
+.itemadd .plus{width:26px;height:26px;border-radius:8px;background:#fff;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0}
+.itemadd.next .plus{background:var(--coral);color:#fff;border-color:var(--coral)}
+.itemadd span{font-size:13.5px;font-weight:600}
+.itemcard{display:flex;align-items:center;gap:11px;padding:13px;background:#fff;border:1px solid var(--line);border-radius:14px;cursor:pointer}
+.itemcard .ic-num{width:24px;height:24px;border-radius:7px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+.itemcard .ic-main{flex:1;min-width:0}.itemcard .ic-main b{display:block;font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.itemcard .ic-main span{font-size:11.5px;color:var(--muted)}
+.itemx,.stopx{width:26px;height:26px;border-radius:8px;border:none;background:var(--off);color:var(--muted);font-size:18px;cursor:pointer;flex-shrink:0;line-height:1}
+.stopx{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:transparent}
+/* bottom sheet */
+.sheet{position:absolute;inset:0;z-index:88;background:rgba(23,21,30,.5);opacity:0;pointer-events:none;transition:.25s;display:flex;align-items:flex-end}
+.sheet.show{opacity:1;pointer-events:auto}
+.sheet-card{background:var(--off);width:100%;border-radius:24px 24px 0 0;padding:10px 20px 28px;transform:translateY(100%);transition:transform .3s cubic-bezier(.2,1,.3,1);max-height:90%;overflow-y:auto}
+.sheet.show .sheet-card{transform:translateY(0)}
+.sheet-grab{width:42px;height:5px;border-radius:3px;background:var(--line);margin:4px auto 14px}
+.sheet-h{font-family:var(--font);font-size:18px;font-weight:800;margin-bottom:6px}
+/* guarantee badge */
+.guarantee{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(135deg,var(--ice-50),#F0FAFF);border:1px solid #BEE7F7;border-radius:16px;padding:14px;margin-top:14px}
+.guarantee .g-badge{width:40px;height:40px;border-radius:11px;background:var(--ice);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.guarantee b{font-size:13.5px;color:var(--ice-text)}.guarantee p{font-size:11.5px;color:#2A7E9C;line-height:1.5;margin-top:2px}
+/* courier route note */
+.radiusnote{display:flex;gap:8px;align-items:center;font-size:11.5px;color:var(--ice-text);background:var(--ice-50);padding:10px 12px;border-radius:11px;margin-top:12px;font-weight:600;line-height:1.4}.radiusnote svg{flex-shrink:0;color:var(--ice)}
+/* urgency tags */
+.urgtag{display:inline-block;font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:7px;margin:8px 0 2px}
+.urg-immediate{background:#E9F7F1;color:#0E5C3C}.urg-soon{background:#EDF2FF;color:#1B45A8}.urg-later{background:#FFF7E8;color:#8A6100}
+/* match likelihood */
+
+
+
+
+
+.globebtn{background:transparent;border:none;cursor:pointer;color:var(--muted);width:34px;height:34px;display:flex;align-items:center;justify-content:center;padding:0}.globebtn svg{width:22px;height:22px}
+.topbar .globebtn{color:var(--ink);background:var(--off);border-radius:50%}
+.auth-globe{position:absolute;top:16px;right:16px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.12);border-radius:50%;z-index:5}
+.langopt{display:flex;align-items:center;gap:14px;padding:15px 16px;border-radius:14px;cursor:pointer;border:1.5px solid var(--line);background:#fff;transition:.12s;box-shadow:0 1px 6px rgba(30,20,40,.04)}.langopt+.langopt{margin-top:9px}
+.langopt:active{transform:scale(.99)}.langopt.on{background:var(--coral-50);border-color:var(--coral)}
+.langopt .lf{font-size:25px;line-height:1}.langopt b{flex:1;font-size:16px;font-weight:600;color:var(--ink)}.langopt.on b{color:var(--coral-text)}.langopt svg{color:var(--coral);flex-shrink:0}
+.setrow{display:flex;align-items:center;gap:12px;cursor:pointer}
+.presence-pick{display:flex;gap:8px;margin-top:8px}
+.presence-pick button{flex:1;padding:10px 6px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:11.5px;font-weight:700;color:var(--ink-soft)}
+.presence-pick button span:first-child{font-size:15px}
+.presence-pick button.on{border-color:var(--coral);background:var(--coral-50);color:var(--coral-text)}
+.pdot{width:9px;height:9px;border-radius:50%;display:inline-block;flex-shrink:0}
+.pdot.here{background:#1F9D6B;box-shadow:0 0 0 3px rgba(31,157,107,.15)}
+.pdot.way{background:#2F6BFF;box-shadow:0 0 0 3px rgba(47,107,255,.15)}
+.pdot.soon{background:#E8A317;box-shadow:0 0 0 3px rgba(232,163,23,.15)}
+.presence-pick button[data-p="here_now"].on{border-color:#1F9D6B;background:#E9F7F1;color:#0E5C3C}
+.presence-pick button[data-p="on_the_way"].on{border-color:#2F6BFF;background:#EDF2FF;color:#1B45A8}
+.presence-pick button[data-p="going_soon"].on{border-color:#E8A317;background:#FFF7E8;color:#8A6100}
+.presence-pick button[data-u="immediate"].on{border-color:#1F9D6B;background:#E9F7F1;color:#0E5C3C}
+.presence-pick button[data-u="soon"].on{border-color:#2F6BFF;background:#EDF2FF;color:#1B45A8}
+.presence-pick button[data-u="later"].on{border-color:#E8A317;background:#FFF7E8;color:#8A6100}
+.statushint{font-size:11.5px;color:var(--faint);font-weight:600;margin-top:8px;text-align:center}
+.picknote{font-size:11.5px;color:var(--muted);font-weight:500;line-height:1.5;margin-top:7px}
+.ovgcard{background:#FFF7E8;border:1px solid #F2D79B;border-radius:14px;padding:14px 15px;margin-top:16px}
+.ovgcard b{display:block;font-size:13.5px;color:#7A5200;line-height:1.4}
+.ovgfee{font-size:17px;font-weight:800;color:#8A6100;margin-top:6px;font-family:var(--mono)}
+.ovgup{font-size:12px;color:#8A6100;line-height:1.55;margin-top:8px;font-weight:600}
+.availnote{background:var(--good-50);border:1px solid #CBEBDB;color:#0E5C3C;border-radius:13px;padding:12px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
+.availnote.none{background:var(--bg);border-color:var(--line);display:block}
+.availnote.none b{display:block;font-size:13.5px;color:var(--ink)}
+.availnote.none span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:3px;line-height:1.45}
+.livecard b{font-size:13.5px;display:block}
+.livesub{font-size:12px;color:#0E5C3C;font-weight:600;margin-top:3px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lstop{display:inline-flex;align-items:center;gap:5px}
+.lstop em{font-style:normal;opacity:.6;font-weight:600}
+.avail-h{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:0 0 8px}
+.availstore{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 13px;margin-bottom:8px;cursor:pointer}
+.availstore:active{background:var(--bg)}
+.as-abbr{width:38px;height:38px;border-radius:10px;background:var(--coral-50);color:var(--coral-text);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+.as-mid{flex:1}.as-name{font-weight:700;font-size:14px;color:var(--ink)}.as-stat{font-size:12px;color:var(--muted);font-weight:600;margin-top:1px}.as-go{color:var(--faint);font-weight:800}
+.avail-empty{font-size:12.5px;color:var(--muted);padding:8px 2px 6px;line-height:1.4}
+.ogrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ostat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 14px}
+.ostat .k{font-size:10.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.ostat .v{font-size:23px;font-weight:800;color:var(--ink);margin-top:3px;font-family:var(--mono)}
+.ostat .d{font-size:11px;color:var(--good);font-weight:600;margin-top:2px}
+.ocard{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.orow{display:flex;align-items:center;gap:8px;padding:9px 11px;border-bottom:1px solid var(--line-soft);font-size:12.5px}
+.orow:last-child{border-bottom:none}
+.orow .mono{font-family:var(--mono);font-weight:700;color:var(--ink)}
+.orow .mut{color:var(--muted);font-weight:500}
+.orow .amt{margin-left:auto;font-weight:700;color:var(--ink);white-space:nowrap}
+.ostatus{display:flex;justify-content:space-between;padding:9px 13px;font-size:13px;border-bottom:1px solid var(--line-soft)}
+.ostatus:last-child{border-bottom:none}
+.ostatus b{font-family:var(--mono)}
+.opill{font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;background:var(--coral-50);color:var(--coral-text);text-transform:capitalize;white-space:nowrap}
+.oitem{padding:9px 11px;border-bottom:1px solid var(--line-soft)}
+.oitem:last-child{border-bottom:none}
+.oline{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.oline .mono{font-family:var(--mono);font-weight:700;color:var(--ink)}
+.oline .mut{color:var(--muted);font-weight:500}
+.oline .amt{margin-left:auto;font-weight:700;color:var(--ink);white-space:nowrap}
+.oacts{display:flex;gap:6px;margin-top:8px}
+.oact{font-size:11px;font-weight:700;padding:4px 11px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer}
+.oact.danger{color:var(--coral-text);border-color:var(--coral-100)}
+.offercard{background:#fff;border:1.5px solid var(--coral);border-radius:20px;padding:18px;box-shadow:0 12px 34px -14px rgba(255,77,46,.4)}
+.offer-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.offer-new{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--coral-text);background:var(--coral-50);padding:5px 10px;border-radius:99px}
+.offer-ring{position:relative;width:44px;height:44px;flex-shrink:0}
+.offer-ring svg{width:44px;height:44px;transform:rotate(-90deg)}
+.offer-ring .ort-bg{fill:none;stroke:var(--line);stroke-width:4}
+.offer-ring .ort-fg{fill:none;stroke:var(--coral);stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset 1s linear}
+.offer-ring span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;font-family:var(--mono);color:var(--ink)}
+.offer-store{font-size:22px;font-weight:800;margin-top:12px;color:var(--ink);font-family:var(--font)}
+.offer-meta{font-size:12.5px;color:var(--muted);font-weight:500;margin-top:3px}
+.offer-items{font-size:13px;color:var(--ink-soft);background:var(--bg);border-radius:12px;padding:11px 13px;margin-top:12px;white-space:pre-wrap;line-height:1.5;max-height:150px;overflow:auto}
+.offer-actions{display:flex;gap:10px;margin-top:16px}
+.offer-pass{flex:1;padding:14px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);font-weight:700;font-size:15px;cursor:pointer}
+.offer-accept{flex:2;padding:14px;border-radius:14px;border:none;background:var(--coral);color:#fff;font-weight:800;font-size:15px;cursor:pointer}
+.offer-accept:active{background:var(--coral-press)}
+.offer-waiting .ow-pulse{width:54px;height:54px;border-radius:50%;background:var(--coral-50);margin:0 auto 8px;position:relative}
+.offer-waiting .ow-pulse::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--coral);animation:owp 1.8s ease-out infinite}
+@keyframes owp{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.ratecard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;text-align:center}
+.ratecard .rate-h{font-weight:700;font-size:15px;color:var(--ink)}
+.ratecard .rate-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.stars{display:flex;justify-content:center;gap:9px;margin-top:11px;font-size:32px;line-height:1}
+.stars span{color:var(--line);cursor:pointer;transition:transform .1s,color .1s}
+.stars span.hot,.stars span.on{color:#FFB400}
+.stars span:active{transform:scale(.86)}
+.stars.rated span{cursor:default}
+.rate-thanks{font-size:12.5px;color:var(--good);font-weight:600;margin-top:9px}
+.screen[data-s="lang-select"]{background:radial-gradient(130% 80% at 50% 0%,#FFE9E3 0%,#F7F6F9 55%);overflow-y:auto}
+.langselect{padding:54px 24px 40px;display:flex;flex-direction:column;align-items:center;min-height:100%}
+.ls-logo{width:66px;height:auto;margin-bottom:20px}
+.ls-title{font-family:var(--font);font-size:25px;font-weight:800;color:var(--ink);text-align:center}
+.ls-sub{font-size:11.5px;color:var(--muted);text-align:center;margin:9px 14px 26px;line-height:1.6}
+#langSelectList{width:100%;max-width:340px}
+.lsopt{display:flex;align-items:center;gap:14px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:15px;cursor:pointer;transition:.12s;box-shadow:0 2px 10px rgba(30,20,40,.04)}.lsopt+.lsopt{margin-top:10px}
+.lsopt:active{transform:scale(.99);border-color:var(--coral)}
+.lsopt .lf{font-size:26px}.lsopt b{flex:1;font-size:16px;font-weight:600;color:var(--ink)}.lsopt svg{color:var(--faint)}
+.gtab{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;color:var(--ice-text);background:var(--ice-50);padding:8px 12px;border-radius:20px;margin-top:12px}.gtab svg{color:var(--ice)}
+.spin{width:30px;height:30px;border:3px solid rgba(0,0,0,.1);border-top-color:var(--coral);border-radius:50%;animation:sp 1s linear infinite;margin:14px auto}@keyframes sp{to{transform:rotate(360deg)}}
+
+.auth{position:absolute;inset:0;background:linear-gradient(160deg,#1B1922,#2A2536);display:flex;flex-direction:column;justify-content:center;padding:40px 28px;z-index:80;overflow-y:auto}
+.auth .logo{font-size:38px;font-weight:800;letter-spacing:-1px;color:#fff;text-align:center}.auth .logo span{color:var(--coral)}
+.auth .tag{font-size:12px;color:var(--ice);text-align:center;margin-bottom:30px}
+.auth label{font-size:11px;font-weight:700;color:rgba(255,255,255,.6);margin:14px 2px 6px;display:block;letter-spacing:.3px}
+.auth input{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:13px 14px;font-family:var(--font);font-size:14px;color:#fff}.auth input:focus{outline:none;border-color:var(--coral)}.auth input::placeholder{color:rgba(255,255,255,.3)}
+.auth .switch{text-align:center;margin-top:18px;font-size:13px;color:rgba(255,255,255,.55)}.auth .switch a{color:var(--ice);font-weight:600;cursor:pointer}
+.auth .err{background:rgba(255,77,46,.15);border:1px solid rgba(255,77,46,.3);color:#FFB3A3;font-size:12px;padding:10px 13px;border-radius:11px;margin-top:14px;line-height:1.4}
+.cfgwarn{position:absolute;inset:0;background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:40px 28px;z-index:95;font-size:13.5px;line-height:1.6}
+.cfgwarn h3{font-size:18px;font-weight:800;margin-bottom:12px}.cfgwarn code{background:rgba(255,255,255,.1);padding:2px 6px;border-radius:5px;font-family:var(--mono);font-size:12px}
+/* ===== OTTER LOGO ===== */
+.otter-mark{width:28px!important;height:30px!important}
+.auth-lockup{display:block;width:208px;height:auto;margin:0 auto 14px;overflow:visible;filter:drop-shadow(0 8px 24px rgba(255,77,46,.35))}
+.auth-p{opacity:0;animation:authPSlide .9s cubic-bezier(.2,1.4,.32,1) .2s both}
+.auth-lesi{font-family:var(--font);font-weight:800;font-size:78px;letter-spacing:-3px;fill:#fff;opacity:0;animation:authLesiIn .55s cubic-bezier(.2,1,.3,1) .95s both}
+.auth-lesi .c{fill:var(--coral)}
+@keyframes authPSlide{0%{opacity:0;transform:translateX(-58px)}55%{opacity:1;transform:translateX(8px)}80%{transform:translateX(-2px)}100%{opacity:1;transform:translateX(0)}}
+@keyframes authLesiIn{0%{opacity:0;transform:translateX(16px)}100%{opacity:1;transform:translateX(0)}}
+.splash{position:absolute;inset:0;z-index:200;background:radial-gradient(120% 90% at 50% 40%,#2a201a 0%,#17120e 55%,#0b0908 100%);display:flex;align-items:center;justify-content:center;transition:opacity .6s ease}
+.splash.hide{opacity:0;pointer-events:none}
+.splash-in{display:flex;flex-direction:column;align-items:center}
+.splash-lockup{width:286px;height:auto;overflow:visible}
+.splash-p{opacity:0;animation:pSlide .85s cubic-bezier(.2,1.45,.32,1) .3s both}
+.splash-lesi{font-family:var(--font);font-weight:800;font-size:78px;letter-spacing:-3px;fill:#fff;opacity:0;animation:lesiIn .5s cubic-bezier(.2,1,.3,1) 1s both}
+.splash-lesi .c{fill:var(--coral)}
+.splash-tag{font-size:13px;color:rgba(255,255,255,.55);font-weight:600;margin-top:14px;letter-spacing:.3px;opacity:0;animation:rise .55s ease 1.55s both}
+.splash-load{display:flex;gap:6px;margin-top:24px;opacity:0;animation:rise .5s ease 1.75s both}
+.splash-load span{width:7px;height:7px;border-radius:50%;background:var(--coral);opacity:.4;animation:dotpulse 1.2s ease-in-out infinite}
+.splash-load span:nth-child(2){animation-delay:.2s}.splash-load span:nth-child(3){animation-delay:.4s}
+@keyframes pSlide{0%{opacity:0;transform:translateX(-62px)}55%{opacity:1;transform:translateX(9px)}80%{transform:translateX(-2px)}100%{opacity:1;transform:translateX(0)}}
+@keyframes lesiIn{0%{opacity:0;transform:translateX(18px)}100%{opacity:1;transform:translateX(0)}}
+@keyframes rise{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes dotpulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="pg" x1="0.1" y1="0" x2="0.5" y2="1"><stop offset="0" stop-color="#FF6A42"/><stop offset="1" stop-color="#FF3A1B"/></linearGradient></defs><symbol id="plogo" viewBox="0 0 100 110"><path d="M32,15 L55,15 A29,25.5 0 0 1 55,66 L44,66 L44,89 A11,11 0 0 1 22,89 L22,25 A10,10 0 0 1 32,15 Z" fill="url(#pg)"/><path d="M52,51 C46.5,45 45,41 45,36 A7,7 0 1 1 59,36 C59,41 57.5,45 52,51 Z" fill="#FFF6F2"/><circle cx="52" cy="36" r="2.8" fill="url(#pg)"/></symbol></svg>
+<div class="phone">
+  <div class="splash" id="splash">
+    <div class="splash-in">
+      <svg class="splash-lockup" viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg">
+        <g class="splash-p"><use href="#plogo" x="40" y="38" width="100" height="110"/></g>
+        <text class="splash-lesi" x="127" y="104">le<tspan class="c">si</tspan></text>
+      </svg>
+      <div class="splash-tag">your neighbors, on the way</div>
+      <div class="splash-load"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+  <div class="notch"></div>
+  <div class="sb"><span>9:41</span><div class="r"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 17h2v-5H2v5zm4 0h2V9H6v8zm4 0h2V5h-2v12zm4 0h2v-8h-2v8zm4 0h2V7h-2v10z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4C7 4 2.7 6 0 9l12 15L24 9c-2.7-3-7-5-12-5z"/></svg></div></div>
+
+  <div class="vp">
+
+    <!-- ===================== MAIN (role switch + two views) ===================== -->
+    <div class="screen on" data-s="main">
+      <div class="topbar">
+        <div class="logo"><div class="t">Ple<span>si</span></div></div>
+        <div class="right"><button class="globebtn" onclick="openLang()"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.7"/><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" stroke="currentColor" stroke-width="1.7"/></svg></button><span class="idpill" id="handlePill">#U-····</span><div class="avatarbtn" onclick="openProfile()"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#fff" stroke-width="1.8"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div></div>
+      </div>
+      <div class="segwrap"><div class="seg"><button id="segReq" class="on" onclick="setRole('req')" data-i18n="role_req">Requester</button><button id="segCour" onclick="setRole('cour')" data-i18n="role_cour">Courier</button></div></div>
+
+      <!-- REQUESTER -->
+      <div id="reqView" class="pad">
+        <div class="subhero"><div class="glow"></div><div class="row">
+          <div class="ring"><svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="7"/><circle id="ring" cx="36" cy="36" r="30" fill="none" stroke="#FF4D2E" stroke-width="7" stroke-linecap="round" stroke-dasharray="188" stroke-dashoffset="0"/></svg><div class="c"><div class="n" id="ordersLeft">–</div><div class="l" id="ordersOf">OF –</div></div></div>
+          <div><div class="plan" id="planName">–</div><h3 id="ordersH">–</h3><p id="planSub" data-i18n="loading">Loading…</p></div>
+        </div></div>
+
+        <div class="eyebrow" data-i18n="need_today">What do you need today?</div>
+        <div id="availStores" style="margin-bottom:8px"></div>
+        <div class="fl" data-i18n="pick_store">Pick a store</div>
+        <div class="ac"><input class="inp" id="reqStoreSearch" data-i18n-ph="store_ph" placeholder="Type a store… Publix, Chipotle, CVS" oninput="acFilter('req')" onfocus="acFilter('req')" autocomplete="off"/><div class="ac-list" id="reqStoreList"></div></div>
+        <div class="picknote" data-i18n="pick_store_note">Any store works. If no courier is at or heading there, we'll save your order and send it out the moment one is.</div>
+        <div class="gtab"><svg viewBox="0 0 24 24" width="14" height="14" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5C8 19.3 5 15.5 5 11V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 11.5 2 2 4-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="guar_strip">Every order is Guaranteed or Refunded</span></div>
+
+        <div id="courierResults"></div>
+
+        <button class="btn btn-ghost btn-sm" style="margin-top:16px" onclick="go('r-orders')"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="my_orders">My orders</span></button>
+      </div>
+
+      <!-- COURIER -->
+      <div id="courView" class="pad" style="display:none">
+        <div class="earnhero"><div class="glow"></div><div class="l">Earnings (delivered)</div><div class="a" id="earnAmt">$0.00</div><div class="x">All yours — Plesi takes nothing from courier pay</div></div>
+
+        <div class="availcard">
+          <div class="availrow"><div><div class="t" data-i18n="avail_now">Available</div><div class="s" data-i18n="avail_sub">Flip on when you're heading out</div></div><div class="bigtoggle off" id="availToggle" onclick="toggleAvailable()"><div class="k"></div></div></div>
+          <div class="fl" data-i18n="which_store">Which store or restaurant are you on the way to?</div>
+          <div id="courStops"></div>
+          <button class="btn btn-ghost btn-sm" id="addStopBtn" style="margin-top:8px" onclick="addStop()" data-i18n="add_stop">+ Add another stop</button>
+          <div class="fl" style="margin-top:16px" data-i18n="status_label">Your status</div>
+          <div class="presence-pick" id="presencePick">
+            <button data-p="here_now" onclick="pickPresence('here_now')"><span class="pdot here"></span><span data-i18n="pres_here">Here now</span></button>
+            <button data-p="on_the_way" class="on" onclick="pickPresence('on_the_way')"><span class="pdot way"></span><span data-i18n="pres_way">On the way</span></button>
+            <button data-p="going_soon" onclick="pickPresence('going_soon')"><span class="pdot soon"></span><span data-i18n="pres_soon">Going soon</span></button>
+          </div>
+          <div class="statushint" data-i18n="status_hint">Neighbors see this next to your store</div>
+          <div class="radiusnote"><svg viewBox="0 0 24 24" width="15" height="15" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="radius_note">Plesi stays local — 5 miles max, so every run is quick and on your way.</span></div>
+        </div>
+
+        <div id="liveStatus"></div>
+        <div class="eyebrow" data-i18n="active_deliveries">Your active deliveries</div>
+        <div id="myDeliveries"><div class="empty"><span data-i18n="e_orders_accept">Orders you accept show here — tap any to continue</span></div></div>
+        <div class="eyebrow" data-i18n="incoming_requests">Incoming requests</div>
+        <div id="incomingList"><div class="empty"><span data-i18n="e_go_available">Go available to start receiving requests</span></div></div>
+        <button class="btn btn-ghost btn-sm" style="margin-top:16px" onclick="go('c-orders');loadDeliveries()"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="my_deliveries">My deliveries</span></button>
+      </div>
+    </div>
+
+    <!-- ===================== REQUEST SHEET ===================== -->
+    <div class="screen" data-s="r-req">
+      <div class="back"><div class="b" onclick="go('main')"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2 id="reqTitle">New request</h2><div class="s" id="reqSub">to #C-····</div></div></div>
+      <div class="pad">
+        <div class="fl"><span data-i18n="your_items">Your items</span> <span style="float:right;color:var(--muted);font-weight:700" id="itemCount">0 / 5</span></div>
+        <div id="itemSlots"></div>
+        <div class="fl" data-i18n="when_need">When do you need it?</div>
+        <div class="presence-pick" id="urgPick">
+          <button data-u="immediate" class="on" onclick="pickUrgency('immediate')"><span class="pdot here"></span><span data-i18n="urg_immediate">Immediate</span></button>
+          <button data-u="soon" onclick="pickUrgency('soon')"><span class="pdot way"></span><span data-i18n="urg_soon">Soon</span></button>
+          <button data-u="later" onclick="pickUrgency('later')"><span class="pdot soon"></span><span data-i18n="urg_later">Later</span></button>
+        </div>
+        <div class="statushint" data-i18n="urg_hint">Immediate → couriers Here now · Soon → On the way · Later → Going soon</div>
+        <div class="fl" data-i18n="dropoff">Drop-off</div>
+        <input class="inp" id="reqDrop" value="" data-i18n-ph="dropoff_ph" placeholder="Your delivery address"/>
+        <div class="guarantee"><div class="g-badge"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5C8 19.3 5 15.5 5 11V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 11.5 2 2 4-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><b data-i18n="guar_title">Guaranteed or Refunded</b><p data-i18n="guar_body">Every order is backed by Plesi. Not right? One-tap dispute for 48 hours, resolved within 24.</p></div></div>
+        <div class="card" style="margin-top:12px;display:flex;gap:11px;align-items:flex-start;background:var(--good-50);border-color:#CBEBDB">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" style="flex-shrink:0;color:var(--good);margin-top:1px"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b style="font-size:13px;color:#0E5C3C" data-i18n="billed_title">Billed at exact receipt</b><p style="font-size:11.5px;color:#1F7A53;line-height:1.5;margin-top:2px" data-i18n="billed_body">No delivery fee, no service fee, no tip. You pay the receipt total — nothing more.</p></div>
+        </div>
+        <div id="overageWarn"></div>
+        <button class="btn btn-coral" style="margin-top:18px" id="sendReqBtn" onclick="submitRequest()"><span data-i18n="send_request">Send request</span><svg viewBox="0 0 24 24" fill="none"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+
+    <!-- ===================== ITEM DETAIL SHEET ===================== -->
+    <div class="sheet" id="itemSheet">
+      <div class="sheet-card">
+        <div class="sheet-grab"></div>
+        <div class="sheet-h" data-i18n="item_details">Item details</div>
+        <div class="fl" data-i18n="category">Category</div>
+        <select class="inp" id="itCat"><option>Groceries</option><option>Pharmacy</option><option>Household</option><option>Coffee</option><option>Food / Restaurant</option><option>Other</option></select>
+        <div class="fl" data-i18n="item_desc">Item description</div>
+        <input class="inp" id="itDesc" placeholder="e.g. 2% milk, half gallon"/>
+        <div class="fl"><span data-i18n="brand">Brand</span> <span style="color:var(--faint);font-weight:500">(optional)</span></div>
+        <input class="inp" id="itBrand" placeholder="e.g. Horizon"/>
+        <div class="fl"><span data-i18n="type_size">Type / size</span> <span style="color:var(--faint);font-weight:500">(optional)</span></div>
+        <input class="inp" id="itType" placeholder="e.g. Organic, large"/>
+        <div class="fl"><span data-i18n="other_info">Other info</span> <span style="color:var(--faint);font-weight:500">(optional)</span></div>
+        <input class="inp" id="itOther" placeholder="Substitutions OK? Anything else?"/>
+        <button class="btn btn-coral" style="margin-top:16px" onclick="saveItem()" data-i18n="save_item">Save item</button>
+        <button class="btn btn-ghost btn-sm" style="margin-top:8px" onclick="closeItemSheet()" data-i18n="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <!-- ===================== TRACKING ===================== -->
+    <div class="screen" data-s="r-track">
+      <div class="back"><div class="b" onclick="go('r-orders')"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2>Your order</h2><div class="s" id="trkSub">–</div></div></div>
+      <div class="pad">
+        <div class="statuscard"><div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.6" fill="currentColor"/><circle cx="18" cy="20" r="1.6" fill="currentColor"/><path d="M3 4h2l2.5 12h11l2-8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><b id="trkStatus">–</b><p id="trkNote">–</p></div></div>
+        <div class="eyebrow">Live updates</div>
+        <div id="trkTimeline"></div>
+        <div id="trkDispute" style="display:none;margin-top:8px"></div>
+        <button class="btn btn-ghost btn-sm" style="margin-top:4px" onclick="openChatFor(activeOrderId,'r-track')"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-6.5A8 8 0 1 1 21 12z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Message courier</button>
+        <p style="font-size:11px;color:var(--faint);text-align:center;margin-top:12px">24-hour resolution guarantee · one-tap dispute for 48 hours after delivery</p>
+      </div>
+    </div>
+
+    <!-- ===================== ORDERS ===================== -->
+    <div class="screen" data-s="c-orders">
+      <div class="back"><div class="b" onclick="go('main')"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2 data-i18n="my_deliveries">My deliveries</h2></div></div>
+      <div class="pad"><div id="deliveriesList"></div></div>
+    </div>
+
+    <div class="screen" data-s="r-orders">
+      <div class="back"><div class="b" onclick="go('main')"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2>My orders</h2></div></div>
+      <div class="pad"><div id="ordersList"></div></div>
+    </div>
+
+    <!-- ===================== CHAT ===================== -->
+    <div class="screen" data-s="r-chat">
+      <div class="back"><div class="b" onclick="go(chatBack)"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2 style="font-family:var(--mono);font-size:15px" id="chatWith">#····</h2><div class="s" style="color:var(--good)">● Chat open until delivery</div></div></div>
+      <div class="chatscroll" id="chatScroll"></div>
+      <div class="compose"><input id="chatInput" data-i18n-ph="chat_ph" placeholder="Message…" onkeydown="if(event.key==='Enter')sendChat()"/><button class="snd" onclick="sendChat()"><svg viewBox="0 0 24 24" fill="none"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    </div>
+
+    <!-- ===================== COURIER DELIVER ===================== -->
+    <div class="screen" data-s="c-deliver">
+      <div class="back"><div class="b" onclick="closeDeliver()"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2>Active delivery</h2><div class="s" id="delSub">–</div></div></div>
+      <div class="pad">
+        <div class="statuscard" style="background:linear-gradient(150deg,var(--coral),#FF6B4A)"><div class="ic" style="background:rgba(255,255,255,.18)"><svg viewBox="0 0 24 24" fill="none" style="color:#fff"><path d="M5 7h14l-1 13H6L5 7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8"/></svg></div><div><b id="delPay">–</b><p style="color:rgba(255,255,255,.85)" id="delAddr">–</p></div></div>
+        <div class="eyebrow" data-i18n="two_photo">2-photo verification</div>
+        <div class="capstep" id="cap1" onclick="document.getElementById('cap1file').click()"><div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3v18l3-2 3 2 3-2 3 2V3l-3 2-3-2-3 2-3-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div><div><b data-i18n="photo_receipt_b">Photo the receipt</b><span id="cap1s" data-i18n="tl_sets_bill">Sets the exact bill</span></div></div>
+        <input type="file" accept="image/*" capture="environment" id="cap1file" style="display:none" onchange="uploadCapture(1,this.files&&this.files[0]); this.value=''"/>
+        <div class="capstep locked" id="cap2" onclick="document.getElementById('cap2file').click()"><div class="box"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v9h14v-9" stroke="currentColor" stroke-width="1.7"/></svg></div><div><b data-i18n="photo_dropoff_b">Photo the drop-off</b><span id="cap2s" data-i18n="proof_door">Proof at the door</span></div></div>
+        <input type="file" accept="image/*" capture="environment" id="cap2file" style="display:none" onchange="uploadCapture(2,this.files&&this.files[0]); this.value=''"/>
+        <button class="btn btn-ghost btn-sm" style="margin-top:12px" onclick="openChatFor(deliverOrder.id,'c-deliver')"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-6.5A8 8 0 1 1 21 12z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Message requester</button>
+        <button class="btn btn-coral" id="completeBtn" style="margin-top:12px;opacity:.4;pointer-events:none" onclick="completeDelivery()">Complete delivery</button>
+      </div>
+    </div>
+
+    <!-- ===================== PROFILE ===================== -->
+    <div class="screen" data-s="profile">
+      <div class="back"><div class="b" onclick="go('main')"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2>Profile</h2></div></div>
+      <div class="pad">
+        <div class="card"><div style="font-family:var(--mono);font-size:16px;font-weight:600">As requester: <span id="pU">#U-····</span></div><div style="font-family:var(--mono);font-size:16px;font-weight:600;margin-top:6px">As courier: <span id="pC">#C-····</span></div><div style="font-size:12.5px;color:var(--muted);margin-top:8px" id="pMeta">–</div></div>
+
+        <div class="eyebrow" data-i18n="delivery_address">Delivery address</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:8px">This is where couriers bring your orders. Shared only with the courier who accepts.</p>
+        <button class="btn btn-ghost btn-sm" onclick="useLiveLocationProfile()"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="update_location">Update to my current location</span></button>
+        <div id="profLocStatus" style="font-size:12px;color:var(--good);font-weight:600;margin:8px 0 0;text-align:center"></div>
+        <input class="inp" id="profAddress" placeholder="123 Main St, Apt 4B, Miami FL" style="margin-top:10px"/>
+        <button class="btn btn-coral btn-sm" style="margin-top:10px" onclick="saveProfileAddress()" data-i18n="save_address">Save address</button>
+
+        <div class="eyebrow" data-i18n="payment_method">Payment method</div>
+        <div class="card" id="profCard" style="display:flex;align-items:center;gap:12px"><div class="cp-brand" id="profBrand" style="background:var(--ink);color:#fff;font-size:11px;font-weight:800;padding:6px 10px;border-radius:8px;letter-spacing:.5px">CARD</div><div style="flex:1"><div style="font-family:var(--mono);font-size:14px" id="profCardNum">•••• ••••</div><div style="font-size:11px;color:var(--muted)">Charged the exact receipt after each delivery</div></div></div>
+        <button class="btn btn-ghost btn-sm" style="margin-top:10px" onclick="go('ob-payment')" data-i18n="update_card">Update card</button>
+
+        <div class="eyebrow" data-i18n="language">Language</div>
+        <div class="card setrow" onclick="openLang()">
+          <span class="lf" id="profLangFlag" style="font-size:24px">🌐</span>
+          <div style="flex:1"><div style="font-weight:600;font-size:15px" id="profLangName">English</div><div style="font-size:11px;color:var(--muted)">Tap to change · saved to your account</div></div>
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18" style="color:var(--faint)"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div id="ownerEntry" style="display:none">
+          <div class="eyebrow">Owner</div>
+          <button class="btn btn-coral btn-sm" onclick="openOwner()">📊 Owner dashboard</button>
+        </div>
+
+        <div class="eyebrow" data-i18n="account">Account</div>
+        <button class="btn btn-ghost btn-sm" onclick="go('onboard')" data-i18n="change_plan">Change plan</button>
+        <button class="btn btn-ghost btn-sm" style="margin-top:10px;color:var(--coral-text)" onclick="signOut()" data-i18n="sign_out">Sign out</button>
+        <p style="font-size:11px;color:var(--faint);text-align:center;margin-top:18px;line-height:1.5">Plesi never sells your data. Others only ever see your handle.</p>
+        <p style="font-size:10px;color:var(--faint);text-align:center;margin-top:6px;font-weight:700;letter-spacing:.5px">v52</p>
+      </div>
+    </div>
+
+    <!-- ===================== OWNER DASHBOARD (admin only) ===================== -->
+    <div class="screen" data-s="owner" style="z-index:79">
+      <div class="back"><div class="b" onclick="go('profile')"><svg viewBox="0 0 24 24" fill="none"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h2>Owner dashboard</h2><div class="s" id="ownSub">Live metrics</div></div></div>
+      <div class="pad">
+        <div style="display:flex;gap:8px;margin-bottom:14px">
+          <button class="btn btn-ghost btn-sm" style="margin:0;flex:1" onclick="openOwner()">↻ Refresh</button>
+          <button class="btn btn-ghost btn-sm" style="margin:0;flex:1" onclick="adminReleaseStale()">⏱ Release stale</button>
+        </div>
+        <div id="ownStats" class="ogrid"></div>
+        <div class="eyebrow" style="margin-top:20px">Orders by status</div>
+        <div id="ownStatus" class="ocard"></div>
+        <div class="eyebrow" style="margin-top:20px">Recent orders</div>
+        <div id="ownOrders" class="ocard"></div>
+        <div class="eyebrow" style="margin-top:20px">Recent signups</div>
+        <div id="ownUsers" class="ocard"></div>
+        <div style="height:30px"></div>
+      </div>
+    </div>
+
+    <!-- ===================== LANGUAGE SELECT (first login) ===================== -->
+    <div class="screen" data-s="lang-select" style="z-index:78">
+      <div class="langselect">
+        <svg class="ls-logo"><use href="#plogo"/></svg>
+        <div class="ls-title">Choose your language</div>
+        <div class="ls-sub">Elige tu idioma · Escolha seu idioma · Choisissez votre langue · Scegli la tua lingua · Wähle deine Sprache</div>
+        <div id="langSelectList"></div>
+      </div>
+    </div>
+
+    <!-- ===================== ONBOARD: ADDRESS ===================== -->
+    <div class="screen" data-s="ob-address" style="z-index:75">
+      <div class="topbar"><div class="logo"><div class="m"><svg class="otter-mark"><use href="#plogo"/></svg></div><div class="t" data-i18n="your_address">Your address</div></div></div>
+      <div class="pad">
+        <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px">Where should couriers bring your orders? We share this only with the courier who accepts, only after they accept.</p>
+        <button class="btn btn-ghost" id="locBtn" onclick="useLiveLocation()"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="use_location">Use my current location</span></button>
+        <div id="locStatus" style="font-size:12px;color:var(--good);font-weight:600;margin-top:10px;text-align:center"></div>
+        <div class="fl" data-i18n="home_address">Home address</div>
+        <input class="inp" id="obAddress" placeholder="123 Main St, Apt 4B, Miami FL"/>
+        <div class="fl" data-i18n="delivery_notes">Delivery notes (optional)</div>
+        <input class="inp" id="obNotes" placeholder="Gate code, leave at door, etc."/>
+        <button class="btn btn-coral" style="margin-top:20px" id="addrBtn" onclick="saveAddress()" data-i18n="continue">Continue</button>
+      </div>
+    </div>
+
+    <!-- ===================== ONBOARD: PAYMENT ===================== -->
+    <div class="screen" data-s="ob-payment" style="z-index:75">
+      <div class="topbar"><div class="logo"><div class="m"><svg class="otter-mark"><use href="#plogo"/></svg></div><div class="t" data-i18n="payment">Payment</div></div></div>
+      <div class="pad">
+        <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:6px">Add a card. After each delivery you're charged the <b style="color:var(--ink)">exact receipt total</b> — no delivery fee, no service fee, no tip.</p>
+        <div class="cardpreview"><div class="cp-brand" id="cpBrand">CARD</div><div class="cp-num" id="cpNum">•••• •••• •••• ••••</div><div class="cp-row"><span id="cpName">YOUR NAME</span><span id="cpExp">MM/YY</span></div></div>
+        <div class="fl" data-i18n="card_number">Card number</div>
+        <input class="inp" id="ccNum" inputmode="numeric" placeholder="4242 4242 4242 4242" oninput="onCardInput()"/>
+        <div style="display:flex;gap:10px"><div style="flex:1"><div class="fl" data-i18n="expiry">Expiry</div><input class="inp" id="ccExp" inputmode="numeric" placeholder="MM/YY" oninput="onCardInput()"/></div><div style="flex:1"><div class="fl">CVC</div><input class="inp" id="ccCvc" inputmode="numeric" placeholder="123"/></div><div style="width:90px"><div class="fl">ZIP</div><input class="inp" id="ccZip" inputmode="numeric" placeholder="33131"/></div></div>
+        <div id="payErr" style="font-size:12px;color:var(--coral-text);margin-top:10px;display:none"></div>
+        <button class="btn btn-coral" style="margin-top:18px" id="payBtn" onclick="savePayment()" data-i18n="save_card_start">Save card & start</button>
+        <p style="font-size:11px;color:var(--faint);text-align:center;margin-top:12px;line-height:1.5">We never store your full card number — only the last 4 digits. Test mode: no real charge is made yet.</p>
+      </div>
+    </div>
+
+    <!-- ===================== ONBOARD / PLAN PICKER ===================== -->
+    <div class="screen" data-s="onboard" style="z-index:75">
+      <div class="topbar"><div class="logo"><div class="m"><svg class="otter-mark"><use href="#plogo"/></svg></div><div class="t">Choose a plan</div></div></div>
+      <div class="pad">
+        <p style="font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:4px">Founding member pricing — locked for life.</p>
+        <div id="planPicker" style="margin-top:14px"></div>
+        <button class="btn btn-coral" style="margin-top:18px" id="startBtn" onclick="startSubscription()" data-i18n="start_membership">Start membership</button>
+        <button class="btn btn-ghost btn-sm" style="margin-top:8px" onclick="cancelCheckout()" data-i18n="maybe_later">Maybe later</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- auth -->
+  <div class="auth" id="authScreen">
+    <button class="globebtn auth-globe" onclick="openLang()"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.7"/><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" stroke="currentColor" stroke-width="1.7"/></svg></button>
+    <svg class="auth-lockup" viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg">
+      <g class="auth-p"><use href="#plogo" x="40" y="38" width="100" height="110"/></g>
+      <text class="auth-lesi" x="127" y="104">le<tspan class="c">si</tspan></text>
+    </svg>
+    <div class="tag"><span data-i18n="tagline">your neighbors, on the way</span></div>
+    <label data-i18n="email">Email</label>
+    <input id="authEmail" type="email" placeholder="you@example.com" autocomplete="email"/>
+    <label data-i18n="password">Password</label>
+    <input id="authPass" type="password" placeholder="••••••••" autocomplete="current-password"/>
+    <div class="err" id="authErr" style="display:none"></div>
+    <button class="btn btn-coral" style="margin-top:20px" id="authBtn" onclick="doAuth()" data-i18n="continue">Continue</button>
+    <div class="switch" id="authSwitch"><span data-i18n="auth_switch">New accounts are created automatically.</span> <a onclick="document.getElementById('authEmail').value='';document.getElementById('authPass').value='';document.getElementById('authErr').style.display='none';document.getElementById('authEmail').focus();" data-i18n="clear">Clear</a></div>
+  </div>
+
+  <div class="cfgwarn" id="cfgWarn" style="display:none">
+    <h3>One step left</h3>
+    <p>Paste your Supabase key into <code>SUPABASE_KEY</code> near the top of the script, then reload.</p>
+  </div>
+
+  <div class="matchbanner" id="matchBanner"><div class="mb-emoji" id="mbEmoji">🎉</div><div style="flex:1"><div class="mb-t" id="mbTitle"></div><div class="mb-s" id="mbSub"></div></div></div>
+  <div class="sheet" id="langSheet"><div class="sheet-card"><div class="sheet-grab"></div><div class="sheet-h" data-i18n="language">Language</div><div id="langList"></div><button class="btn btn-ghost btn-sm" style="margin-top:12px" onclick="closeLang()" data-i18n="cancel">Cancel</button></div></div>
+  <div class="toast" id="toast"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const { createClient } = supabase;
+
+/* ===== CONFIG (URL + key set) ===== */
+const SUPABASE_URL = 'https://rocnnykvdfgqkpsoitoh.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJvY25ueWt2ZGZncWtwc29pdG9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE5OTI5MTAsImV4cCI6MjA5NzU2ODkxMH0.jXiii9D3_28TIDvOGANfXZfba5hQnaD0IXyW8RuCVo4';
+const FALLBACK = { lat: 25.7617, lng: -80.1918 };
+
+if (!SUPABASE_KEY || !(SUPABASE_KEY.startsWith('sb_') || SUPABASE_KEY.startsWith('eyJ'))) {
+  document.getElementById('cfgWarn').style.display='flex';
+  document.getElementById('authScreen').style.display='none';
+}
+const sb = createClient(SUPABASE_URL, SUPABASE_KEY, { auth:{persistSession:false, autoRefreshToken:false}});
+/* ===== i18n ===== */
+const I18N = {"en": {"tagline": "your neighbors, on the way", "email": "Email", "password": "Password", "continue": "Continue", "auth_switch": "New accounts are created automatically.", "clear": "Clear", "role_req": "Requester", "role_cour": "Courier", "need_today": "What do you need today?", "pick_store": "Pick a store", "store_ph": "Type a store… Publix, Chipotle, CVS", "guar_strip": "Every order is Guaranteed or Refunded", "my_orders": "My orders", "your_items": "Your items", "when_need": "When do you need it?", "urg_immediate": "Immediate", "urg_soon": "Soon", "urg_later": "Later", "ut_immediate": "Immediate", "ut_soon": "Soon", "ut_later": "Later", "dropoff": "Drop-off", "dropoff_ph": "Your delivery address", "guar_title": "Guaranteed or Refunded", "guar_body": "Every order is backed by Plesi. Not right? One-tap dispute for 48 hours, resolved within 24.", "billed_title": "Billed at exact receipt", "billed_body": "No delivery fee, no service fee, no tip. You pay the receipt total — nothing more.", "send_request": "Send request", "item_details": "Item details", "category": "Category", "item_desc": "Item description", "brand": "Brand", "type_size": "Type / size", "other_info": "Other info", "save_item": "Save item", "cancel": "Cancel", "avail_now": "Available", "avail_sub": "Flip on when you're heading out", "which_store": "Which store or restaurant are you on the way to?", "add_stop": "+ Add another stop", "how_far": "How far will you travel?", "radius_note": "Plesi keeps it local — we match you with neighbors within ¼ mile, so every run is a short hop.", "active_deliveries": "Your active deliveries", "incoming_requests": "Incoming requests", "accept": "Accept", "skip": "Skip", "start_membership": "Start membership", "maybe_later": "Maybe later", "your_address": "Your address", "use_location": "Use my current location", "home_address": "Home address", "delivery_notes": "Delivery notes (optional)", "payment": "Payment", "card_number": "Card number", "expiry": "Expiry", "save_card_start": "Save card & start", "delivery_address": "Delivery address", "update_location": "Update to my current location", "save_address": "Save address", "payment_method": "Payment method", "update_card": "Update card", "account": "Account", "change_plan": "Change plan", "sign_out": "Sign out", "language": "Language", "choose_plan": "Choose your plan", "t_add_desc": "Add an item description", "t_add_item": "Add at least one item", "t_addr_saved": "Address saved", "t_card_saved": "Card saved", "t_drop_confirmed": "Drop-off confirmed", "t_valid_receipt": "Enter a valid receipt total", "t_enter_addr": "Enter an address", "t_enter_home": "Enter your home address", "t_find_store": "Find a store first", "t_no_active": "No active order", "t_photo_receipt": "Photo the receipt first", "t_pick_store": "Pick a store first", "t_placing": "Placing your order…", "t_welcome": "Welcome to Plesi", "t_offline": "You're offline", "b_match_title": "Matched with #{c}!", "b_match_sub": "They're heading to {s} for your order", "b_live_title": "You're live!", "b_live_sub": "We'll send requests within {n} mi on your route", "b_route_title": "Still heading out?", "b_route_sub": "Confirm your route to {s} to keep getting requests", "b_got_title": "You got the order!", "b_got_sub": "Address unlocked — start the delivery", "b_done_title": "Delivery complete!", "b_done_sub": "You earned ${p} — paid out via Stripe", "st_pending_t": "Finding a courier nearby", "st_pending_n": "Sent to every available courier at {s}", "st_accepted_t": "Accepted by #{c}", "st_accepted_n": "Your courier is on the way to {s}", "st_receipt_t": "Receipt verified", "st_receipt_n": "You'll be charged this exact total", "st_delivered_t": "Delivered to your door", "st_delivered_n": "Charged to your card", "st_completed_t": "Delivered", "st_completed_n": "Order complete", "broadcasting": "broadcasting", "tl_claimed_t": "Courier claimed it", "tl_waiting": "Waiting for a courier", "tl_exact_bill": "exact bill", "tl_sets_bill": "Sets the exact bill", "tl_dropoff_photo": "Drop-off photo", "e_orders_accept": "Orders you accept show here — tap any to continue", "e_go_available": "Go available to start receiving requests", "e_no_couriers_t": "No couriers there right now", "e_no_couriers_s": "Nobody is at or on the way to {s} yet — but we'll save your order and send it out the moment someone is.", "e_no_orders_t": "No orders yet", "e_no_orders_s": "Find a courier and request items", "e_no_requests_t": "No requests yet", "e_no_requests_s": "Neighbors who order from this store will show up here — first to accept wins", "e_load_couriers": "Couldn't load couriers", "e_load_requests": "Couldn't load requests", "plan_basic_desc": "Occasional errands", "plan_standard_desc": "The weekly routine", "plan_unlimited_desc": "Lean all the way in", "plan_orders_mo": "{n} orders / month", "plan_unlimited_perk": "Unlimited orders", "plan_basic_name": "Essential", "plan_standard_name": "Plus", "plan_unlimited_name": "Unlimited", "plan_word": "plan", "plan_nofees": "No delivery fees · no tips · billed at exact receipt", "per_mo": "/mo", "order_from": "Order from {s}", "your_stops": "your stops", "two_photo": "2-photo verification", "photo_receipt_b": "Photo the receipt", "photo_dropoff_b": "Photo the drop-off", "proof_door": "Proof at the door", "earn_pct": "Earn $3.00 + 3%", "earn_amt": "Earn ${p}", "addr_on_accept": "Address unlocked on accept", "chat_sys": "Chat is open while the order is active · closes 30 min after delivery", "chat_ph": "Message…", "ssh_no_plan": "NO PLAN", "ssh_start_first": "Start your first order", "ssh_pick_plan": "Pick a plan only when you place an order", "ssh_unlimited_caps": "UNLIMITED", "ssh_of": "OF {n}", "ssh_order_left_1": "{n} order left", "ssh_orders_left_n": "{n} orders left", "ssh_founding_locked": "Founding member · price locked for life", "t_adding": "Adding {n}…", "guar_something": "Something off? Resolved within 24 hours.", "report_problem": "Report a problem", "dispute_opened": "Dispute opened — we'll resolve within 24 hours", "t_add_store_heading": "Add at least one store you're heading to", "loading": "Loading…", "locating_courier": "Locating your courier…", "eta_away": "Courier {mi} mi away · about {min} min to you", "tap_retry": "Tap to retry", "rate_courier_title": "How was your delivery?", "rate_courier_sub": "Rate your courier", "rating_thanks": "Thanks for your rating!", "offer_new": "New task", "offer_pass": "Pass", "offer_item": "item", "offer_items": "items", "offer_waiting_t": "You're available", "offer_waiting_s": "We'll ping you the moment a task pops up at your store", "offer_taken": "That one was just taken", "offer_cap": "Finish an active order first", "status_label": "Your status", "pres_here": "Here now", "pres_way": "On the way", "pres_soon": "Going soon", "avail_now_near": "Available near you now", "avail_none": "No couriers nearby right now — order below and it'll go out the moment one's available.", "live_now": "You're live", "live_updated": "Updated — neighbors see this now", "status_hint": "Your status at your first stop — later stops show as coming up next", "cour_avail_1": "1 courier available at {s}", "cour_avail_n": "{n} couriers available at {s}", "plan_inflight": "{n} in progress", "pick_store_note": "Any store works. If no courier is at or heading there, we'll save your order and send it out the moment one is.", "home_needed_t": "Set your home address", "home_needed_s": "Plesi matches you with neighbors within ¼ mile, so we need your address first.", "home_needed_btn": "Set address", "loc_denied": "Turn on location to set your address", "my_deliveries": "My deliveries", "e_no_deliv_t": "No deliveries yet", "e_no_deliv_s": "Deliveries you complete will show up here", "deliv_canceled": "Canceled", "ovg_title": "You've used your included orders this month", "ovg_fee": "Overage fee for this order: ${f}", "ovg_up": "Or upgrade to {p} for ${d} more per month and never pay this fee.", "ovg_btn": "Upgrade to {p}", "urg_hint": "Immediate → couriers Here now · Soon → On the way · Later → Going soon"}, "es": {"tagline": "tus vecinos, en camino", "email": "Correo", "password": "Contraseña", "continue": "Continuar", "auth_switch": "Las cuentas nuevas se crean automáticamente.", "clear": "Borrar", "role_req": "Solicitante", "role_cour": "Repartidor", "need_today": "¿Qué necesitas hoy?", "pick_store": "Elige una tienda", "store_ph": "Escribe una tienda… Publix, Chipotle, CVS", "guar_strip": "Cada pedido está Garantizado o Reembolsado", "my_orders": "Mis pedidos", "your_items": "Tus artículos", "when_need": "¿Cuándo lo necesitas?", "urg_immediate": "Inmediato", "urg_soon": "Pronto", "urg_later": "Más tarde", "ut_immediate": "Inmediato", "ut_soon": "Pronto", "ut_later": "Más tarde", "dropoff": "Entrega", "dropoff_ph": "Tu dirección de entrega", "guar_title": "Garantizado o Reembolsado", "guar_body": "Cada pedido está respaldado por Plesi. ¿Algo mal? Disputa con un toque durante 48 horas, resuelta en 24.", "billed_title": "Cobrado según el recibo exacto", "billed_body": "Sin tarifa de entrega, sin tarifa de servicio, sin propina. Pagas el total del recibo, nada más.", "send_request": "Enviar pedido", "item_details": "Detalles del artículo", "category": "Categoría", "item_desc": "Descripción del artículo", "brand": "Marca", "type_size": "Tipo / tamaño", "other_info": "Otra info", "save_item": "Guardar artículo", "cancel": "Cancelar", "avail_now": "Disponible", "avail_sub": "Actívalo cuando vayas a salir", "which_store": "¿A qué tienda o restaurante vas?", "add_stop": "+ Agregar otra parada", "how_far": "¿Qué tan lejos viajarás?", "radius_note": "Plesi es local — te conectamos con vecinos a ¼ de milla, para que cada entrega sea un paso corto.", "active_deliveries": "Tus entregas activas", "incoming_requests": "Solicitudes entrantes", "accept": "Aceptar", "skip": "Saltar", "start_membership": "Iniciar membresía", "maybe_later": "Quizás después", "your_address": "Tu dirección", "use_location": "Usar mi ubicación actual", "home_address": "Dirección de casa", "delivery_notes": "Notas de entrega (opcional)", "payment": "Pago", "card_number": "Número de tarjeta", "expiry": "Vencimiento", "save_card_start": "Guardar tarjeta y empezar", "delivery_address": "Dirección de entrega", "update_location": "Actualizar a mi ubicación actual", "save_address": "Guardar dirección", "payment_method": "Método de pago", "update_card": "Actualizar tarjeta", "account": "Cuenta", "change_plan": "Cambiar plan", "sign_out": "Cerrar sesión", "language": "Idioma", "choose_plan": "Elige tu plan", "t_add_desc": "Agrega una descripción del artículo", "t_add_item": "Agrega al menos un artículo", "t_addr_saved": "Dirección guardada", "t_card_saved": "Tarjeta guardada", "t_drop_confirmed": "Entrega confirmada", "t_valid_receipt": "Ingresa un total de recibo válido", "t_enter_addr": "Ingresa una dirección", "t_enter_home": "Ingresa tu dirección de casa", "t_find_store": "Primero busca una tienda", "t_no_active": "Sin pedido activo", "t_photo_receipt": "Primero fotografía el recibo", "t_pick_store": "Primero elige una tienda", "t_placing": "Realizando tu pedido…", "t_welcome": "Bienvenido a Plesi", "t_offline": "Estás desconectado", "b_match_title": "¡Emparejado con #{c}!", "b_match_sub": "Va a {s} por tu pedido", "b_live_title": "¡Estás activo!", "b_live_sub": "Te enviaremos solicitudes a {n} millas en tu ruta", "b_route_title": "¿Aún vas a salir?", "b_route_sub": "Confirma tu ruta a {s} para seguir recibiendo solicitudes", "b_got_title": "¡Conseguiste el pedido!", "b_got_sub": "Dirección desbloqueada — inicia la entrega", "b_done_title": "¡Entrega completada!", "b_done_sub": "Ganaste ${p} — pagado vía Stripe", "st_pending_t": "Buscando un repartidor cerca", "st_pending_n": "Enviado a cada repartidor disponible en {s}", "st_accepted_t": "Aceptado por #{c}", "st_accepted_n": "Tu repartidor va camino a {s}", "st_receipt_t": "Recibo verificado", "st_receipt_n": "Se te cobrará este total exacto", "st_delivered_t": "Entregado en tu puerta", "st_delivered_n": "Cobrado a tu tarjeta", "st_completed_t": "Entregado", "st_completed_n": "Pedido completado", "broadcasting": "transmitiendo", "tl_claimed_t": "Un repartidor lo tomó", "tl_waiting": "Esperando un repartidor", "tl_exact_bill": "cuenta exacta", "tl_sets_bill": "Define la cuenta exacta", "tl_dropoff_photo": "Foto de entrega", "e_orders_accept": "Los pedidos que aceptes aparecen aquí — toca uno para continuar", "e_go_available": "Ponte disponible para recibir solicitudes", "e_no_couriers_t": "No hay repartidores allí ahora", "e_no_couriers_s": "Nadie está en {s} ni en camino todavía — pero guardamos tu pedido y lo enviamos en cuanto alguien lo esté.", "e_no_orders_t": "Aún no hay pedidos", "e_no_orders_s": "Busca un repartidor y pide artículos", "e_no_requests_t": "Aún no hay solicitudes", "e_no_requests_s": "Los vecinos que pidan de esta tienda aparecerán aquí — el primero en aceptar gana", "e_load_couriers": "No se pudieron cargar los repartidores", "e_load_requests": "No se pudieron cargar las solicitudes", "plan_basic_desc": "Mandados ocasionales", "plan_standard_desc": "La rutina semanal", "plan_unlimited_desc": "Sin límites", "plan_orders_mo": "{n} pedidos / mes", "plan_unlimited_perk": "Pedidos ilimitados", "plan_basic_name": "Esencial", "plan_standard_name": "Plus", "plan_unlimited_name": "Ilimitado", "plan_word": "plan", "plan_nofees": "Sin tarifas de entrega · sin propinas · cobrado al recibo exacto", "per_mo": "/mes", "order_from": "Pedido de {s}", "your_stops": "tus paradas", "two_photo": "Verificación con 2 fotos", "photo_receipt_b": "Fotografía el recibo", "photo_dropoff_b": "Fotografía la entrega", "proof_door": "Prueba en la puerta", "earn_pct": "Gana $3.00 + 3%", "earn_amt": "Gana ${p}", "addr_on_accept": "Dirección desbloqueada al aceptar", "chat_sys": "El chat está abierto mientras el pedido está activo · se cierra 30 min después de la entrega", "chat_ph": "Mensaje…", "ssh_no_plan": "SIN PLAN", "ssh_start_first": "Haz tu primer pedido", "ssh_pick_plan": "Elige un plan solo cuando hagas un pedido", "ssh_unlimited_caps": "ILIMITADO", "ssh_of": "DE {n}", "ssh_order_left_1": "{n} pedido restante", "ssh_orders_left_n": "{n} pedidos restantes", "ssh_founding_locked": "Miembro fundador · precio fijo de por vida", "t_adding": "Agregando {n}…", "guar_something": "¿Algo mal? Resuelto en 24 horas.", "report_problem": "Reportar un problema", "dispute_opened": "Disputa abierta — la resolveremos en 24 horas", "t_add_store_heading": "Agrega al menos una tienda a la que vas", "loading": "Cargando…", "locating_courier": "Localizando tu repartidor…", "eta_away": "Repartidor a {mi} millas · unos {min} min", "tap_retry": "Toca para reintentar", "rate_courier_title": "¿Cómo estuvo tu entrega?", "rate_courier_sub": "Califica a tu repartidor", "rating_thanks": "¡Gracias por tu calificación!", "offer_new": "Nueva tarea", "offer_pass": "Pasar", "offer_item": "artículo", "offer_items": "artículos", "offer_waiting_t": "Estás disponible", "offer_waiting_s": "Te avisaremos en cuanto aparezca una tarea en tu tienda", "offer_taken": "Esa acaba de ser tomada", "offer_cap": "Termina un pedido activo primero", "status_label": "Tu estado", "pres_here": "Ya estoy", "pres_way": "En camino", "pres_soon": "Voy pronto", "avail_now_near": "Disponible cerca de ti", "avail_none": "No hay repartidores cerca ahora — pide abajo y saldrá en cuanto haya uno disponible.", "live_now": "Estás activo", "live_updated": "Actualizado — tus vecinos ya lo ven", "status_hint": "Tu estado en tu primera parada — las siguientes aparecen como próximas", "cour_avail_1": "1 repartidor disponible en {s}", "cour_avail_n": "{n} repartidores disponibles en {s}", "plan_inflight": "{n} en curso", "pick_store_note": "Cualquier tienda sirve. Si no hay repartidor allí ni en camino, guardamos tu pedido y lo enviamos en cuanto haya uno.", "home_needed_t": "Configura tu dirección", "home_needed_s": "Plesi te conecta con vecinos a ¼ de milla, así que necesitamos tu dirección primero.", "home_needed_btn": "Configurar dirección", "loc_denied": "Activa la ubicación para configurar tu dirección", "my_deliveries": "Mis entregas", "e_no_deliv_t": "Aún no hay entregas", "e_no_deliv_s": "Las entregas que completes aparecerán aquí", "deliv_canceled": "Cancelado", "ovg_title": "Ya usaste los pedidos incluidos este mes", "ovg_fee": "Cargo por exceso en este pedido: ${f}", "ovg_up": "O mejora a {p} por ${d} más al mes y nunca pagues este cargo.", "ovg_btn": "Mejorar a {p}", "urg_hint": "Inmediato → repartidores Ya estoy · Pronto → En camino · Más tarde → Voy pronto"}, "pt": {"tagline": "seus vizinhos, a caminho", "email": "E-mail", "password": "Senha", "continue": "Continuar", "auth_switch": "Novas contas são criadas automaticamente.", "clear": "Limpar", "role_req": "Solicitante", "role_cour": "Entregador", "need_today": "O que você precisa hoje?", "pick_store": "Escolha uma loja", "store_ph": "Digite uma loja… Publix, Chipotle, CVS", "guar_strip": "Cada pedido é Garantido ou Reembolsado", "my_orders": "Meus pedidos", "your_items": "Seus itens", "when_need": "Quando você precisa?", "urg_immediate": "Imediato", "urg_soon": "Em breve", "urg_later": "Mais tarde", "ut_immediate": "Imediato", "ut_soon": "Em breve", "ut_later": "Mais tarde", "dropoff": "Entrega", "dropoff_ph": "Seu endereço de entrega", "guar_title": "Garantido ou Reembolsado", "guar_body": "Cada pedido tem a garantia da Plesi. Algo errado? Disputa com um toque por 48 horas, resolvida em 24.", "billed_title": "Cobrado pelo recibo exato", "billed_body": "Sem taxa de entrega, sem taxa de serviço, sem gorjeta. Você paga o total do recibo — nada mais.", "send_request": "Enviar pedido", "item_details": "Detalhes do item", "category": "Categoria", "item_desc": "Descrição do item", "brand": "Marca", "type_size": "Tipo / tamanho", "other_info": "Outra info", "save_item": "Salvar item", "cancel": "Cancelar", "avail_now": "Disponível", "avail_sub": "Ative quando estiver saindo", "which_store": "Para qual loja ou restaurante você está indo?", "add_stop": "+ Adicionar outra parada", "how_far": "Até onde você vai?", "radius_note": "A Plesi é local — conectamos você a vizinhos em ¼ de milha, para que cada entrega seja bem perto.", "active_deliveries": "Suas entregas ativas", "incoming_requests": "Solicitações recebidas", "accept": "Aceitar", "skip": "Pular", "start_membership": "Iniciar assinatura", "maybe_later": "Talvez depois", "your_address": "Seu endereço", "use_location": "Usar minha localização atual", "home_address": "Endereço residencial", "delivery_notes": "Notas de entrega (opcional)", "payment": "Pagamento", "card_number": "Número do cartão", "expiry": "Validade", "save_card_start": "Salvar cartão e começar", "delivery_address": "Endereço de entrega", "update_location": "Atualizar para minha localização atual", "save_address": "Salvar endereço", "payment_method": "Forma de pagamento", "update_card": "Atualizar cartão", "account": "Conta", "change_plan": "Mudar plano", "sign_out": "Sair", "language": "Idioma", "choose_plan": "Escolha seu plano", "t_add_desc": "Adicione uma descrição do item", "t_add_item": "Adicione pelo menos um item", "t_addr_saved": "Endereço salvo", "t_card_saved": "Cartão salvo", "t_drop_confirmed": "Entrega confirmada", "t_valid_receipt": "Insira um total de recibo válido", "t_enter_addr": "Insira um endereço", "t_enter_home": "Insira seu endereço residencial", "t_find_store": "Primeiro encontre uma loja", "t_no_active": "Nenhum pedido ativo", "t_photo_receipt": "Primeiro fotografe o recibo", "t_pick_store": "Primeiro escolha uma loja", "t_placing": "Fazendo seu pedido…", "t_welcome": "Bem-vindo à Plesi", "t_offline": "Você está offline", "b_match_title": "Combinado com #{c}!", "b_match_sub": "Está indo para {s} pelo seu pedido", "b_live_title": "Você está ativo!", "b_live_sub": "Enviaremos solicitações em até {n} mi na sua rota", "b_route_title": "Ainda vai sair?", "b_route_sub": "Confirme sua rota para {s} para continuar recebendo solicitações", "b_got_title": "Você pegou o pedido!", "b_got_sub": "Endereço liberado — inicie a entrega", "b_done_title": "Entrega concluída!", "b_done_sub": "Você ganhou ${p} — pago via Stripe", "st_pending_t": "Procurando um entregador por perto", "st_pending_n": "Enviado a todos os entregadores disponíveis em {s}", "st_accepted_t": "Aceito por #{c}", "st_accepted_n": "Seu entregador está a caminho de {s}", "st_receipt_t": "Recibo verificado", "st_receipt_n": "Você pagará este total exato", "st_delivered_t": "Entregue na sua porta", "st_delivered_n": "Cobrado no seu cartão", "st_completed_t": "Entregue", "st_completed_n": "Pedido concluído", "broadcasting": "transmitindo", "tl_claimed_t": "Um entregador pegou", "tl_waiting": "Aguardando um entregador", "tl_exact_bill": "conta exata", "tl_sets_bill": "Define a conta exata", "tl_dropoff_photo": "Foto da entrega", "e_orders_accept": "Os pedidos que você aceitar aparecem aqui — toque em um para continuar", "e_go_available": "Fique disponível para receber solicitações", "e_no_couriers_t": "Nenhum entregador lá agora", "e_no_couriers_s": "Ninguém está em {s} ou a caminho ainda — mas guardamos seu pedido e o enviamos assim que alguém estiver.", "e_no_orders_t": "Ainda não há pedidos", "e_no_orders_s": "Encontre um entregador e peça itens", "e_no_requests_t": "Ainda não há solicitações", "e_no_requests_s": "Vizinhos que pedirem desta loja aparecerão aqui — o primeiro a aceitar ganha", "e_load_couriers": "Não foi possível carregar entregadores", "e_load_requests": "Não foi possível carregar solicitações", "plan_basic_desc": "Tarefas ocasionais", "plan_standard_desc": "A rotina semanal", "plan_unlimited_desc": "Vá com tudo", "plan_orders_mo": "{n} pedidos / mês", "plan_unlimited_perk": "Pedidos ilimitados", "plan_basic_name": "Essencial", "plan_standard_name": "Plus", "plan_unlimited_name": "Ilimitado", "plan_word": "plano", "plan_nofees": "Sem taxas de entrega · sem gorjetas · cobrado pelo recibo exato", "per_mo": "/mês", "order_from": "Pedido de {s}", "your_stops": "suas paradas", "two_photo": "Verificação com 2 fotos", "photo_receipt_b": "Fotografe o recibo", "photo_dropoff_b": "Fotografe a entrega", "proof_door": "Prova na porta", "earn_pct": "Ganhe $3.00 + 3%", "earn_amt": "Ganhe ${p}", "addr_on_accept": "Endereço liberado ao aceitar", "chat_sys": "O chat fica aberto enquanto o pedido está ativo · fecha 30 min após a entrega", "chat_ph": "Mensagem…", "ssh_no_plan": "SEM PLANO", "ssh_start_first": "Faça seu primeiro pedido", "ssh_pick_plan": "Escolha um plano apenas ao fazer um pedido", "ssh_unlimited_caps": "ILIMITADO", "ssh_of": "DE {n}", "ssh_order_left_1": "{n} pedido restante", "ssh_orders_left_n": "{n} pedidos restantes", "ssh_founding_locked": "Membro fundador · preço fixo para sempre", "t_adding": "Adicionando {n}…", "guar_something": "Algo errado? Resolvido em 24 horas.", "report_problem": "Relatar um problema", "dispute_opened": "Disputa aberta — resolveremos em 24 horas", "t_add_store_heading": "Adicione pelo menos uma loja para onde você vai", "loading": "Carregando…", "locating_courier": "Localizando seu entregador…", "eta_away": "Entregador a {mi} mi · cerca de {min} min", "tap_retry": "Toque para tentar de novo", "rate_courier_title": "Como foi sua entrega?", "rate_courier_sub": "Avalie seu entregador", "rating_thanks": "Obrigado pela avaliação!", "offer_new": "Nova tarefa", "offer_pass": "Passar", "offer_item": "item", "offer_items": "itens", "offer_waiting_t": "Você está disponível", "offer_waiting_s": "Avisaremos assim que uma tarefa aparecer na sua loja", "offer_taken": "Essa acabou de ser aceita", "offer_cap": "Termine um pedido ativo primeiro", "status_label": "Seu status", "pres_here": "Já estou", "pres_way": "A caminho", "pres_soon": "Vou logo", "avail_now_near": "Disponível perto de você", "avail_none": "Nenhum entregador por perto agora — peça abaixo e sairá assim que um estiver disponível.", "live_now": "Você está ativo", "live_updated": "Atualizado — seus vizinhos já veem", "status_hint": "Seu status na primeira parada — as próximas aparecem como a seguir", "cour_avail_1": "1 entregador disponível em {s}", "cour_avail_n": "{n} entregadores disponíveis em {s}", "plan_inflight": "{n} em andamento", "pick_store_note": "Qualquer loja serve. Se nenhum entregador estiver lá ou a caminho, guardamos seu pedido e o enviamos assim que houver um.", "home_needed_t": "Defina seu endereço", "home_needed_s": "A Plesi conecta você a vizinhos em ¼ de milha, então precisamos do seu endereço primeiro.", "home_needed_btn": "Definir endereço", "loc_denied": "Ative a localização para definir seu endereço", "my_deliveries": "Minhas entregas", "e_no_deliv_t": "Ainda não há entregas", "e_no_deliv_s": "As entregas que você concluir aparecerão aqui", "deliv_canceled": "Cancelado", "ovg_title": "Você já usou os pedidos incluídos este mês", "ovg_fee": "Taxa de excedente neste pedido: ${f}", "ovg_up": "Ou faça upgrade para {p} por ${d} a mais por mês e nunca pague esta taxa.", "ovg_btn": "Fazer upgrade para {p}", "urg_hint": "Imediato → entregadores Já estou · Em breve → A caminho · Mais tarde → Vou logo"}, "fr": {"tagline": "vos voisins, en chemin", "email": "E-mail", "password": "Mot de passe", "continue": "Continuer", "auth_switch": "Les nouveaux comptes sont créés automatiquement.", "clear": "Effacer", "role_req": "Demandeur", "role_cour": "Coursier", "need_today": "De quoi avez-vous besoin aujourd'hui ?", "pick_store": "Choisissez un magasin", "store_ph": "Tapez un magasin… Publix, Chipotle, CVS", "guar_strip": "Chaque commande est Garantie ou Remboursée", "my_orders": "Mes commandes", "your_items": "Vos articles", "when_need": "Quand en avez-vous besoin ?", "urg_immediate": "Immédiat", "urg_soon": "Bientôt", "urg_later": "Plus tard", "ut_immediate": "Immédiat", "ut_soon": "Bientôt", "ut_later": "Plus tard", "dropoff": "Livraison", "dropoff_ph": "Votre adresse de livraison", "guar_title": "Garanti ou Remboursé", "guar_body": "Chaque commande est garantie par Plesi. Un souci ? Litige en un geste pendant 48 heures, résolu sous 24.", "billed_title": "Facturé au reçu exact", "billed_body": "Pas de frais de livraison, pas de frais de service, pas de pourboire. Vous payez le total du reçu, rien de plus.", "send_request": "Envoyer la demande", "item_details": "Détails de l'article", "category": "Catégorie", "item_desc": "Description de l'article", "brand": "Marque", "type_size": "Type / taille", "other_info": "Autre info", "save_item": "Enregistrer l'article", "cancel": "Annuler", "avail_now": "Disponible", "avail_sub": "Activez quand vous partez", "which_store": "Vers quel magasin ou restaurant allez-vous ?", "add_stop": "+ Ajouter un arrêt", "how_far": "Jusqu'où irez-vous ?", "radius_note": "Plesi reste local — nous vous associons à des voisins dans un rayon de ¼ de mile, chaque course est toute proche.", "active_deliveries": "Vos livraisons en cours", "incoming_requests": "Demandes entrantes", "accept": "Accepter", "skip": "Passer", "start_membership": "Commencer l'abonnement", "maybe_later": "Plus tard", "your_address": "Votre adresse", "use_location": "Utiliser ma position actuelle", "home_address": "Adresse du domicile", "delivery_notes": "Notes de livraison (facultatif)", "payment": "Paiement", "card_number": "Numéro de carte", "expiry": "Expiration", "save_card_start": "Enregistrer la carte et commencer", "delivery_address": "Adresse de livraison", "update_location": "Mettre à jour avec ma position actuelle", "save_address": "Enregistrer l'adresse", "payment_method": "Moyen de paiement", "update_card": "Modifier la carte", "account": "Compte", "change_plan": "Changer de forfait", "sign_out": "Se déconnecter", "language": "Langue", "choose_plan": "Choisissez votre forfait", "t_add_desc": "Ajoutez une description de l'article", "t_add_item": "Ajoutez au moins un article", "t_addr_saved": "Adresse enregistrée", "t_card_saved": "Carte enregistrée", "t_drop_confirmed": "Livraison confirmée", "t_valid_receipt": "Saisissez un total de reçu valide", "t_enter_addr": "Saisissez une adresse", "t_enter_home": "Saisissez votre adresse", "t_find_store": "Trouvez d'abord un magasin", "t_no_active": "Aucune commande active", "t_photo_receipt": "Photographiez d'abord le reçu", "t_pick_store": "Choisissez d'abord un magasin", "t_placing": "Envoi de votre commande…", "t_welcome": "Bienvenue sur Plesi", "t_offline": "Vous êtes hors ligne", "b_match_title": "Associé à #{c} !", "b_match_sub": "Se rend à {s} pour votre commande", "b_live_title": "Vous êtes en ligne !", "b_live_sub": "Nous enverrons des demandes dans un rayon de {n} mi sur votre route", "b_route_title": "Toujours en route ?", "b_route_sub": "Confirmez votre itinéraire vers {s} pour continuer à recevoir des demandes", "b_got_title": "Vous avez la commande !", "b_got_sub": "Adresse débloquée — commencez la livraison", "b_done_title": "Livraison terminée !", "b_done_sub": "Vous avez gagné ${p} — versé via Stripe", "st_pending_t": "Recherche d'un coursier à proximité", "st_pending_n": "Envoyé à chaque coursier disponible à {s}", "st_accepted_t": "Accepté par #{c}", "st_accepted_n": "Votre coursier se rend à {s}", "st_receipt_t": "Reçu vérifié", "st_receipt_n": "Vous serez facturé ce montant exact", "st_delivered_t": "Livré à votre porte", "st_delivered_n": "Facturé sur votre carte", "st_completed_t": "Livré", "st_completed_n": "Commande terminée", "broadcasting": "diffusion", "tl_claimed_t": "Un coursier l'a pris", "tl_waiting": "En attente d'un coursier", "tl_exact_bill": "montant exact", "tl_sets_bill": "Définit le montant exact", "tl_dropoff_photo": "Photo de livraison", "e_orders_accept": "Les commandes que vous acceptez s'affichent ici — touchez-en une pour continuer", "e_go_available": "Devenez disponible pour recevoir des demandes", "e_no_couriers_t": "Aucun coursier là pour le moment", "e_no_couriers_s": "Personne n'est à {s} ni en route — mais nous gardons votre commande et l'envoyons dès que quelqu'un y sera.", "e_no_orders_t": "Aucune commande pour l'instant", "e_no_orders_s": "Trouvez un coursier et demandez des articles", "e_no_requests_t": "Aucune demande pour l'instant", "e_no_requests_s": "Les voisins qui commandent dans ce magasin apparaîtront ici — le premier à accepter gagne", "e_load_couriers": "Impossible de charger les coursiers", "e_load_requests": "Impossible de charger les demandes", "plan_basic_desc": "Courses occasionnelles", "plan_standard_desc": "La routine hebdomadaire", "plan_unlimited_desc": "Foncez à fond", "plan_orders_mo": "{n} commandes / mois", "plan_unlimited_perk": "Commandes illimitées", "plan_basic_name": "Essentiel", "plan_standard_name": "Plus", "plan_unlimited_name": "Illimité", "plan_word": "forfait", "plan_nofees": "Pas de frais de livraison · pas de pourboire · facturé au reçu exact", "per_mo": "/mois", "order_from": "Commande de {s}", "your_stops": "vos arrêts", "two_photo": "Vérification par 2 photos", "photo_receipt_b": "Photographiez le reçu", "photo_dropoff_b": "Photographiez la livraison", "proof_door": "Preuve à la porte", "earn_pct": "Gagnez 3,00 $ + 3 %", "earn_amt": "Gagnez ${p}", "addr_on_accept": "Adresse débloquée à l'acceptation", "chat_sys": "Le chat est ouvert pendant que la commande est active · se ferme 30 min après la livraison", "chat_ph": "Message…", "ssh_no_plan": "AUCUN FORFAIT", "ssh_start_first": "Passez votre première commande", "ssh_pick_plan": "Choisissez un forfait seulement au moment de commander", "ssh_unlimited_caps": "ILLIMITÉ", "ssh_of": "SUR {n}", "ssh_order_left_1": "{n} commande restante", "ssh_orders_left_n": "{n} commandes restantes", "ssh_founding_locked": "Membre fondateur · prix bloqué à vie", "t_adding": "Ajout de {n}…", "guar_something": "Un souci ? Résolu sous 24 heures.", "report_problem": "Signaler un problème", "dispute_opened": "Litige ouvert — nous le résoudrons sous 24 heures", "t_add_store_heading": "Ajoutez au moins un magasin où vous allez", "loading": "Chargement…", "locating_courier": "Localisation de votre coursier…", "eta_away": "Coursier à {mi} mi · environ {min} min", "tap_retry": "Touchez pour réessayer", "rate_courier_title": "Comment s'est passée votre livraison ?", "rate_courier_sub": "Notez votre coursier", "rating_thanks": "Merci pour votre note !", "offer_new": "Nouvelle tâche", "offer_pass": "Passer", "offer_item": "article", "offer_items": "articles", "offer_waiting_t": "Vous êtes disponible", "offer_waiting_s": "Nous vous préviendrons dès qu'une tâche apparaît à votre magasin", "offer_taken": "Celle-ci vient d'être prise", "offer_cap": "Terminez d'abord une commande active", "status_label": "Votre statut", "pres_here": "Sur place", "pres_way": "En route", "pres_soon": "Bientôt", "avail_now_near": "Disponible près de vous", "avail_none": "Aucun coursier à proximité — commandez ci-dessous, ça partira dès qu'un coursier est disponible.", "live_now": "Vous êtes en ligne", "live_updated": "Mis à jour — vos voisins le voient", "status_hint": "Votre statut au premier arrêt — les suivants apparaissent comme à venir", "cour_avail_1": "1 coursier disponible à {s}", "cour_avail_n": "{n} coursiers disponibles à {s}", "plan_inflight": "{n} en cours", "pick_store_note": "N'importe quel magasin convient. Si aucun coursier n'y est ou ne s'y rend, nous gardons votre commande et l'envoyons dès qu'il y en a un.", "home_needed_t": "Définissez votre adresse", "home_needed_s": "Plesi vous associe à des voisins dans un rayon de ¼ de mile — il nous faut d'abord votre adresse.", "home_needed_btn": "Définir l'adresse", "loc_denied": "Activez la localisation pour définir votre adresse", "my_deliveries": "Mes livraisons", "e_no_deliv_t": "Aucune livraison", "e_no_deliv_s": "Les livraisons que vous terminez apparaîtront ici", "deliv_canceled": "Annulée", "ovg_title": "Vous avez utilisé vos commandes incluses ce mois-ci", "ovg_fee": "Frais de dépassement pour cette commande : {f} $", "ovg_up": "Ou passez à {p} pour {d} $ de plus par mois et ne payez jamais ces frais.", "ovg_btn": "Passer à {p}", "urg_hint": "Immédiat → coursiers Sur place · Bientôt → En route · Plus tard → Bientôt"}, "it": {"tagline": "i tuoi vicini, in arrivo", "email": "Email", "password": "Password", "continue": "Continua", "auth_switch": "I nuovi account vengono creati automaticamente.", "clear": "Cancella", "role_req": "Richiedente", "role_cour": "Corriere", "need_today": "Di cosa hai bisogno oggi?", "pick_store": "Scegli un negozio", "store_ph": "Scrivi un negozio… Publix, Chipotle, CVS", "guar_strip": "Ogni ordine è Garantito o Rimborsato", "my_orders": "I miei ordini", "your_items": "I tuoi articoli", "when_need": "Quando ti serve?", "urg_immediate": "Immediato", "urg_soon": "Presto", "urg_later": "Più tardi", "ut_immediate": "Immediato", "ut_soon": "Presto", "ut_later": "Più tardi", "dropoff": "Consegna", "dropoff_ph": "Il tuo indirizzo di consegna", "guar_title": "Garantito o Rimborsato", "guar_body": "Ogni ordine è garantito da Plesi. Qualcosa non va? Contestazione con un tocco per 48 ore, risolta entro 24.", "billed_title": "Addebito sullo scontrino esatto", "billed_body": "Nessun costo di consegna, nessun costo di servizio, nessuna mancia. Paghi il totale dello scontrino — nient'altro.", "send_request": "Invia richiesta", "item_details": "Dettagli articolo", "category": "Categoria", "item_desc": "Descrizione articolo", "brand": "Marca", "type_size": "Tipo / dimensione", "other_info": "Altre info", "save_item": "Salva articolo", "cancel": "Annulla", "avail_now": "Disponibile", "avail_sub": "Attiva quando esci", "which_store": "Verso quale negozio o ristorante stai andando?", "add_stop": "+ Aggiungi un'altra tappa", "how_far": "Quanto lontano andrai?", "radius_note": "Plesi resta locale — ti abbiniamo a vicini entro ¼ di miglio, così ogni consegna è a due passi.", "active_deliveries": "Le tue consegne attive", "incoming_requests": "Richieste in arrivo", "accept": "Accetta", "skip": "Salta", "start_membership": "Inizia l'abbonamento", "maybe_later": "Forse più tardi", "your_address": "Il tuo indirizzo", "use_location": "Usa la mia posizione attuale", "home_address": "Indirizzo di casa", "delivery_notes": "Note di consegna (opzionale)", "payment": "Pagamento", "card_number": "Numero della carta", "expiry": "Scadenza", "save_card_start": "Salva carta e inizia", "delivery_address": "Indirizzo di consegna", "update_location": "Aggiorna alla mia posizione attuale", "save_address": "Salva indirizzo", "payment_method": "Metodo di pagamento", "update_card": "Aggiorna carta", "account": "Account", "change_plan": "Cambia piano", "sign_out": "Esci", "language": "Lingua", "choose_plan": "Scegli il tuo piano", "t_add_desc": "Aggiungi una descrizione dell'articolo", "t_add_item": "Aggiungi almeno un articolo", "t_addr_saved": "Indirizzo salvato", "t_card_saved": "Carta salvata", "t_drop_confirmed": "Consegna confermata", "t_valid_receipt": "Inserisci un totale dello scontrino valido", "t_enter_addr": "Inserisci un indirizzo", "t_enter_home": "Inserisci il tuo indirizzo di casa", "t_find_store": "Prima trova un negozio", "t_no_active": "Nessun ordine attivo", "t_photo_receipt": "Prima fotografa lo scontrino", "t_pick_store": "Prima scegli un negozio", "t_placing": "Invio del tuo ordine…", "t_welcome": "Benvenuto su Plesi", "t_offline": "Sei offline", "b_match_title": "Abbinato con #{c}!", "b_match_sub": "Sta andando a {s} per il tuo ordine", "b_live_title": "Sei attivo!", "b_live_sub": "Invieremo richieste entro {n} mi sul tuo percorso", "b_route_title": "Esci ancora?", "b_route_sub": "Conferma il tuo percorso verso {s} per continuare a ricevere richieste", "b_got_title": "Hai preso l'ordine!", "b_got_sub": "Indirizzo sbloccato — inizia la consegna", "b_done_title": "Consegna completata!", "b_done_sub": "Hai guadagnato ${p} — pagato tramite Stripe", "st_pending_t": "Cerco un corriere nelle vicinanze", "st_pending_n": "Inviato a ogni corriere disponibile da {s}", "st_accepted_t": "Accettato da #{c}", "st_accepted_n": "Il tuo corriere sta andando a {s}", "st_receipt_t": "Scontrino verificato", "st_receipt_n": "Ti verrà addebitato questo totale esatto", "st_delivered_t": "Consegnato alla tua porta", "st_delivered_n": "Addebitato sulla tua carta", "st_completed_t": "Consegnato", "st_completed_n": "Ordine completato", "broadcasting": "trasmissione", "tl_claimed_t": "Un corriere l'ha preso", "tl_waiting": "In attesa di un corriere", "tl_exact_bill": "conto esatto", "tl_sets_bill": "Imposta il conto esatto", "tl_dropoff_photo": "Foto della consegna", "e_orders_accept": "Gli ordini che accetti appaiono qui — toccane uno per continuare", "e_go_available": "Renditi disponibile per ricevere richieste", "e_no_couriers_t": "Nessun corriere lì al momento", "e_no_couriers_s": "Nessuno è da {s} né in arrivo — ma conserviamo il tuo ordine e lo inviamo appena qualcuno ci sarà.", "e_no_orders_t": "Ancora nessun ordine", "e_no_orders_s": "Trova un corriere e richiedi articoli", "e_no_requests_t": "Ancora nessuna richiesta", "e_no_requests_s": "I vicini che ordinano da questo negozio appariranno qui — vince il primo che accetta", "e_load_couriers": "Impossibile caricare i corrieri", "e_load_requests": "Impossibile caricare le richieste", "plan_basic_desc": "Commissioni occasionali", "plan_standard_desc": "La routine settimanale", "plan_unlimited_desc": "Buttati completamente", "plan_orders_mo": "{n} ordini / mese", "plan_unlimited_perk": "Ordini illimitati", "plan_basic_name": "Essenziale", "plan_standard_name": "Plus", "plan_unlimited_name": "Illimitato", "plan_word": "piano", "plan_nofees": "Nessun costo di consegna · nessuna mancia · addebito sullo scontrino esatto", "per_mo": "/mese", "order_from": "Ordine da {s}", "your_stops": "le tue tappe", "two_photo": "Verifica con 2 foto", "photo_receipt_b": "Fotografa lo scontrino", "photo_dropoff_b": "Fotografa la consegna", "proof_door": "Prova alla porta", "earn_pct": "Guadagna $3.00 + 3%", "earn_amt": "Guadagna ${p}", "addr_on_accept": "Indirizzo sbloccato all'accettazione", "chat_sys": "La chat è aperta mentre l'ordine è attivo · si chiude 30 min dopo la consegna", "chat_ph": "Messaggio…", "ssh_no_plan": "NESSUN PIANO", "ssh_start_first": "Fai il tuo primo ordine", "ssh_pick_plan": "Scegli un piano solo quando ordini", "ssh_unlimited_caps": "ILLIMITATO", "ssh_of": "DI {n}", "ssh_order_left_1": "{n} ordine rimasto", "ssh_orders_left_n": "{n} ordini rimasti", "ssh_founding_locked": "Membro fondatore · prezzo bloccato a vita", "t_adding": "Aggiunta di {n}…", "guar_something": "Qualcosa non va? Risolto entro 24 ore.", "report_problem": "Segnala un problema", "dispute_opened": "Contestazione aperta — la risolveremo entro 24 ore", "t_add_store_heading": "Aggiungi almeno un negozio dove stai andando", "loading": "Caricamento…", "locating_courier": "Individuazione del corriere…", "eta_away": "Corriere a {mi} mi · circa {min} min", "tap_retry": "Tocca per riprovare", "rate_courier_title": "Com'è andata la consegna?", "rate_courier_sub": "Valuta il tuo corriere", "rating_thanks": "Grazie per la tua valutazione!", "offer_new": "Nuovo incarico", "offer_pass": "Passa", "offer_item": "articolo", "offer_items": "articoli", "offer_waiting_t": "Sei disponibile", "offer_waiting_s": "Ti avviseremo appena appare un incarico nel tuo negozio", "offer_taken": "Quello è appena stato preso", "offer_cap": "Prima completa un ordine attivo", "status_label": "Il tuo stato", "pres_here": "Sono qui", "pres_way": "In arrivo", "pres_soon": "A breve", "avail_now_near": "Disponibile vicino a te", "avail_none": "Nessun corriere nelle vicinanze ora — ordina qui sotto e partirà appena uno è disponibile.", "live_now": "Sei attivo", "live_updated": "Aggiornato — i vicini lo vedono ora", "status_hint": "Il tuo stato alla prima tappa — le successive appaiono come in arrivo", "cour_avail_1": "1 corriere disponibile da {s}", "cour_avail_n": "{n} corrieri disponibili da {s}", "plan_inflight": "{n} in corso", "pick_store_note": "Qualsiasi negozio va bene. Se nessun corriere è lì o in arrivo, conserviamo il tuo ordine e lo inviamo appena ce n'è uno.", "home_needed_t": "Imposta il tuo indirizzo", "home_needed_s": "Plesi ti abbina a vicini entro ¼ di miglio, quindi ci serve prima il tuo indirizzo.", "home_needed_btn": "Imposta indirizzo", "loc_denied": "Attiva la posizione per impostare il tuo indirizzo", "my_deliveries": "Le mie consegne", "e_no_deliv_t": "Ancora nessuna consegna", "e_no_deliv_s": "Le consegne che completi appariranno qui", "deliv_canceled": "Annullato", "ovg_title": "Hai già usato gli ordini inclusi questo mese", "ovg_fee": "Costo extra per questo ordine: ${f}", "ovg_up": "Oppure passa a {p} per ${d} in più al mese e non pagare mai questo costo.", "ovg_btn": "Passa a {p}", "urg_hint": "Immediato → corrieri Sono qui · Presto → In arrivo · Più tardi → A breve"}, "de": {"tagline": "deine Nachbarn, unterwegs", "email": "E-Mail", "password": "Passwort", "continue": "Weiter", "auth_switch": "Neue Konten werden automatisch erstellt.", "clear": "Löschen", "role_req": "Besteller", "role_cour": "Kurier", "need_today": "Was brauchst du heute?", "pick_store": "Wähle einen Laden", "store_ph": "Laden eingeben… Publix, Chipotle, CVS", "guar_strip": "Jede Bestellung ist Garantiert oder Erstattet", "my_orders": "Meine Bestellungen", "your_items": "Deine Artikel", "when_need": "Wann brauchst du es?", "urg_immediate": "Sofort", "urg_soon": "Bald", "urg_later": "Später", "ut_immediate": "Sofort", "ut_soon": "Bald", "ut_later": "Später", "dropoff": "Lieferung", "dropoff_ph": "Deine Lieferadresse", "guar_title": "Garantiert oder Erstattet", "guar_body": "Jede Bestellung ist durch Plesi abgesichert. Etwas nicht in Ordnung? Reklamation per Tipp für 48 Stunden, gelöst in 24.", "billed_title": "Abrechnung zum exakten Beleg", "billed_body": "Keine Liefergebühr, keine Servicegebühr, kein Trinkgeld. Du zahlst die Belegsumme — nicht mehr.", "send_request": "Anfrage senden", "item_details": "Artikeldetails", "category": "Kategorie", "item_desc": "Artikelbeschreibung", "brand": "Marke", "type_size": "Typ / Größe", "other_info": "Weitere Infos", "save_item": "Artikel speichern", "cancel": "Abbrechen", "avail_now": "Verfügbar", "avail_sub": "Aktiviere, wenn du losgehst", "which_store": "Zu welchem Laden oder Restaurant gehst du?", "add_stop": "+ Weiteren Halt hinzufügen", "how_far": "Wie weit fährst du?", "radius_note": "Plesi bleibt lokal — wir verbinden dich mit Nachbarn im Umkreis von ¼ Meile, jede Fahrt ist ganz nah.", "active_deliveries": "Deine aktiven Lieferungen", "incoming_requests": "Eingehende Anfragen", "accept": "Annehmen", "skip": "Überspringen", "start_membership": "Mitgliedschaft starten", "maybe_later": "Vielleicht später", "your_address": "Deine Adresse", "use_location": "Meinen aktuellen Standort verwenden", "home_address": "Privatadresse", "delivery_notes": "Lieferhinweise (optional)", "payment": "Zahlung", "card_number": "Kartennummer", "expiry": "Ablauf", "save_card_start": "Karte speichern & starten", "delivery_address": "Lieferadresse", "update_location": "Auf aktuellen Standort aktualisieren", "save_address": "Adresse speichern", "payment_method": "Zahlungsmethode", "update_card": "Karte aktualisieren", "account": "Konto", "change_plan": "Tarif ändern", "sign_out": "Abmelden", "language": "Sprache", "choose_plan": "Wähle deinen Tarif", "t_add_desc": "Artikelbeschreibung hinzufügen", "t_add_item": "Mindestens einen Artikel hinzufügen", "t_addr_saved": "Adresse gespeichert", "t_card_saved": "Karte gespeichert", "t_drop_confirmed": "Lieferung bestätigt", "t_valid_receipt": "Gültige Belegsumme eingeben", "t_enter_addr": "Adresse eingeben", "t_enter_home": "Privatadresse eingeben", "t_find_store": "Zuerst einen Laden finden", "t_no_active": "Keine aktive Bestellung", "t_photo_receipt": "Zuerst den Beleg fotografieren", "t_pick_store": "Zuerst einen Laden wählen", "t_placing": "Bestellung wird aufgegeben…", "t_welcome": "Willkommen bei Plesi", "t_offline": "Du bist offline", "b_match_title": "Zugeteilt an #{c}!", "b_match_sub": "Unterwegs zu {s} für deine Bestellung", "b_live_title": "Du bist live!", "b_live_sub": "Wir senden Anfragen im Umkreis von {n} mi auf deiner Route", "b_route_title": "Noch unterwegs?", "b_route_sub": "Bestätige deine Route nach {s}, um weiter Anfragen zu erhalten", "b_got_title": "Du hast die Bestellung!", "b_got_sub": "Adresse freigeschaltet — starte die Lieferung", "b_done_title": "Lieferung abgeschlossen!", "b_done_sub": "Du hast ${p} verdient — ausgezahlt über Stripe", "st_pending_t": "Suche einen Kurier in der Nähe", "st_pending_n": "An jeden verfügbaren Kurier bei {s} gesendet", "st_accepted_t": "Angenommen von #{c}", "st_accepted_n": "Dein Kurier ist unterwegs zu {s}", "st_receipt_t": "Beleg bestätigt", "st_receipt_n": "Dir wird genau dieser Betrag berechnet", "st_delivered_t": "An deine Tür geliefert", "st_delivered_n": "Deiner Karte belastet", "st_completed_t": "Geliefert", "st_completed_n": "Bestellung abgeschlossen", "broadcasting": "sende", "tl_claimed_t": "Kurier hat es übernommen", "tl_waiting": "Warte auf einen Kurier", "tl_exact_bill": "exakte Rechnung", "tl_sets_bill": "Legt die exakte Rechnung fest", "tl_dropoff_photo": "Lieferfoto", "e_orders_accept": "Angenommene Bestellungen erscheinen hier — tippe eine an, um fortzufahren", "e_go_available": "Werde verfügbar, um Anfragen zu erhalten", "e_no_couriers_t": "Gerade keine Kuriere dort", "e_no_couriers_s": "Niemand ist bei {s} oder unterwegs — aber wir heben deine Bestellung auf und senden sie, sobald jemand da ist.", "e_no_orders_t": "Noch keine Bestellungen", "e_no_orders_s": "Finde einen Kurier und fordere Artikel an", "e_no_requests_t": "Noch keine Anfragen", "e_no_requests_s": "Nachbarn, die in diesem Laden bestellen, erscheinen hier — wer zuerst annimmt, gewinnt", "e_load_couriers": "Kuriere konnten nicht geladen werden", "e_load_requests": "Anfragen konnten nicht geladen werden", "plan_basic_desc": "Gelegentliche Besorgungen", "plan_standard_desc": "Die wöchentliche Routine", "plan_unlimited_desc": "Voll dabei", "plan_orders_mo": "{n} Bestellungen / Monat", "plan_unlimited_perk": "Unbegrenzte Bestellungen", "plan_basic_name": "Essential", "plan_standard_name": "Plus", "plan_unlimited_name": "Unbegrenzt", "plan_word": "Tarif", "plan_nofees": "Keine Liefergebühren · kein Trinkgeld · Abrechnung zum exakten Beleg", "per_mo": "/Mon.", "order_from": "Bestellung von {s}", "your_stops": "deine Halte", "two_photo": "Verifizierung mit 2 Fotos", "photo_receipt_b": "Beleg fotografieren", "photo_dropoff_b": "Lieferung fotografieren", "proof_door": "Nachweis an der Tür", "earn_pct": "Verdiene $3.00 + 3%", "earn_amt": "Verdiene ${p}", "addr_on_accept": "Adresse bei Annahme freigeschaltet", "chat_sys": "Der Chat ist offen, solange die Bestellung aktiv ist · schließt 30 Min. nach Lieferung", "chat_ph": "Nachricht…", "ssh_no_plan": "KEIN TARIF", "ssh_start_first": "Mach deine erste Bestellung", "ssh_pick_plan": "Wähle einen Tarif erst bei einer Bestellung", "ssh_unlimited_caps": "UNBEGRENZT", "ssh_of": "VON {n}", "ssh_order_left_1": "{n} Bestellung übrig", "ssh_orders_left_n": "{n} Bestellungen übrig", "ssh_founding_locked": "Gründungsmitglied · Preis lebenslang fixiert", "t_adding": "{n} wird hinzugefügt…", "guar_something": "Etwas nicht in Ordnung? Gelöst in 24 Stunden.", "report_problem": "Problem melden", "dispute_opened": "Reklamation eröffnet — wir lösen sie in 24 Stunden", "t_add_store_heading": "Füge mindestens einen Laden hinzu, zu dem du gehst", "loading": "Lädt…", "locating_courier": "Kurier wird geortet…", "eta_away": "Kurier {mi} mi entfernt · etwa {min} Min", "tap_retry": "Zum Wiederholen tippen", "rate_courier_title": "Wie war deine Lieferung?", "rate_courier_sub": "Bewerte deinen Kurier", "rating_thanks": "Danke für deine Bewertung!", "offer_new": "Neue Aufgabe", "offer_pass": "Weiter", "offer_item": "Artikel", "offer_items": "Artikel", "offer_waiting_t": "Du bist verfügbar", "offer_waiting_s": "Wir benachrichtigen dich, sobald eine Aufgabe in deinem Laden auftaucht", "offer_taken": "Der wurde gerade vergeben", "offer_cap": "Beende zuerst eine aktive Bestellung", "status_label": "Dein Status", "pres_here": "Bin da", "pres_way": "Unterwegs", "pres_soon": "Bald", "avail_now_near": "Jetzt in deiner Nähe", "avail_none": "Gerade keine Kuriere in der Nähe — bestelle unten, sie geht raus, sobald einer verfügbar ist.", "live_now": "Du bist live", "live_updated": "Aktualisiert — Nachbarn sehen das jetzt", "status_hint": "Dein Status am ersten Halt — spätere Halte erscheinen als Nächstes", "cour_avail_1": "1 Kurier verfügbar bei {s}", "cour_avail_n": "{n} Kuriere verfügbar bei {s}", "plan_inflight": "{n} laufend", "pick_store_note": "Jeder Laden geht. Ist kein Kurier dort oder unterwegs, heben wir deine Bestellung auf und senden sie, sobald einer da ist.", "home_needed_t": "Lege deine Adresse fest", "home_needed_s": "Plesi verbindet dich mit Nachbarn im Umkreis von ¼ Meile — dafür brauchen wir zuerst deine Adresse.", "home_needed_btn": "Adresse festlegen", "loc_denied": "Aktiviere den Standort, um deine Adresse festzulegen", "my_deliveries": "Meine Lieferungen", "e_no_deliv_t": "Noch keine Lieferungen", "e_no_deliv_s": "Abgeschlossene Lieferungen erscheinen hier", "deliv_canceled": "Storniert", "ovg_title": "Du hast deine enthaltenen Bestellungen diesen Monat aufgebraucht", "ovg_fee": "Zusatzgebühr für diese Bestellung: ${f}", "ovg_up": "Oder wechsle zu {p} für ${d} mehr pro Monat und zahle diese Gebühr nie.", "ovg_btn": "Zu {p} wechseln", "urg_hint": "Sofort → Kuriere Bin da · Bald → Unterwegs · Später → Bald"}};
+let LANG=(function(){try{var s=localStorage.getItem('plesi_lang');if(s&&I18N[s])return s;}catch(e){}return 'en';})();
+if(!I18N[LANG])LANG='en';
+function t(k){return (I18N[LANG]&&I18N[LANG][k])||I18N.en[k]||k;}
+window.t=t;
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){var v=t(el.getAttribute('data-i18n'));if(v)el.textContent=v;});
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){var v=t(el.getAttribute('data-i18n-ph'));if(v)el.setAttribute('placeholder',v);});
+  try{document.documentElement.lang=LANG;}catch(e){}
+  try{var _L=LANGS.filter(function(a){return a[0]===LANG;})[0];if(_L){var _n=document.getElementById('profLangName');if(_n)_n.textContent=_L[1];var _f=document.getElementById('profLangFlag');if(_f)_f.textContent=_L[2];}}catch(e){}
+}
+window.applyI18n=applyI18n;
+try{applyI18n();}catch(e){}
+const LANGS=[['en','English','\uD83C\uDDEC\uD83C\uDDE7'],['es','Espa\u00f1ol','\uD83C\uDDEA\uD83C\uDDF8'],['pt','Portugu\u00eas','\uD83C\uDDE7\uD83C\uDDF7'],['fr','Fran\u00e7ais','\uD83C\uDDEB\uD83C\uDDF7'],['it','Italiano','\uD83C\uDDEE\uD83C\uDDF9'],['de','Deutsch','\uD83C\uDDE9\uD83C\uDDEA']];
+function renderLangList(){var w=document.getElementById('langList');if(!w)return;w.innerHTML=LANGS.map(function(a){var on=a[0]===LANG;return '<div class="langopt'+(on?' on':'')+'" onclick="setLang(\''+a[0]+'\')"><span class="lf">'+a[2]+'</span><b>'+a[1]+'</b>'+(on?'<svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>':'')+'</div>';}).join('');}
+window.openLang=function(){renderLangList();var s=document.getElementById('langSheet');if(s)s.classList.add('show');};
+window.closeLang=function(){var s=document.getElementById('langSheet');if(s)s.classList.remove('show');};
+window.setLang=function(l){LANG=l;try{localStorage.setItem('plesi_lang',l);}catch(e){}applyI18n();renderLangList();try{if(typeof ME!=='undefined'&&ME&&ME.id){sb.from('profiles').update({language:l}).eq('id',ME.id);if(typeof PROFILE!=='undefined'&&PROFILE)PROFILE.language=l;}}catch(e){}try{if(typeof renderSubHero==='function')renderSubHero();}catch(e){}try{if(typeof availTripId!=='undefined'&&availTripId&&typeof loadIncoming==='function')loadIncoming();}catch(e){}try{var _o=document.querySelector('.screen[data-s="r-orders"].on');if(_o&&typeof loadOrders==='function')loadOrders();}catch(e){}closeLang();};
+window.chooseLangFirst=async function(l){LANG=l;try{localStorage.setItem('plesi_lang',l);}catch(e){}applyI18n();try{PROFILE.language=l;await sb.from('profiles').update({language:l}).eq('id',ME.id);}catch(e){}await continueBoot();};
+function renderLangSelect(){var w=document.getElementById('langSelectList');if(!w)return;var q=String.fromCharCode(39);w.innerHTML=LANGS.map(function(a){return '<div class="lsopt" onclick="chooseLangFirst('+q+a[0]+q+')"><span class="lf">'+a[2]+'</span><b>'+a[1]+'</b><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';}).join('');}
+window.renderLangSelect=renderLangSelect;
+
+
+/* ===== state ===== */
+let ME=null, PROFILE=null, SUB=null, PLAN=null, LOC={...FALLBACK,real:false}, STORES=[], ROLE='req', HOME_SET=false;
+async function loadPlan(){
+  try{ const {data,error}=await sb.rpc('plan_status'); PLAN=(!error&&data&&data.length)?data[0]:null; }catch(e){ PLAN=null; }
+}
+let reqTrip=null, activeOrderId=null, deliverOrder=null, availTripId=null;
+let chatChannel=null, orderChannel=null;
+const caps={1:false,2:false,3:false};
+
+/* ===== helpers ===== */
+const $=id=>document.getElementById(id);
+function go(s){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('on'));const el=document.querySelector(`[data-s="${s}"]`);if(el){el.classList.add('on');el.scrollTop=0;}saveNav(s);}
+const RESUMABLE=['main','r-orders','c-orders','profile','r-track','c-deliver'];
+function saveNav(s){ try{ if(RESUMABLE.includes(s)) localStorage.setItem('plesi_nav',JSON.stringify({s,role:typeof ROLE!=='undefined'?ROLE:'req',oid:activeOrderId||(typeof deliverOrder!=='undefined'&&deliverOrder?deliverOrder.id:null),t:Date.now()})); }catch(e){} }
+function restoreNav(){
+  try{
+    const raw=localStorage.getItem('plesi_nav'); if(!raw)return;
+    const n=JSON.parse(raw); if(!n||Date.now()-n.t>1000*60*60*6)return; // 6h window
+    if(n.role) setRole(n.role);
+    if(n.s==='r-track'&&n.oid){ openTracking(n.oid); }
+    else if(n.s==='c-deliver'&&n.oid){ openDeliver(n.oid); }
+    else if(n.s==='r-orders'){ go('r-orders'); loadOrders(); }
+    else if(n.s==='c-orders'){ go('c-orders'); loadDeliveries(); }
+    else if(n.s==='profile'){ openProfile(); }
+  }catch(e){}
+}
+let tT;function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('show'),2400);}
+function escapeHtml(s){return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+
+// chip single-select (request categories)
+document.addEventListener('click',e=>{
+  const c=e.target.closest('.chip'); if(!c||!c.parentElement)return;
+  c.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));
+  c.classList.add('on');
+});
+
+// poll for the courier's current task offer while they're available
+let incomingPoll=null, offerCountdown=null;
+function startPoll(){ stopPoll(); pollMyOffer(); incomingPoll=setInterval(()=>{ if(availTripId) pollMyOffer(); },5000); }
+function stopPoll(){ if(incomingPoll){clearInterval(incomingPoll); incomingPoll=null;} stopOfferCountdown(); }
+function stopOfferCountdown(){ if(offerCountdown){clearInterval(offerCountdown); offerCountdown=null;} }
+
+/* ===== AUTH ===== */
+function bindSwitch(){}
+function showAuthErr(m){const e=$('authErr');e.textContent=m;e.style.display='block';}
+window.doAuth=async()=>{
+  const email=$('authEmail').value.trim(), pass=$('authPass').value;
+  $('authErr').style.display='none';
+  if(!email||!pass){showAuthErr('Enter an email and password.');return;}
+  if(pass.length<6){showAuthErr('Password must be at least 6 characters.');return;}
+  $('authBtn').textContent='…';
+  try{
+    let {error}=await sb.auth.signInWithPassword({email,password:pass});
+    if(!error){ return; }
+    if(/invalid login credentials/i.test(error.message||'')){
+      const {data:su,error:suErr}=await sb.auth.signUp({email,password:pass});
+      if(suErr){
+        if(/already|registered|exists/i.test(suErr.message||'')) showAuthErr('That email already has an account with a different password.');
+        else throw suErr;
+        $('authBtn').textContent=t('continue'); return;
+      }
+      if(su.session){ return; }
+      const {error:siErr}=await sb.auth.signInWithPassword({email,password:pass});
+      if(siErr){ showAuthErr('Account created. If it won\'t log in, turn OFF "Confirm email" in Supabase → Auth → Providers → Email.'); $('authBtn').textContent=t('continue'); return; }
+      return;
+    }
+    throw error;
+  }catch(ex){ console.error('AUTH ERROR →',ex); showAuthErr(ex?.message||'Sign-in failed — check the console (F12).'); $('authBtn').textContent=t('continue'); }
+};
+window.signOut=async()=>{
+  try{ await sb.auth.signOut(); }catch(e){}
+  try{ Object.keys(localStorage).forEach(k=>{ if(k.includes('supabase')||k.startsWith('sb-')) localStorage.removeItem(k); }); }catch(e){}
+  location.href=location.pathname;   // reload clean, no stored session
+};
+
+sb.auth.onAuthStateChange(async(_e,session)=>{
+  if(session?.user){ ME=session.user; $('authScreen').style.display='none'; await boot(); }
+  else { $('authScreen').style.display='flex'; }
+});
+
+/* ===== BOOT ===== */
+async function boot(){
+  let {data:prof}=await sb.from('profiles').select('*').eq('id',ME.id).maybeSingle();
+  if(!prof){
+    const {data:created,error:cErr}=await sb.from('profiles').insert({id:ME.id, email:ME.email||null}).select().single();
+    if(cErr){ alert('Could not create your profile: '+cErr.message); return; }
+    prof=created;
+  }
+  PROFILE=prof;
+  // ===== first-login language gate (saved to the account, asked once) =====
+  if(PROFILE.language && I18N[PROFILE.language]){ LANG=PROFILE.language; }
+  else { var _ls=null; try{_ls=localStorage.getItem('plesi_lang');}catch(e){} LANG=(_ls&&I18N[_ls])?_ls:'en'; }
+  try{localStorage.setItem('plesi_lang',LANG);}catch(e){} applyI18n();
+  await continueBoot();
+}
+async function continueBoot(){
+  await getLoc();
+  HOME_SET = !!PROFILE.home_point;
+  // only ever save a home address from a REAL location fix — never the fallback
+  if(!HOME_SET && LOC.real){
+    await sb.from('profiles').update({home_point:`SRID=4326;POINT(${LOC.lng} ${LOC.lat})`}).eq('id',ME.id);
+    HOME_SET = true;
+  }
+  // stores via bypass-RLS function (works even if table read is locked), with fallback
+  let st=[];
+  try{ const r=await sb.rpc('list_stores'); if(!r.error) st=r.data||[]; }catch(e){ console.error('list_stores error',e); }
+  if(!st.length){ const r2=await sb.from('stores').select('id,name,abbr').order('name'); st=r2.data||[]; if(r2.error) console.error('stores select error',r2.error); }
+  STORES=st;
+  if(!STORES.length) console.warn('No stores loaded — run plesi-setup.sql in Supabase.');
+  let {data:sub}=await sb.from('subscriptions').select('*').eq('user_id',ME.id).maybeSingle();
+  SUB=sub||null;
+  await loadPlan();
+  $('pU').textContent='#'+PROFILE.user_code; $('pC').textContent='#'+PROFILE.courier_code;
+  $('pMeta').textContent=`${SUB?SUB.tier:'no plan'} · ${PROFILE.rating_avg}★`;
+  if(PROFILE.home_address && $('reqDrop')) $('reqDrop').value=PROFILE.home_address;
+  requestNotifPermission();
+  renderSubHero(); setRole('req'); go('main');
+  try{ if((location.hash||'').toLowerCase().indexOf('owner')>=0){ setTimeout(function(){ if(typeof openOwner==='function') openOwner(); }, 500); } }catch(e){}
+  checkRoutePing();
+  restoreNav();
+}
+
+/* ===== ONBOARDING: address + payment ===== */
+window.useLiveLocation=async()=>{
+  $('locBtn').textContent='Locating…';
+  const ok=await getLoc();
+  if(!ok){ $('locStatus').textContent='⚠ '+t('loc_denied'); $('locBtn').textContent=t('use_location'); return; }
+  await sb.from('profiles').update({home_point:`SRID=4326;POINT(${LOC.lng} ${LOC.lat})`}).eq('id',ME.id);
+  HOME_SET=true;
+  $('locStatus').textContent='✓ Live location saved';
+  $('locBtn').innerHTML='<svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Location set';
+};
+window.saveAddress=async()=>{
+  const addr=$('obAddress').value.trim();
+  if(!addr){toast(t('t_enter_home'));return;}
+  $('addrBtn').textContent='…';
+  const notes=$('obNotes').value.trim();
+  const full=addr+(notes?(' — '+notes):'');
+  const {error}=await sb.from('profiles').update({home_address:full}).eq('id',ME.id);
+  if(error){toast(error.message);$('addrBtn').textContent=t('continue');return;}
+  PROFILE.home_address=full; if($('reqDrop'))$('reqDrop').value=full; $('addrBtn').textContent=t('continue'); afterOnboardStep();
+};
+function cardBrand(num){ if(/^4/.test(num))return'VISA'; if(/^5[1-5]/.test(num))return'MASTERCARD'; if(/^3[47]/.test(num))return'AMEX'; if(/^6/.test(num))return'DISCOVER'; return'CARD'; }
+window.onCardInput=()=>{
+  let n=$('ccNum').value.replace(/\D/g,'').slice(0,16);
+  $('ccNum').value=n.replace(/(.{4})/g,'$1 ').trim();
+  $('cpNum').textContent=(n.padEnd(16,'•')).replace(/(.{4})/g,'$1 ').trim();
+  $('cpBrand').textContent=cardBrand(n);
+  let e=$('ccExp').value.replace(/\D/g,'').slice(0,4);
+  if(e.length>=3)e=e.slice(0,2)+'/'+e.slice(2); $('ccExp').value=e; $('cpExp').textContent=e||'MM/YY';
+};
+window.savePayment=async()=>{
+  const num=$('ccNum').value.replace(/\D/g,''), exp=$('ccExp').value, cvc=$('ccCvc').value.replace(/\D/g,''), err=$('payErr');
+  err.style.display='none';
+  if(num.length<15){err.textContent='Enter a valid card number.';err.style.display='block';return;}
+  if(!/^\d{2}\/\d{2}$/.test(exp)){err.textContent='Enter expiry as MM/YY.';err.style.display='block';return;}
+  if(cvc.length<3){err.textContent='Enter the CVC.';err.style.display='block';return;}
+  $('payBtn').textContent='…';
+  const {error}=await sb.from('profiles').update({has_payment:true,card_last4:num.slice(-4),card_brand:cardBrand(num)}).eq('id',ME.id);
+  if(error){toast(error.message);$('payBtn').textContent='Save card & start';return;}
+  PROFILE.has_payment=true; PROFILE.card_last4=num.slice(-4); PROFILE.card_brand=cardBrand(num);
+  $('payBtn').textContent='Save card & start'; toast(t('t_card_saved')); afterOnboardStep();
+};
+
+/* ===== NOTIFICATIONS ===== */
+function requestNotifPermission(){ try{ if('Notification'in window && Notification.permission==='default') Notification.requestPermission(); }catch(e){} }
+let bannerT;
+function showBanner(emoji,title,sub){
+  $('mbEmoji').textContent=emoji; $('mbTitle').textContent=title; $('mbSub').textContent=sub;
+  const b=$('matchBanner'); b.classList.add('show'); clearTimeout(bannerT); bannerT=setTimeout(()=>b.classList.remove('show'),5000);
+  try{ if('Notification'in window && Notification.permission==='granted') new Notification(title,{body:sub}); }catch(e){}
+  try{ if(navigator.vibrate) navigator.vibrate(120); }catch(e){}
+}
+function getLoc(){return new Promise(res=>{
+  if(!navigator.geolocation){ LOC={...FALLBACK,real:false}; res(false); return; }
+  navigator.geolocation.getCurrentPosition(
+    p=>{ LOC={lat:p.coords.latitude,lng:p.coords.longitude,real:true}; res(true); },
+    ()=>{ LOC={...FALLBACK,real:false}; res(false); },
+    {timeout:8000,enableHighAccuracy:true});
+});}
+
+/* ===== STORES (autocomplete) ===== */
+let reqStoreId=null;
+function acFilter(which){
+  const input=$(which+'StoreSearch'), list=$(which+'StoreList'), q=(input.value||'').trim(), ql=q.toLowerCase();
+  const matches=STORES.filter(s=>s.name.toLowerCase().includes(ql)).slice(0,7);
+  let html=matches.map(s=>`<div class="ac-item" onmousedown="acPick('${which}','${s.id}')">${escapeHtml(s.name)}</div>`).join('');
+  const exact=STORES.some(s=>s.name.toLowerCase()===ql);
+  if(q && !exact){ html+=`<div class="ac-item ac-add" onmousedown="addCustomStore('${which}')"><b>+ Use “${escapeHtml(q)}”</b><span>Add this store or restaurant</span></div>`; }
+  if(!html) html='<div class="ac-item" style="color:var(--muted)">Type a store or restaurant</div>';
+  list.innerHTML=html; list.style.display='block';
+}
+window.acFilter=acFilter;
+window.addCustomStore=async(which)=>{
+  const name=($(which+'StoreSearch').value||'').trim(); if(!name)return;
+  $(which+'StoreList').style.display='none'; toast(t('t_adding').replace('{n}',name));
+  const {data,error}=await sb.rpc('get_or_create_store',{p_name:name});
+  if(error){toast(error.message);return;}
+  const id=data; if(id && !STORES.some(s=>s.id===id)) STORES.push({id,name,abbr:name.replace(/[^a-zA-Z0-9]/g,'').slice(0,2).toUpperCase()||'ST'});
+  if(which==='req'){ reqStoreId=id; selectedStore={id,name}; $('reqStoreSearch').value=name; findCouriers(); }
+};
+window.acPick=(which,id)=>{
+  const store=STORES.find(s=>s.id===id); if(!store)return;
+  $(which+'StoreSearch').value=store.name;
+  $(which+'StoreList').style.display='none';
+  if(which==='req'){ reqStoreId=id; selectedStore={id,name:store.name}; findCouriers(); }
+};
+document.addEventListener('click',e=>{ if(!e.target.closest('.ac')){ document.querySelectorAll('.ac-list').forEach(l=>l.style.display='none'); } });
+
+/* ===== COURIER DESTINATIONS (up to 3 stops) ===== */
+let courStops=[null];
+let courierPresence='on_the_way';
+window.pickPresence=(p)=>{ courierPresence=p; document.querySelectorAll('#presencePick button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-p')===p)); if(availTripId) syncLiveTrip(true); };
+async function syncLiveTrip(announce){
+  if(!availTripId) return;
+  const stops=courStops.filter(Boolean);
+  if(!stops.length){ await goOffline(); toast(t('t_add_store_heading')); return; }
+  try{
+    const {error}=await sb.from('trips').update({store_id:stops[0],store_ids:stops,presence:courierPresence}).eq('id',availTripId);
+    if(error){ toast(error.message); return; }
+    setAvailUI(true,stops);
+    if(announce) toast(t('live_updated'));
+  }catch(e){}
+}
+async function goOffline(){
+  try{ await sb.from('trips').update({status:'closed'}).eq('courier_id',ME.id).eq('status','open'); }catch(e){}
+  availTripId=null; setAvailUI(false); stopPoll();
+  const il=$('incomingList'); if(il) il.innerHTML='<div class="empty"><span>'+t('e_go_available')+'</span></div>';
+}
+function renderStops(){
+  const wrap=$('courStops'); if(!wrap)return;
+  wrap.innerHTML=courStops.map((sid,i)=>{
+    const name=sid?(STORES.find(s=>s.id===sid)?.name||''):'';
+    const ph=i===0?'On the way to…':(i===1?'Then headed to… (optional)':'And after that… (optional)');
+    return `<div class="ac" style="margin-top:${i?8:0}px"><input class="inp" id="courStop${i}" placeholder="${ph}" value="${escapeHtml(name)}" oninput="stopFilter(${i})" onfocus="stopFilter(${i})" autocomplete="off"/>${(sid||courStops.length>1)?`<button class="stopx" onclick="removeStop(${i})">×</button>`:''}<div class="ac-list" id="courStopList${i}"></div></div>`;
+  }).join('');
+  const btn=$('addStopBtn'); if(btn) btn.style.display=courStops.length<3?'inline-flex':'none';
+}
+window.addStop=()=>{ if(courStops.length<3){courStops.push(null); renderStops();} };
+window.removeStop=(i)=>{ courStops.splice(i,1); if(!courStops.length)courStops=[null]; renderStops(); if(availTripId) syncLiveTrip(true); };
+window.stopFilter=(i)=>{
+  const input=$('courStop'+i), list=$('courStopList'+i), q=(input.value||'').trim(), ql=q.toLowerCase();
+  const matches=STORES.filter(s=>s.name.toLowerCase().includes(ql)).slice(0,7);
+  let html=matches.map(s=>`<div class="ac-item" onmousedown="stopPick(${i},'${s.id}')">${escapeHtml(s.name)}</div>`).join('');
+  const exact=STORES.some(s=>s.name.toLowerCase()===ql);
+  if(q && !exact){ html+=`<div class="ac-item ac-add" onmousedown="addCustomStop(${i})"><b>+ Use “${escapeHtml(q)}”</b><span>Add this store or restaurant</span></div>`; }
+  if(!html) html='<div class="ac-item" style="color:var(--muted)">Type a store or restaurant</div>';
+  list.innerHTML=html; list.style.display='block';
+};
+window.stopPick=(i,id)=>{ courStops[i]=id; renderStops(); if(availTripId) syncLiveTrip(true); };
+window.addCustomStop=async(i)=>{
+  const name=($('courStop'+i).value||'').trim(); if(!name)return;
+  const list=$('courStopList'+i); if(list)list.style.display='none'; toast(t('t_adding').replace('{n}',name));
+  const {data,error}=await sb.rpc('get_or_create_store',{p_name:name});
+  if(error){toast(error.message);return;}
+  const id=data; if(id && !STORES.some(s=>s.id===id)) STORES.push({id,name,abbr:name.replace(/[^a-zA-Z0-9]/g,'').slice(0,2).toUpperCase()||'ST'});
+  courStops[i]=id; renderStops(); if(availTripId) syncLiveTrip(true);
+};
+function fmtMi(mi){ return (Math.round(mi*100)/100).toString(); }
+window.onRadiusChange=()=>{
+  let mi=parseFloat($('radiusSlider').value||'1'); mi=Math.max(0.25,Math.min(5,mi));
+  $('radiusLabel').textContent=fmtMi(mi)+' mi';
+  if(availTripId){ sb.from('trips').update({radius_m:Math.round(mi*1609.34)}).eq('id',availTripId); }
+};
+
+/* ===== PLAN PICKER ===== */
+let pickedTier='standard';
+const PLANS=[
+  {tier:'basic',     price_founding:17.99, price_regular:19.99, orders_included:4,    desc:'Occasional errands', perk:'4 orders / month'},
+  {tier:'standard',  price_founding:29.99, price_regular:34.99, orders_included:8,    desc:'The weekly routine', perk:'8 orders / month'},
+  {tier:'unlimited', price_founding:39.99, price_regular:44.99, orders_included:null, desc:'Lean all the way in', perk:'Unlimited orders'},
+];
+async function renderPlanPicker(){
+  let cfg=[];
+  try{ const r=await sb.from('plan_config').select('*'); cfg=r.data||[]; }catch(e){}
+  // merge DB prices over the built-in defaults, but always have the defaults
+  const byTier={}; PLANS.forEach(p=>byTier[p.tier]={...p}); cfg.forEach(p=>{ if(byTier[p.tier]) Object.assign(byTier[p.tier],p); });
+  const list=['basic','standard','unlimited'].map(t=>byTier[t]);
+  $('planPicker').innerHTML=list.map(p=>`
+    <div class="plan-c ${p.tier==='standard'?'sel':''}" data-tier="${p.tier}" onclick="pickPlan('${p.tier}')">
+      <div class="ph"><div><div class="pn">${t('plan_'+p.tier+'_name')}</div><div class="pd">${t('plan_'+p.tier+'_desc')} · ${p.tier==='unlimited'?t('plan_unlimited_perk'):t('plan_orders_mo').replace('{n}',p.orders_included)}</div></div>
+      <div><div class="pr">$${p.price_founding}<span>${t('per_mo')}</span></div><div class="was">$${p.price_regular}</div></div></div>
+      <div style="font-size:11px;color:var(--ice-text);background:var(--ice-50);padding:6px 10px;border-radius:9px;margin-top:11px;font-weight:600">${t('plan_nofees')}</div>
+    </div>`).join('');
+}
+window.pickPlan=t=>{pickedTier=t;document.querySelectorAll('.plan-c').forEach(c=>c.classList.toggle('sel',c.getAttribute('data-tier')===t));};
+window.startSubscription=async()=>{
+  $('startBtn').textContent='…';
+  const included={basic:4,standard:8,unlimited:9999}[pickedTier]??9999;
+  const {data,error}=await sb.from('subscriptions').upsert({user_id:ME.id,tier:pickedTier,status:'active',is_founding:true,orders_included:included,orders_used:0},{onConflict:'user_id'}).select().single();
+  if(error){toast(error.message);$('startBtn').textContent=t('start_membership');return;}
+  SUB=data; $('startBtn').textContent=t('start_membership'); toast(t('t_welcome')); afterOnboardStep();
+};
+window.cancelCheckout=()=>{ pendingOrder=null; renderSubHero(); setRole('req'); go('main'); };
+function afterOnboardStep(){
+  if(pendingOrder){ proceedCheckout(); }
+  else { renderSubHero(); setRole('req'); go('main'); }
+}
+function proceedCheckout(){
+  if(!SUB){ renderPlanPicker(); go('onboard'); return; }
+  if(!PROFILE.home_address){ go('ob-address'); return; }
+  if(!PROFILE.has_payment){ go('ob-payment'); return; }
+  doPlaceOrder();
+}
+
+/* ===== SUBSCRIPTION HERO ===== */
+function renderSubHero(){
+  if(!SUB){
+    $('ordersLeft').textContent='+';
+    $('ordersOf').textContent=t('ssh_no_plan');
+    $('planName').textContent='Plesi';
+    $('ordersH').textContent=t('ssh_start_first');
+    $('planSub').textContent=t('ssh_pick_plan');
+    $('ring').setAttribute('stroke-dashoffset',188);
+    return;
+  }
+  const included=(PLAN&&PLAN.orders_included!=null)?PLAN.orders_included:SUB.orders_included;
+  const used=(PLAN&&PLAN.orders_used!=null)?PLAN.orders_used:SUB.orders_used;
+  const inflight=(PLAN&&PLAN.in_flight!=null)?PLAN.in_flight:0;
+  const unlimited=included>=9999;
+  const avail=Math.max(included-used-inflight,0);
+  const left=unlimited?'∞':avail;
+  $('ordersLeft').textContent=left;
+  $('ordersOf').textContent=unlimited?t('ssh_unlimited_caps'):t('ssh_of').replace('{n}',included);
+  $('planName').textContent=t('plan_'+SUB.tier+'_name')+' '+t('plan_word');
+  $('ordersH').textContent=unlimited?t('plan_unlimited_perk'):(avail===1?t('ssh_order_left_1').replace('{n}',avail):t('ssh_orders_left_n').replace('{n}',avail));
+  $('planSub').textContent=(inflight>0?(t('plan_inflight').replace('{n}',inflight)+' · '):'')+t('ssh_founding_locked');
+  if(!unlimited){const pct=avail/Math.max(included,1);$('ring').setAttribute('stroke-dashoffset',Math.round(188*(1-pct)));}
+  else $('ring').setAttribute('stroke-dashoffset',0);
+}
+
+/* ===== ROLE SWITCH ===== */
+let availStoresPoll=null;
+async function loadAvailableStores(){
+  const wrap=$('availStores'); if(!wrap)return;
+  if(!HOME_SET){
+    wrap.innerHTML='<div class="availnote none"><b>'+escapeHtml(t('home_needed_t'))+'</b><span>'+escapeHtml(t('home_needed_s'))+'</span>'
+      +'<button class="btn btn-ghost btn-sm" style="margin-top:10px" onclick="openProfile()">'+escapeHtml(t('home_needed_btn'))+'</button></div>';
+    return;
+  }
+  let data;
+  try{
+    const r=await sb.rpc('available_stores_for_me');
+    if(r.error){ wrap.innerHTML='<div class="avail-empty" style="color:var(--coral-text)">Store list error: '+escapeHtml(r.error.message||'')+'</div>'; return; }
+    data=r.data;
+  }catch(e){ return; }
+  const badge={here_now:['🟢',t('pres_here')],on_the_way:['🔵',t('pres_way')],going_soon:['🟡',t('pres_soon')]};
+  if(!data||!data.length){ wrap.innerHTML='<div class="avail-empty">'+t('avail_none')+'</div>'; return; }
+  wrap.innerHTML='<div class="avail-h">'+t('avail_now_near')+'</div>'+data.map(function(s){
+    var b=badge[s.best_presence]||badge.going_soon;
+    return '<div class="availstore" data-id="'+s.store_id+'" data-name="'+escapeHtml(s.store_name||'').replace(/"/g,'&quot;')+'" onclick="pickAvailStore(this)"><div class="as-abbr">'+escapeHtml(s.store_abbr||'?')+'</div><div class="as-mid"><div class="as-name">'+escapeHtml(s.store_name||'')+'</div><div class="as-stat">'+b[0]+' '+b[1]+(s.courier_count>1?(' · '+s.courier_count):'')+'</div></div><div class="as-go">→</div></div>';
+  }).join('');
+}
+window.pickAvailStore=function(el){ var id=el.getAttribute('data-id'), name=el.getAttribute('data-name'); reqStoreId=id; selectedStore={id:id,name:name}; var si=$('reqStoreSearch'); if(si)si.value=name; if(typeof findCouriers==='function')findCouriers(); };
+function startAvailStores(){ if(availStoresPoll)clearInterval(availStoresPoll); loadAvailableStores(); availStoresPoll=setInterval(loadAvailableStores,10000); }
+function stopAvailStores(){ if(availStoresPoll){clearInterval(availStoresPoll);availStoresPoll=null;} }
+window.setRole=(r)=>{
+  ROLE=r; const req=r==='req';
+  $('segReq').classList.toggle('on',req); $('segCour').classList.toggle('on',!req);
+  $('reqView').style.display=req?'block':'none'; $('courView').style.display=req?'none':'block';
+  $('handlePill').textContent='#'+(req?PROFILE.user_code:PROFILE.courier_code);
+  if(req){ renderSubHero(); loadPlan().then(renderSubHero); stopPoll(); startAvailStores(); }
+  else { stopAvailStores(); ensureCourier(); renderStops(); loadEarnings(); checkAvailability(); loadMyDeliveries(); }
+};
+async function loadMyDeliveries(){
+  const {data}=await sb.from('orders').select('*, stores(name,abbr)').eq('courier_id',ME.id).in('status',['accepted','shopping','receipt_verified']).order('accepted_at',{ascending:false});
+  const wrap=$('myDeliveries');
+  if(!data||!data.length){ wrap.innerHTML='<div class="empty"><span>'+t('e_orders_accept')+'</span></div>'; return; }
+  const stepN={accepted:0,shopping:1,receipt_verified:1};
+  wrap.innerHTML=data.map(o=>{
+    const done=stepN[o.status]||0;
+    const dots=[1,2].map(i=>`<div class="d ${i<=done?'on':''}"></div>`).join('');
+    const pillStatus=o.status==='receipt_verified'?'receipt_verified':'accepted';
+    return `<div class="deliv" onclick="openDeliver('${o.id}')"><div class="top"><div class="slogo">${o.stores.abbr}</div>
+      <div style="flex:1"><div class="store" style="font-family:var(--font);font-size:14.5px;font-weight:700">${o.stores.name} run</div><div class="when">${o.receipt_total?('$'+o.receipt_total+' · earn $'+(3+0.03*o.receipt_total).toFixed(2)):'tap to continue'}</div></div>
+      <span class="statuspill sp-${pillStatus}">${o.status==='receipt_verified'?'receipt done':'shopping'}</span></div>
+      <div class="progdots">${dots}</div></div>`;
+  }).join('');
+}
+
+/* ===== back from a delivery → refresh the courier basket ===== */
+window.closeDeliver=()=>{ go('main'); setRole('cour'); };
+
+/* ===== PROFILE: address + payment ===== */
+window.openProfile=()=>{
+  go('profile');
+  $('pU').textContent='#'+PROFILE.user_code; $('pC').textContent='#'+PROFILE.courier_code;
+  $('pMeta').textContent=`${SUB?SUB.tier:''} · founding member · ${PROFILE.rating_avg}★`;
+  $('profAddress').value=PROFILE.home_address||'';
+  $('profBrand').textContent=PROFILE.card_brand||'CARD';
+  $('profCardNum').textContent=PROFILE.card_last4?('•••• '+PROFILE.card_last4):'No card on file';
+  $('profLocStatus').textContent='';
+  try{$('ownerEntry').style.display=(PROFILE&&PROFILE.is_admin)?'block':'none';}catch(e){}
+};
+window.openOwner=async()=>{
+  go('owner');
+  $('ownStats').innerHTML='<div class="ostat"><div class="k">Loading…</div></div>';
+  $('ownStatus').innerHTML=''; $('ownOrders').innerHTML=''; $('ownUsers').innerHTML='';
+  const money=n=>'$'+Number(n||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+  try{
+    const {data:s,error}=await sb.rpc('admin_stats');
+    if(error){ const na=/authoriz/i.test(error.message||''); $('ownStats').innerHTML='<div class="ostat" style="grid-column:1/-1"><div class="k" style="color:var(--coral-text)">'+(na?'Not the owner account':'Error')+'</div><div class="d" style="color:var(--muted);font-weight:600;margin-top:4px">'+(na?'This login isn\'t flagged as owner. Run the is_admin SQL for this account\'s email, then reopen.':error.message)+'</div></div>'; return; }
+    const cell=(k,v,d)=>'<div class="ostat"><div class="k">'+k+'</div><div class="v">'+v+'</div>'+(d?'<div class="d">'+d+'</div>':'')+'</div>';
+    $('ownStats').innerHTML=[
+      cell('Users',s.users_total,'+'+s.users_today+' today'),
+      cell('Orders',s.orders_total,'+'+s.orders_today+' today'),
+      cell('Active now',s.orders_active,s.couriers_available+' couriers live'),
+      cell('Completed',s.orders_done,''),
+      cell('GMV',money(s.gmv_total),money(s.gmv_week)+' this week'),
+      cell('Courier payouts',money(s.payouts_total),''),
+      cell('Avg order',money(s.aov),''),
+      cell('Avg rating',(s.avg_rating||'–')+'★',''),
+      cell('Couriers',s.couriers_total,s.couriers_available+' available'),
+      cell('Active subs',s.subs_total,'B'+s.subs_basic+' · S'+s.subs_standard+' · U'+s.subs_unlimited)
+    ].join('');
+    const srow=(l,n)=>'<div class="ostatus"><span>'+l+'</span><b>'+n+'</b></div>';
+    $('ownStatus').innerHTML=srow('Pending',s.st_pending)+srow('Accepted',s.st_accepted)+srow('Shopping',s.st_shopping)+srow('Receipt verified',s.st_receipt)+srow('Delivered',s.st_done)+srow('Canceled',s.st_canceled);
+  }catch(e){$('ownStats').innerHTML='<div class="ostat"><div class="k">Error</div><div class="d">'+e.message+'</div></div>';return;}
+  try{
+    const {data:ords}=await sb.rpc('admin_recent_orders',{p_limit:25});
+    $('ownOrders').innerHTML=(ords&&ords.length)?ords.map(o=>{
+      const active=['pending','accepted','shopping','receipt_verified'].includes(o.status);
+      const hasCourier=['accepted','shopping','receipt_verified'].includes(o.status);
+      let acts='';
+      if(active){acts='<div class="oacts">'+(hasCourier?'<button class="oact" onclick="adminRelease(\''+o.order_id+'\')">Release</button>':'')+'<button class="oact danger" onclick="adminCancel(\''+o.order_id+'\')">Cancel</button></div>';}
+      return '<div class="oitem"><div class="oline"><span class="opill">'+(o.status||'').replace('_',' ')+'</span><span class="mono">'+(o.store||'—')+'</span><span class="mut">#'+(o.requester||'····')+(o.courier?(' → #'+o.courier):'')+'</span><span class="amt">'+(o.total?('$'+Number(o.total).toFixed(2)):'')+'</span></div>'+acts+'</div>';
+    }).join(''):'<div class="oitem"><div class="oline mut">No orders yet</div></div>';
+  }catch(e){$('ownOrders').innerHTML='<div class="oitem"><div class="oline mut">'+e.message+'</div></div>';}
+  try{
+    const {data:us}=await sb.rpc('admin_recent_users',{p_limit:25});
+    $('ownUsers').innerHTML=(us&&us.length)?us.map(u=>{
+      const role=u.courier?('<span class="opill">courier '+(u.rating||'')+'★</span>'):'<span class="mut">requester</span>';
+      const flag=u.banned?'<span class="opill" style="background:#FDECEC;color:#B42318">suspended</span>':'';
+      const btn='<button class="oact'+(u.banned?'':' danger')+'" onclick="adminBan(\''+u.id+'\','+(u.banned?'false':'true')+')">'+(u.banned?'Unban':'Ban')+'</button>';
+      return '<div class="oitem"><div class="oline"><span class="mono">#'+(u.u_code||'····')+'</span>'+role+flag+'<span class="amt mut" style="font-weight:500">'+fmtDT(u.created)+'</span></div><div class="oacts">'+btn+'</div></div>';
+    }).join(''):'<div class="oitem"><div class="oline mut">No users yet</div></div>';
+  }catch(e){$('ownUsers').innerHTML='<div class="oitem"><div class="oline mut">'+e.message+'</div></div>';}
+};
+window.adminBan=async(id,ban)=>{
+  if(!confirm(ban?'Suspend this account? Their active orders go back to the pool.':'Restore this account?'))return;
+  try{const {error}=await sb.rpc('admin_ban_user',{p_user:id,p_ban:ban}); if(error){toast(error.message);return;} toast(ban?'Account suspended':'Account restored'); openOwner();}catch(e){toast(e.message);}
+};
+window.adminCancel=async(id)=>{
+  if(!confirm('Cancel this order?'))return;
+  try{const {error}=await sb.rpc('admin_cancel_order',{p_order:id}); if(error){toast(error.message);return;} toast('Order canceled'); openOwner();}catch(e){toast(e.message);}
+};
+window.adminRelease=async(id)=>{
+  try{const {error}=await sb.rpc('admin_release_order',{p_order:id}); if(error){toast(error.message);return;} toast('Order released back to the pool'); openOwner();}catch(e){toast(e.message);}
+};
+window.adminReleaseStale=async()=>{
+  try{const {data,error}=await sb.rpc('release_stale_orders',{p_hours:3}); if(error){toast(error.message);return;} toast((data||0)+' stale order(s) released'); openOwner();}catch(e){toast(e.message);}
+};
+window.useLiveLocationProfile=async()=>{
+  $('profLocStatus').textContent='Locating…';
+  const ok=await getLoc();
+  if(!ok){ $('profLocStatus').textContent='⚠ '+t('loc_denied'); return; }
+  await sb.from('profiles').update({home_point:`SRID=4326;POINT(${LOC.lng} ${LOC.lat})`}).eq('id',ME.id);
+  HOME_SET=true;
+  $('profLocStatus').textContent='✓ Live location updated';
+};
+window.saveProfileAddress=async()=>{
+  const addr=$('profAddress').value.trim();
+  if(!addr){toast(t('t_enter_addr'));return;}
+  const {error}=await sb.from('profiles').update({home_address:addr}).eq('id',ME.id);
+  if(error){toast(error.message);return;}
+  PROFILE.home_address=addr; if($('reqDrop'))$('reqDrop').value=addr; toast(t('t_addr_saved'));
+};
+window.findCouriers=()=>{
+  if(!reqStoreId||!selectedStore){toast(t('t_pick_store'));return;}
+  renderCourierResults();
+};
+function renderCourierResults(){
+  const wrap=$('courierResults'); if(!wrap)return;
+  const storeName=(selectedStore&&selectedStore.name)||'store';
+  wrap.innerHTML='<button class="btn btn-coral" style="margin-top:12px" onclick="openOrderSheet()">'+
+    escapeHtml(t('order_from').replace('{s}',storeName))+'</button>';
+}
+/* ===== ITEM BUILDER (max 5, with details) ===== */
+let orderItems=[], editingIdx=-1, pendingOrder=null, reqUrgency='immediate';
+window.pickUrgency=(u)=>{ reqUrgency=u; document.querySelectorAll('#urgPick button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-u')===u)); };
+function renderItemSlots(){
+  const wrap=$('itemSlots'); let html='';
+  for(let i=0;i<5;i++){
+    const it=orderItems[i];
+    if(it){
+      const sub=[it.brand,it.type,it.category].filter(Boolean).join(' · ')||'Tap to edit';
+      html+=`<div class="itemcard" onclick="editItem(${i})"><div class="ic-num">${i+1}</div><div class="ic-main"><b>${escapeHtml(it.desc||it.category||'Item')}</b><span>${escapeHtml(sub)}</span></div><button class="itemx" onclick="event.stopPropagation();removeItem(${i})">×</button></div>`;
+    } else {
+      const first=orderItems.filter(Boolean).length===i;
+      html+=`<div class="itemadd ${first?'next':''}" onclick="addItem(${i})"><div class="plus">+</div><span>Add item ${i+1}</span></div>`;
+    }
+  }
+  wrap.innerHTML=html;
+  $('itemCount').textContent=orderItems.filter(Boolean).length+' / 5';
+}
+window.addItem=(i)=>{ editingIdx=i; openItemSheet({}); };
+window.editItem=(i)=>{ editingIdx=i; openItemSheet(orderItems[i]); };
+window.removeItem=(i)=>{ orderItems.splice(i,1); renderItemSlots(); };
+function openItemSheet(it){
+  $('itCat').value=it.category||'Groceries'; $('itDesc').value=it.desc||''; $('itBrand').value=it.brand||''; $('itType').value=it.type||''; $('itOther').value=it.other||'';
+  $('itemSheet').classList.add('show'); setTimeout(()=>$('itDesc').focus(),120);
+}
+window.closeItemSheet=()=>$('itemSheet').classList.remove('show');
+window.saveItem=()=>{
+  const desc=$('itDesc').value.trim();
+  if(!desc){toast(t('t_add_desc'));return;}
+  const it={category:$('itCat').value,desc,brand:$('itBrand').value.trim(),type:$('itType').value.trim(),other:$('itOther').value.trim()};
+  if(editingIdx>=0&&editingIdx<orderItems.length) orderItems[editingIdx]=it; else orderItems.push(it);
+  closeItemSheet(); renderItemSlots();
+};
+function formatItems(items){
+  return items.filter(Boolean).map(it=>{
+    let s=it.desc; const extra=[it.brand&&('brand: '+it.brand),it.type&&('type: '+it.type),it.other].filter(Boolean);
+    if(extra.length) s+=' ('+extra.join(', ')+')';
+    return '• '+s+(it.category?(' ['+it.category+']'):'');
+  }).join('\n');
+}
+
+function renderOverageWarn(){
+  const w=$('overageWarn'); if(!w)return;
+  w.innerHTML='';
+  if(!PLAN) return;
+  const included=PLAN.orders_included;
+  if(included==null||included>=9999) return;                 // Unlimited never overages
+  if((PLAN.remaining!=null?PLAN.remaining:0)>0) return;      // still inside the plan
+  if(PLAN.overage_fee==null) return;
+  const fee=Number(PLAN.overage_fee).toFixed(2);
+  const nameKey={basic:'plan_basic_name',standard:'plan_standard_name',unlimited:'plan_unlimited_name'};
+  const nt=PLAN.next_tier, diff=PLAN.upgrade_diff;
+  let h='<div class="ovgcard"><b>'+escapeHtml(t('ovg_title'))+'</b>'
+       +'<div class="ovgfee">'+escapeHtml(t('ovg_fee').replace('{f}',fee))+'</div>';
+  if(nt && diff!=null){
+    const nextName=t(nameKey[nt]||'plan_standard_name');
+    h+='<div class="ovgup">'+escapeHtml(t('ovg_up').replace('{p}',nextName).replace('{d}',Number(diff).toFixed(2)))+'</div>'
+      +'<button class="btn btn-coral btn-sm" style="margin-top:11px" onclick="go(\'onboard\')">'
+      +escapeHtml(t('ovg_btn').replace('{p}',nextName))+'</button>';
+  }
+  w.innerHTML=h+'</div>';
+}
+window.openOrderSheet=async()=>{
+  await loadPlan(); renderOverageWarn();
+  if(!selectedStore){toast(t('t_find_store'));return;}
+  $('reqTitle').textContent=t('order_from').replace('{s}',selectedStore.name);
+  $('reqSub').textContent='Goes to available couriers · first to accept';
+  orderItems=[]; renderItemSlots();
+  pickUrgency('immediate');
+  $('reqDrop').value=PROFILE.home_address||'';
+  go('r-req');
+};
+window.submitRequest=()=>{
+  if(!selectedStore){toast(t('t_pick_store'));go('main');return;}
+  const items=orderItems.filter(Boolean);
+  if(!items.length){toast(t('t_add_item'));return;}
+  pendingOrder={ store:selectedStore, items:formatItems(items), category:items[0].category||'Groceries', drop:($('reqDrop').value.trim()||'Leave at door'), urgency:reqUrgency, item_count:items.length, lat:LOC.lat, lng:LOC.lng };
+  proceedCheckout();
+};
+async function doPlaceOrder(){
+  const o=pendingOrder; if(!o)return;
+  $('sendReqBtn').disabled=true; toast(t('t_placing'));
+  try{
+    const {data,error}=await sb.rpc('place_order',{p_store_id:o.store.id,p_items:o.items,p_category:o.category,p_dropoff_address:o.drop,p_dropoff_instructions:null,p_lat:o.lat,p_lng:o.lng,p_urgency:o.urgency,p_item_count:o.item_count});
+    if(error)throw error;
+    const {data:sub}=await sb.from('subscriptions').select('*').eq('user_id',ME.id).single(); SUB=sub; await loadPlan(); renderSubHero();
+    pendingOrder=null; activeOrderId=data; try{ sb.rpc('offer_next_courier',{p_order_id:data}); }catch(e){} openTracking(data);
+  }catch(ex){toast(ex.message);}
+  $('sendReqBtn').disabled=false;
+}
+
+/* ===== ORDERS + TRACKING ===== */
+function fmtDT(ts){ if(!ts)return''; try{var d=new Date(ts);return d.toLocaleDateString([], {month:'short',day:'numeric'})+' · '+d.toLocaleTimeString([], {hour:'numeric',minute:'2-digit'});}catch(e){return'';} }
+window.loadOrders=async()=>{
+  const {data}=await sb.from('orders').select('*, stores(name,abbr)').eq('requester_id',ME.id).order('created_at',{ascending:false});
+  const wrap=$('ordersList');
+  if(!data||!data.length){wrap.innerHTML=`<div class="empty"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/></svg><b>${t('e_no_orders_t')}</b><span>${t('e_no_orders_s')}</span></div>`;return;}
+  wrap.innerHTML=data.map(o=>{
+    const active=!['completed','delivered','canceled','refunded'].includes(o.status);
+    const label=(o.status==='delivered'||o.status==='completed')?('Delivered'+(o.receipt_total?' · $'+o.receipt_total:'')):o.status.replace('_',' ');
+    return `<div class="trip" onclick="openTracking('${o.id}')"><div class="top"><div class="slogo">${o.stores.abbr}</div><div style="flex:1"><div class="store" style="font-family:var(--font)">${o.stores.name}</div><div class="when" style="color:${active?'var(--coral)':'var(--good)'}">${active?'● ':'✓ '}${label}</div><div class="otime">${fmtDT(o.created_at)}</div></div><span class="go">${active?'Track →':'View'}</span></div></div>`;
+  }).join('');
+};
+window.loadDeliveries=async()=>{
+  const wrap=$('deliveriesList'); if(!wrap)return;
+  const {data}=await sb.from('orders').select('*, stores(name,abbr)').eq('courier_id',ME.id).order('created_at',{ascending:false});
+  if(!data||!data.length){
+    wrap.innerHTML='<div class="empty"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/></svg><b>'+escapeHtml(t('e_no_deliv_t'))+'</b><span>'+escapeHtml(t('e_no_deliv_s'))+'</span></div>';
+    return;
+  }
+  wrap.innerHTML=data.map(function(o){
+    const active=['accepted','shopping','receipt_verified'].includes(o.status);
+    const done=['delivered','completed'].includes(o.status);
+    const gone=['canceled','refunded'].includes(o.status);
+    const pay=o.receipt_total?(3+0.03*o.receipt_total).toFixed(2):null;
+    const label=done?(t('st_completed_t')+(pay?(' · '+t('earn_amt').replace('{p}',pay)):''))
+              :(gone?t('deliv_canceled'):o.status.replace('_',' '));
+    const color=active?'var(--coral)':(done?'var(--good)':'var(--muted)');
+    const mark=active?'● ':(done?'✓ ':'· ');
+    const store=(o.stores&&o.stores.name)||'—', abbr=(o.stores&&o.stores.abbr)||'?';
+    return '<div class="trip"'+(active?(' onclick="openDeliver(\''+o.id+'\')"'):' style="cursor:default"')+
+      '><div class="top"><div class="slogo">'+escapeHtml(abbr)+'</div><div style="flex:1">'+
+      '<div class="store" style="font-family:var(--font)">'+escapeHtml(store)+'</div>'+
+      '<div class="when" style="color:'+color+'">'+mark+escapeHtml(label)+'</div>'+
+      '<div class="otime">'+fmtDT(o.created_at)+'</div></div>'+
+      (active?'<span class="go">'+escapeHtml(t('continue'))+' →</span>':'')+'</div></div>';
+  }).join('');
+};
+/* live map removed — at a ¼-mile radius, chat + status beats a moving pin */
+
+let lastTrackStatus={};
+window.openTracking=async(id)=>{
+  activeOrderId=id; go('r-track');
+  if(orderChannel)sb.removeChannel(orderChannel);
+  orderChannel=sb.channel('o:'+id)
+    .on('postgres_changes',{event:'*',schema:'public',table:'orders',filter:`id=eq.${id}`},()=>renderTracking(id))
+    .on('postgres_changes',{event:'INSERT',schema:'public',table:'order_photos',filter:`order_id=eq.${id}`},()=>renderTracking(id))
+    .subscribe();
+  renderTracking(id);
+};
+async function renderTracking(id){
+  const {data:o}=await sb.from('orders').select('*, stores(name,abbr)').eq('id',id).single();
+  if(!o)return;
+  let courierCode='····';
+  if(o.courier_id){ const {data:cp}=await sb.from('public_profiles').select('courier_code').eq('id',o.courier_id).maybeSingle(); courierCode=cp?.courier_code||'····'; }
+  reqTrip={courier_code:courierCode};
+  // celebrate the match the moment a courier claims it
+  if(lastTrackStatus[id]==='pending' && o.status==='accepted'){ showBanner('🎉',t('b_match_title').replace('{c}',courierCode),t('b_match_sub').replace('{s}',o.stores.name)); }
+  lastTrackStatus[id]=o.status;
+  $('trkSub').textContent=o.stores.name+(o.created_at?(' · '+fmtDT(o.created_at)):'');
+  const {data:photos}=await sb.from('order_photos').select('*').eq('order_id',id);
+  const by={}; for(const p of (photos||[])) by[p.type]=p;
+  async function url(p){if(!p)return null;const {data}=await sb.storage.from('order-photos').createSignedUrl(p.storage_path,3600);return data?.signedUrl;}
+  const [uR,uD]=await Promise.all([url(by.receipt),url(by.delivery)]);
+  const card=PROFILE?.card_last4?(' · charged to card ending '+PROFILE.card_last4):'';
+  const sm={pending:[t('st_pending_t'),t('st_pending_n').replace('{s}',o.stores.name)],accepted:[t('st_accepted_t').replace('{c}',courierCode),t('st_accepted_n').replace('{s}',o.stores.name)],receipt_verified:[t('st_receipt_t')+(o.receipt_total?' · $'+o.receipt_total:''),t('st_receipt_n')],delivered:[t('st_delivered_t')+(o.receipt_total?' · $'+o.receipt_total:''),t('st_delivered_n')],completed:[t('st_completed_t'),t('st_completed_n')]}[o.status]||[o.status,''];
+  $('trkStatus').textContent=sm[0]; $('trkNote').textContent=sm[1];
+  const steps=[
+    {t:t('tl_claimed_t'),s:o.accepted_at?('#'+courierCode+' · '+new Date(o.accepted_at).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})):t('tl_waiting'),done:!!o.accepted_at},
+    {t:t('st_receipt_t'),s:o.receipt_total?('$'+o.receipt_total+' — '+t('tl_exact_bill')):t('tl_sets_bill'),done:['receipt_verified','delivered','completed'].includes(o.status),img:uR},
+    {t:t('st_delivered_t'),s:t('tl_dropoff_photo'),done:['delivered','completed'].includes(o.status),img:uD},
+  ];
+  const ai=steps.findIndex(s=>!s.done);
+  $('trkTimeline').innerHTML=steps.map((s,i)=>{
+    const cls=s.done?'tl-done':(i===ai?'tl-active':'tl-wait');
+    const ck=s.done?'<svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>':'';
+    return `<div class="tl-item ${cls}"><div class="tl-rail"><div class="tl-dot">${ck}</div>${i===steps.length-1?'':'<div class="tl-line"></div>'}</div><div class="tl-body"><div class="t">${s.t}</div><div class="s">${s.s}</div>${s.img?`<img src="${s.img}"/>`:''}</div></div>`;
+  }).join('');
+  // one-tap dispute (visible 48h post-delivery) + SLA
+  const dz=$('trkDispute');
+  if(dz){
+    if(['delivered','completed'].includes(o.status)){
+      dz.style.display='block';
+      let _rated=null; try{ const {data:_r2}=await sb.from('ratings').select('stars').eq('order_id',o.id).eq('rater_id',ME.id).maybeSingle(); _rated=_r2?_r2.stars:null; }catch(e){}
+      dz.innerHTML=ratingCardHtml(o.id,_rated)+`<div class="guarantee" style="margin-top:0"><div class="g-badge"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5C8 19.3 5 15.5 5 11V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 11.5 2 2 4-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div style="flex:1"><b>${t('guar_title')}</b><p>${t('guar_something')}</p></div></div><button class="btn btn-ghost btn-sm" style="margin-top:10px" onclick="toast(t('dispute_opened'))">${t('report_problem')}</button>`;
+    } else dz.style.display='none';
+  }
+}
+
+function ratingCardHtml(orderId, rated){
+  const sub = rated ? '' : `<div class="rate-sub">${t('rate_courier_sub')}</div>`;
+  const stars = rated
+    ? `<div class="stars rated">${[1,2,3,4,5].map(n=>`<span class="${n<=rated?'on':''}">★</span>`).join('')}</div><div class="rate-thanks">${t('rating_thanks')}</div>`
+    : `<div class="stars" id="rateStars" data-oid="${orderId}">${[1,2,3,4,5].map(n=>`<span data-n="${n}" onclick="submitRating(this)" onmouseover="hoverStars(${n})" onmouseout="hoverStars(0)">★</span>`).join('')}</div>`;
+  return `<div class="ratecard"><div class="rate-h">${t('rate_courier_title')}</div>${sub}${stars}</div>`;
+}
+window.hoverStars=(n)=>{ const w=$('rateStars'); if(!w)return; w.querySelectorAll('span').forEach(s=>s.classList.toggle('hot', parseInt(s.getAttribute('data-n'))<=n)); };
+window.submitRating=async(el)=>{
+  const stars=parseInt(el.getAttribute('data-n')); const wrap=el.closest('.stars'); const oid=wrap.getAttribute('data-oid');
+  try{
+    const {error}=await sb.rpc('rate_order',{p_order_id:oid,p_stars:stars});
+    if(error){toast(error.message);return;}
+    wrap.outerHTML=`<div class="stars rated">${[1,2,3,4,5].map(n=>`<span class="${n<=stars?'on':''}">★</span>`).join('')}</div><div class="rate-thanks">${t('rating_thanks')}</div>`;
+    const sub=document.querySelector('.ratecard .rate-sub'); if(sub)sub.remove();
+    toast(t('rating_thanks'));
+  }catch(e){toast(e.message);}
+};
+
+/* ===== CHAT (both sides — runs from accept until delivery) ===== */
+let chatBack='r-track';
+window.openChatFor=async(orderId, back)=>{
+  if(!orderId){toast(t('t_no_active'));return;}
+  activeOrderId=orderId; chatBack=back||'r-track';
+  const {data:o}=await sb.from('orders').select('requester_id,courier_id').eq('id',orderId).single();
+  let label='#····';
+  if(o){
+    const iAmReq = o.requester_id===ME.id;
+    const otherId = iAmReq ? o.courier_id : o.requester_id;
+    if(otherId){ const {data:pp}=await sb.from('public_profiles').select('user_code,courier_code').eq('id',otherId).maybeSingle(); label='#'+(iAmReq?(pp?.courier_code):(pp?.user_code))||'····'; }
+    else label='#····';
+  }
+  $('chatWith').textContent=label;
+  go('r-chat'); loadChat();
+};
+async function loadChat(){
+  const {data}=await sb.from('messages').select('*').eq('order_id',activeOrderId).order('created_at');
+  const s=$('chatScroll'); s.innerHTML='<div class="bub sys">'+t('chat_sys')+'</div>'+(data||[]).map(bub).join(''); s.scrollTop=s.scrollHeight;
+  if(chatChannel)sb.removeChannel(chatChannel);
+  chatChannel=sb.channel('c:'+activeOrderId).on('postgres_changes',{event:'INSERT',schema:'public',table:'messages',filter:`order_id=eq.${activeOrderId}`},p=>{$('chatScroll').insertAdjacentHTML('beforeend',bub(p.new));$('chatScroll').scrollTop=$('chatScroll').scrollHeight;}).subscribe();
+}
+function bub(m){return `<div class="bub ${m.sender_id===ME.id?'me':'them'}">${escapeHtml(m.body)}</div>`;}
+window.sendChat=async()=>{const v=$('chatInput').value.trim();if(!v)return;$('chatInput').value='';const {error}=await sb.from('messages').insert({order_id:activeOrderId,sender_id:ME.id,body:v});if(error)toast(error.message);};
+
+/* ===== COURIER ===== */
+async function ensureCourier(){ if(PROFILE && !PROFILE.is_courier){ await sb.from('profiles').update({is_courier:true}).eq('id',ME.id); PROFILE.is_courier=true; } }
+async function loadEarnings(){
+  const {data}=await sb.from('orders').select('courier_pay').eq('courier_id',ME.id).in('status',['delivered','completed']);
+  const total=(data||[]).reduce((a,o)=>a+Number(o.courier_pay||0),0);
+  $('earnAmt').textContent='$'+total.toFixed(2);
+}
+async function checkAvailability(){
+  const {data}=await sb.from('trips').select('*, stores(name)').eq('courier_id',ME.id).eq('status','open').order('created_at',{ascending:false}).limit(1);
+  if(data&&data.length){
+    availTripId=data[0].id;
+    if(data[0].store_ids&&data[0].store_ids.length){ courStops=data[0].store_ids.slice(0,3); }
+    if(data[0].presence){ courierPresence=data[0].presence; }
+    document.querySelectorAll('#presencePick button').forEach(b=>b.classList.toggle('on',b.getAttribute('data-p')===courierPresence));
+    renderStops();
+    setAvailUI(true,data[0].store_ids||[data[0].store_id]); startPoll();
+  }
+  else { availTripId=null; renderStops(); setAvailUI(false); stopPoll(); $('incomingList').innerHTML='<div class="empty"><span>'+t('e_go_available')+'</span></div>'; }
+}
+function setAvailUI(on,storeIds){
+  $('availToggle').classList.toggle('off',!on);
+  if(on){
+    const ladder=['here_now','on_the_way','going_soon'];
+    const dotc={here_now:'here',on_the_way:'way',going_soon:'soon'};
+    const lbl={here_now:t('pres_here'),on_the_way:t('pres_way'),going_soon:t('pres_soon')};
+    const base=Math.max(0,ladder.indexOf(courierPresence));
+    const parts=(storeIds||[]).map((id,i)=>{
+      const nm=(STORES.find(s=>s.id===id)||{}).name; if(!nm)return '';
+      const st=ladder[Math.min(2,base+i)];
+      return '<span class="lstop"><span class="pdot '+dotc[st]+'"></span>'+escapeHtml(nm)+' <em>'+escapeHtml(lbl[st])+'</em></span>';
+    }).filter(Boolean).join('');
+    $('liveStatus').innerHTML='<div class="livecard"><div class="livedot"></div><div><b>'+t('live_now')+'</b><div class="livesub">'+parts+'</div></div></div>';
+  } else $('liveStatus').innerHTML='';
+}
+window.toggleAvailable=async()=>{
+  const turningOn=$('availToggle').classList.contains('off');
+  if(turningOn){
+    if(!HOME_SET){ toast(t('home_needed_s')); openProfile(); return; }
+    const stops=courStops.filter(Boolean);
+    if(!stops.length){toast(t('t_add_store_heading'));return;}
+    const radius=402; // 0.25 mi — fixed, non-adjustable (Business Plan 3.0)
+    await sb.from('trips').update({status:'closed'}).eq('courier_id',ME.id).eq('status','open');
+    const {data,error}=await sb.from('trips').insert({courier_id:ME.id,store_id:stops[0],store_ids:stops,origin:`SRID=4326;POINT(${LOC.lng} ${LOC.lat})`,scheduled_at:new Date().toISOString(),status:'open',presence:courierPresence,radius_m:radius}).select('*').single();
+    if(error){toast(error.message);return;}
+    availTripId=data.id; setAvailUI(true,stops); showBanner('🚗',t('b_live_title'),t('b_live_sub').replace('{n}','¼')); startPoll();
+  } else {
+    await goOffline(); toast(t('t_offline'));
+  }
+};
+/* one-hour confirmation ping for declared-but-not-departed couriers */
+async function checkRoutePing(){
+  try{
+    const {data}=await sb.from('trips').select('id,created_at,store_ids').eq('courier_id',ME.id).eq('status','open').order('created_at',{ascending:false}).limit(1);
+    if(data&&data.length){
+      const age=Date.now()-new Date(data[0].created_at).getTime();
+      if(age>1000*60*60){ // older than 1 hour
+        const names=(data[0].store_ids||[]).map(id=>STORES.find(s=>s.id===id)?.name).filter(Boolean).join(' → ');
+        showBanner('⏰',t('b_route_title'),t('b_route_sub').replace('{s}',names||t('your_stops')));
+      }
+    }
+  }catch(e){}
+}
+const skippedOrders=new Set();
+window.skipOrder=(id,el)=>{ skippedOrders.add(id); };
+let currentOffer=null;
+function loadIncoming(){ return pollMyOffer(); }
+async function pollMyOffer(){
+  if(!availTripId) return;
+  let data;
+  try{
+    const r=await sb.rpc('pull_offer_for_me');
+    if(r.error){ showDispatchError(r.error.message); return; }
+    data=r.data;
+  }catch(e){ showDispatchError((e&&e.message)?e.message:String(e)); return; }
+  const off=(data&&data.length)?data[0]:null;
+  if(!off){ if(currentOffer){ currentOffer=null; stopOfferCountdown(); } renderNoOffer(); return; }
+  if(currentOffer && currentOffer.offer_id===off.offer_id) return; // already showing; keep countdown running
+  currentOffer=off; renderOffer(off); startOfferCountdown(off);
+}
+function showDispatchError(msg){
+  const w=$('incomingList'); if(!w)return;
+  w.innerHTML='<div class="empty" style="border:1px solid var(--coral-100);background:#FFF6F4"><b style="color:var(--coral-text)">Dispatch error</b><span style="word-break:break-word">'+escapeHtml(msg||'unknown')+'</span></div>';
+}
+function renderNoOffer(){
+  $('incomingList').innerHTML=`<div class="empty offer-waiting"><div class="ow-pulse"></div><b>${t('offer_waiting_t')}</b><span>${t('offer_waiting_s')}</span></div>`;
+}
+function renderOffer(off){
+  const uLabel={immediate:t('ut_immediate'),soon:t('ut_soon'),later:t('ut_later')};
+  const n=off.item_count||1;
+  $('incomingList').innerHTML=`
+    <div class="offercard">
+      <div class="offer-top">
+        <span class="offer-new">${t('offer_new')} · ${off.store_name}</span>
+        <div class="offer-ring"><svg viewBox="0 0 44 44"><circle class="ort-bg" cx="22" cy="22" r="19"/><circle class="ort-fg" id="ortFg" cx="22" cy="22" r="19"/></svg><span id="ortNum">45</span></div>
+      </div>
+      <div class="offer-store">${off.store_name} run</div>
+      <div class="offer-meta">#${off.user_code} · ${n} ${n===1?t('offer_item'):t('offer_items')} · +$3.00 + 3%</div>
+      <div class="urgtag urg-${off.urgency||'immediate'}" style="margin-top:11px;display:inline-block">${uLabel[off.urgency]||t('ut_immediate')}</div>
+      <div class="offer-items">${escapeHtml(off.items||'')}</div>
+      <div class="offer-actions">
+        <button class="offer-pass" onclick="respondOffer('${off.offer_id}',false)">${t('offer_pass')}</button>
+        <button class="offer-accept" onclick="respondOffer('${off.offer_id}',true)">${t('accept')}</button>
+      </div>
+    </div>`;
+}
+function startOfferCountdown(off){
+  stopOfferCountdown();
+  const total=45, exp=new Date(off.expires_at).getTime(), C=2*Math.PI*19;
+  function tick(){
+    const rem=Math.max(0,Math.round((exp-Date.now())/1000));
+    const num=document.getElementById('ortNum'); if(num)num.textContent=rem;
+    const fg=document.getElementById('ortFg'); if(fg){ fg.style.strokeDasharray=C; fg.style.strokeDashoffset=C*(1-Math.max(0,Math.min(1,rem/total))); }
+    if(rem<=0){ stopOfferCountdown(); if(currentOffer){ const id=currentOffer.offer_id; respondOffer(id,false); } }
+  }
+  tick(); offerCountdown=setInterval(tick,1000);
+}
+window.respondOffer=async(offerId,accept)=>{
+  const oid=currentOffer?currentOffer.order_id:null;
+  stopOfferCountdown(); currentOffer=null;
+  let r;
+  try{ r=await sb.rpc('respond_offer',{p_offer_id:offerId,p_accept:accept}); }catch(e){ toast(e.message); pollMyOffer(); return; }
+  if(r.error){ toast(r.error.message); pollMyOffer(); return; }
+  const status=r.data;
+  if(accept && status==='accepted' && oid){ showBanner('⚡',t('b_got_title'),t('b_got_sub')); stopPoll(); openDeliver(oid); return; }
+  if(accept && status==='gone'){ toast(t('offer_taken')); }
+  if(status==='cap'){ toast(t('offer_cap')); }
+  pollMyOffer();
+};
+async function openDeliver(id){
+  go('c-deliver');
+  const {data:o}=await sb.from('orders').select('*, stores(name)').eq('id',id).single(); deliverOrder=o;
+  const {data:photos}=await sb.from('order_photos').select('type').eq('order_id',id);
+  const have={}; (photos||[]).forEach(p=>have[p.type]=true);
+  caps[1]=!!have.receipt; caps[2]=!!have.delivery;
+  const {data:drop}=await sb.from('order_dropoffs').select('*').eq('order_id',id).maybeSingle();
+  $('delSub').textContent=o.stores.name+(o.created_at?(' · '+fmtDT(o.created_at)):' · order '+id.slice(0,8));
+  $('delAddr').textContent=drop?drop.address:t('addr_on_accept');
+  $('delPay').textContent=o.receipt_total?t('earn_amt').replace('{p}',(3.00+0.03*o.receipt_total).toFixed(2)):t('earn_pct');
+  setCapUI();
+}
+function setCapUI(){
+  [1,2].forEach(n=>{
+    const e=$('cap'+n); const done=caps[n];
+    e.classList.toggle('done',done);
+    const unlocked = n===1 || caps[n-1];
+    e.classList.toggle('locked',!unlocked && !done);
+    const labels={1:done?'Captured ✓':'Sets the exact bill',2:done?'Captured ✓':'Proof at the door'};
+    $('cap'+n+'s').textContent=labels[n];
+  });
+  const all=caps[1]&&caps[2];
+  $('completeBtn').style.opacity=all?'1':'.4'; $('completeBtn').style.pointerEvents=all?'auto':'none';
+}
+window.uploadCapture=async(n,file)=>{
+  if(!file){return;}
+  if(n===2&&!caps[1]){toast(t('t_photo_receipt'));return;}
+  const types={1:'receipt',2:'delivery'};
+  const step=$('cap'+n); const span=step.querySelector('span'); span.textContent='Uploading…';
+  try{
+    let total=null;
+    if(n===1){
+      total=parseFloat(prompt('Enter the receipt total (the exact amount on the receipt):','38.40'));
+      if(!total||isNaN(total)||total<=0){ span.textContent=t('tap_retry'); toast(t('t_valid_receipt')); return; }
+    }
+    const path=`${deliverOrder.id}/${types[n]}.jpg`;
+    const up=await sb.storage.from('order-photos').upload(path,file,{upsert:true,contentType:file.type||'image/jpeg'});
+    if(up.error)throw up.error;
+    await sb.from('order_photos').upsert({order_id:deliverOrder.id,type:types[n],storage_path:path},{onConflict:'order_id,type'});
+    if(n===1){ await sb.rpc('set_order_status',{p_order_id:deliverOrder.id,p_status:'receipt_verified',p_receipt_total:total}); deliverOrder.receipt_total=total; $('delPay').textContent=t('earn_amt').replace('{p}',(3.00+0.03*total).toFixed(2)); try{ await sb.rpc('close_store_listing',{p_order_id:deliverOrder.id}); await checkAvailability(); }catch(e){} }
+    caps[n]=true; setCapUI();
+    if(n===1)toast(t('st_receipt_t')+' · $'+total.toFixed(2));
+    if(n===2)toast(t('t_drop_confirmed'));
+  }catch(ex){toast(ex.message); $('cap'+n+'s').textContent=t('tap_retry');}
+};
+window.completeDelivery=async()=>{
+  const {error}=await sb.rpc('set_order_status',{p_order_id:deliverOrder.id,p_status:'delivered'});
+  if(error){toast(error.message);return;}
+  const pay=(3.00+0.03*(deliverOrder.receipt_total||0)).toFixed(2);
+  showBanner('💸',t('b_done_title'),t('b_done_sub').replace('{p}',pay));
+  go('main'); setRole('cour');
+};
+
+// preload orders list when navigating there
+const _go=window.go=go;
+document.addEventListener('click',e=>{ if(e.target.closest('[onclick*="r-orders"]')) setTimeout(loadOrders,50); });
+
+bindSwitch();
+
+// hide launch screen once ready
+(function(){var s=document.getElementById('splash');if(!s)return;var done=false;function hideIt(){if(done)return;done=true;s.classList.add('hide');setTimeout(function(){s.style.display='none';},650);}window.addEventListener('load',function(){setTimeout(hideIt,2700);});setTimeout(hideIt,4000);})();
+</script>
+</body>
+</html>
